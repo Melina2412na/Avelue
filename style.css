@@ -1767,6 +1767,13 @@ button:hover{
     font-size:14px;
 
 }
+
+/* Nur Leonies Bild verschieben */
+.team-member img.leonie-img{
+    object-position: center 20%;
+}
+
+
 .presentation-section {
     padding: 120px 70px;
     background: #ffffff;
@@ -2069,3 +2076,4 @@ height:420px;
 }
 
 }
+
