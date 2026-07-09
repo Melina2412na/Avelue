@@ -2407,3 +2407,117 @@ height:420px;
 
 }
 
+
+/* ===========================
+   MOBILE HERO ONLY
+=========================== */
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 28px 22px;
+    display: grid;
+    grid-template-columns: 42px 1fr auto;
+    align-items: center;
+    gap: 14px;
+  }
+
+  header::before {
+    content: "☰";
+    font-size: 34px;
+    color: #071b45;
+    line-height: 1;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 44px;
+  }
+
+  .logo h2 {
+    font-size: 34px;
+    color: #071b45;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header > button {
+    padding: 14px 20px;
+    border-radius: 999px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 28px 22px 70px;
+    gap: 42px;
+    overflow: hidden;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    border-radius: 26px;
+    display: block;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(42px, 12vw, 64px);
+    line-height: 1.08;
+    white-space: normal;
+    margin-bottom: 28px;
+    color: #071b45;
+  }
+
+  .hero-text h1 span {
+    color: #ff6b00;
+  }
+
+  .hero-text p {
+    width: 100%;
+    font-size: 21px;
+    line-height: 1.65;
+    color: #071b45;
+    margin-bottom: 36px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    height: 70px;
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .hero-buttons button:first-child {
+    background: #020817;
+    color: #ffffff;
+  }
+
+  .hero-buttons button:last-child {
+    background: #ffffff;
+    color: #020817;
+    border: 1px solid #cbd5e1;
+  }
+}
+
