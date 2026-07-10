@@ -6,6 +6,7 @@
     <title>Landingpage</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
@@ -48,7 +49,7 @@
     </div>
 
     <div class="hero-image">
-        <img src="Bilder/workshop.png"Workshop">
+        <img src="Bilder/workshop.png"Workshop>
     </div>
 
 </section>
@@ -56,7 +57,7 @@
 
 <section class="problem">
 
-    <div class="problem-header">
+    <div class="problem-header" data-aos="fade-up" data-aos-delay="100">
 
 
 
@@ -73,7 +74,7 @@
 
     </div>
 
-    <div class="problem-wrapper">
+    <div class="problem-wrapper" data-aos="fade-up">
 
         <!-- Vorher -->
 
@@ -212,7 +213,7 @@
 
 </section>
 
-<section class="solution">
+<section class="solution" data-aos="fade-up">
 
     <div class="solution-left">
 
@@ -247,19 +248,19 @@
 
     <div class="solution-right">
 
-        <div class="feature-card">
+        <div class="feature-card" data-aos="fade-left" data-aos-delay="100">
             <span>01</span>
             <h3>Erkennen</h3>
             <p>Sprache, Notizen und Ideen werden automatisch erfasst.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-aos="fade-left" data-aos-delay="250">
             <span>02</span>
             <h3>Verstehen</h3>
             <p>Die KI erkennt Themen, Muster und wichtige Entscheidungen.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-aos="fade-left" data-aos-delay="400">
             <span>03</span>
             <h3>Strukturieren</h3>
             <p>Aus chaotischen Workshop-Inhalten entstehen klare Ergebnisse.</p>
@@ -270,7 +271,7 @@
 </section>
 
 
-<section class="video-showcase">
+<section class="video-showcase" data-aos="fade" data-aos-delay="100">
 
     <div class="video-header">
 
@@ -308,7 +309,7 @@
 </section>
 
 
-<section class="product-logic">
+<section class="product-logic" data-aos="fade-up" data-aos-delay="100">
     <p class="section-tag">PRODUKTLOGIK</p>
 
     <h2>So funktioniert <span>Avelue.</span></h2>
@@ -356,7 +357,7 @@
 </section>
 
 
-<section class="app-showcase">
+<section class="app-showcase" data-aos="fade-up" data-aos-delay="100">
   <div class="app-showcase__content">
 
     <div class="app-showcase__text">
@@ -486,7 +487,7 @@
   </div>
 </section>
     
-<section class="features-section">
+<section class="features-section" data-aos="fade-up">
     <p class="section-tag">FUNKTIONEN</p>
 
     <h2>Alles, was du für bessere<br>Workshop-Ergebnisse brauchst.</h2>
@@ -521,7 +522,8 @@
         </div>
     </div>
 </section>
-<section class="value-hub">
+
+<section class="value-hub" data-aos="fade" data-aos-delay="100">
 
     <div class="value-intro">
         
@@ -1123,6 +1125,21 @@ function showUsecase(type) {
     </div>
 
 </section>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+
+    duration: 900,
+    easing: "ease-out",
+    once: true,
+    offset: 120
+
+});
+</script>
+
+
 </body>
 
 <footer>
