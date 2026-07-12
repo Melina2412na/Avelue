@@ -577,137 +577,856 @@
 
 </section>
 
+<section class="app-section" id="app">
 
-<section class="app-showcase">
-  <div class="app-showcase__content">
+    <div class="app-container">
 
-    <div class="app-showcase__text">
-      <p class="app-showcase__eyebrow">DIE AVELUE APP </p>
-      <h2>Der komplette Überblick</h2>
-      <p class="app-showcase__intro">
-       Von der Vorbereitung bis zum Wissensspeicher vereint die Avelue App alle Informationen an einem Ort. 
-       KI unterstützt Sie intelligent bei jedem Schritt – die Kontrolle über Ergebnisse, Freigaben und Datenschutz
-        bleibt jederzeit in Ihrer Hand.
-      </p>
+        <!-- Überschrift -->
 
-      <div class="app-showcase__icon-row">
-        <div>
-          <span>▣</span>
-          <p>Vorbereiten</p>
-        </div>
-        <div>
-          <span>≋</span>
-          <p>Dokumentieren</p>
-        </div>
-        <div>
-          <span>✓</span>
-          <p>Analysieren</p>
-        </div>
-        <div>
-          <span>◎</span>
-          <p>Nachbereiten</p>
-        </div>
-      </div>
-    </div>
+        <header class="app-heading">
 
-    <div class="tablet-mockup">
-      <div class="tablet-frame">
-        <div class="tablet-camera"></div>
+            <span class="app-eyebrow">
+                DIE AVELUE APP
+            </span>
 
-        <div class="tablet-screen">
-          <aside class="tablet-sidebar">
-            <div class="tablet-logo">Avelue</div>
-            <nav>
-              <span>Übersicht</span>
-              <span class="active">Meetings</span>
-              <span>Agenda</span>
-              <span>Live</span>
-              <span>Ergebnisse</span>
-              <span>Aufgaben</span>
-              <span>Wissen</span>
-            </nav>
-          </aside>
+            <h2>
+                Eine App:<br>
+                Der komplette Überblick.
+            </h2>
 
-          <main class="tablet-dashboard">
-            <div class="tablet-topbar">
-              <h3>Innovationsmeeting Q2</h3>
-              <button>Teilen</button>
-            </div>
+            <p>
+                Von der Vorbereitung bis zum Wissensspeicher vereint die
+                Avelue App alle Informationen an einem Ort. KI unterstützt
+                Sie intelligent bei jedem Schritt – die Kontrolle über
+                Ergebnisse, Freigaben und Datenschutz bleibt jederzeit
+                in Ihrer Hand.
+            </p>
 
-            <div class="tablet-tabs">
-              <span class="active">Übersicht</span>
-              <span>Agenda</span>
-              <span>Live</span>
-              <span>Ergebnisse</span>
-              <span>Wissen</span>
-            </div>
+        </header>
 
-            <div class="dashboard-grid">
-              <div class="dashboard-card">
-                <h4>KI-Zusammenfassung</h4>
-                <p>Die wichtigsten Inhalte werden erkannt und strukturiert.</p>
-              </div>
 
-              <div class="dashboard-card">
-                <h4>Entscheidungen</h4>
-                <p>Beschlüsse werden nachvollziehbar dokumentiert.</p>
-              </div>
+        <div class="app-showcase">
 
-              <div class="dashboard-card wide">
-                <h4>Live-Transkript</h4>
-                <p><strong>Anna:</strong> Wir sollten den Fokus auf die Analyse legen.</p>
-                <p><strong>Thomas:</strong> Die Datenbasis ist bereits vorhanden.</p>
-              </div>
+            <!-- Linke App-Darstellung -->
 
-              <div class="dashboard-card wide">
-                <h4>Whiteboard</h4>
-                <div class="sticky-row">
-                  <span>Idee</span>
-                  <span>Ziel</span>
-                  <span>Nächster Schritt</span>
+            <div class="app-preview">
+
+                <div class="app-window">
+
+                    <!-- Fensterleiste -->
+
+                    <div class="app-window-top">
+
+                        <div class="app-window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span class="app-window-title">
+                            Avelue
+                        </span>
+
+                        <div class="app-window-user">
+                            AV
+                        </div>
+
+                    </div>
+
+
+                    <div class="app-window-body">
+
+                        <!-- App Sidebar -->
+
+                        <aside class="app-sidebar">
+
+                            <div class="app-sidebar-logo">
+                                <span></span>
+                                avelue
+                            </div>
+
+                            <nav>
+                                <button class="sidebar-icon is-active" data-screen="dashboard">
+                                    <span>⌂</span>
+                                </button>
+
+                                <button class="sidebar-icon" data-screen="workshops">
+                                    <span>▣</span>
+                                </button>
+
+                                <button class="sidebar-icon" data-screen="agenda">
+                                    <span>≡</span>
+                                </button>
+
+                                <button class="sidebar-icon" data-screen="live">
+                                    <span>●</span>
+                                </button>
+
+                                <button class="sidebar-icon" data-screen="results">
+                                    <span>✓</span>
+                                </button>
+
+                                <button class="sidebar-icon" data-screen="memory">
+                                    <span>◇</span>
+                                </button>
+                            </nav>
+
+                        </aside>
+
+
+                        <!-- App-Inhalte -->
+
+                        <main class="app-screen-area">
+
+                            <!-- Dashboard -->
+
+                            <div class="app-screen is-active" data-screen-content="dashboard">
+
+                                <div class="screen-header">
+                                    <div>
+                                        <span class="screen-kicker">ÜBERSICHT</span>
+                                        <h3>Guten Morgen.</h3>
+                                    </div>
+
+                                    <button class="screen-action">
+                                        + Workshop
+                                    </button>
+                                </div>
+
+                                <div class="dashboard-stats">
+
+                                    <div>
+                                        <span>Aktive Workshops</span>
+                                        <strong>04</strong>
+                                        <small>2 heute</small>
+                                    </div>
+
+                                    <div>
+                                        <span>Offene Freigaben</span>
+                                        <strong>12</strong>
+                                        <small>3 dringend</small>
+                                    </div>
+
+                                    <div>
+                                        <span>Neue Erkenntnisse</span>
+                                        <strong>28</strong>
+                                        <small>diese Woche</small>
+                                    </div>
+
+                                </div>
+
+                                <div class="dashboard-grid">
+
+                                    <div class="screen-panel">
+                                        <div class="panel-heading">
+                                            <strong>Laufende Formate</strong>
+                                            <span>Alle anzeigen</span>
+                                        </div>
+
+                                        <div class="workshop-row">
+                                            <span class="row-status orange"></span>
+                                            <div>
+                                                <strong>Strategie Workshop</strong>
+                                                <small>Heute · 10:00 Uhr</small>
+                                            </div>
+                                            <span>Live</span>
+                                        </div>
+
+                                        <div class="workshop-row">
+                                            <span class="row-status blue"></span>
+                                            <div>
+                                                <strong>Produkt-Roadmap</strong>
+                                                <small>Morgen · 09:30 Uhr</small>
+                                            </div>
+                                            <span>Geplant</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="screen-panel">
+                                        <div class="panel-heading">
+                                            <strong>Aktivität</strong>
+                                        </div>
+
+                                        <div class="activity-chart">
+                                            <span style="height: 35%"></span>
+                                            <span style="height: 55%"></span>
+                                            <span style="height: 42%"></span>
+                                            <span style="height: 70%"></span>
+                                            <span style="height: 62%"></span>
+                                            <span style="height: 88%"></span>
+                                            <span style="height: 72%"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Workshops -->
+
+                            <div class="app-screen" data-screen-content="workshops">
+
+                                <div class="screen-header">
+                                    <div>
+                                        <span class="screen-kicker">WORKSHOPS</span>
+                                        <h3>Zusammenarbeit organisieren.</h3>
+                                    </div>
+
+                                    <button class="screen-action">
+                                        + Neues Format
+                                    </button>
+                                </div>
+
+                                <div class="workshop-table">
+
+                                    <div class="table-head">
+                                        <span>Workshop</span>
+                                        <span>Datum</span>
+                                        <span>Status</span>
+                                    </div>
+
+                                    <div class="table-row">
+                                        <strong>Strategie 2027</strong>
+                                        <span>18. Juni</span>
+                                        <small class="status-live">Live</small>
+                                    </div>
+
+                                    <div class="table-row">
+                                        <strong>Customer Journey</strong>
+                                        <span>21. Juni</span>
+                                        <small class="status-planned">Geplant</small>
+                                    </div>
+
+                                    <div class="table-row">
+                                        <strong>Produkt-Roadmap</strong>
+                                        <span>24. Juni</span>
+                                        <small class="status-review">Review</small>
+                                    </div>
+
+                                    <div class="table-row">
+                                        <strong>Team-Retrospektive</strong>
+                                        <span>28. Juni</span>
+                                        <small class="status-planned">Geplant</small>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Agenda -->
+
+                            <div class="app-screen" data-screen-content="agenda">
+
+                                <div class="screen-header">
+                                    <div>
+                                        <span class="screen-kicker">AGENDA</span>
+                                        <h3>Strukturiert starten.</h3>
+                                    </div>
+
+                                    <button class="screen-action">
+                                        KI-Vorschlag
+                                    </button>
+                                </div>
+
+                                <div class="agenda-layout">
+
+                                    <div class="agenda-list">
+
+                                        <div class="agenda-item">
+                                            <span>01</span>
+                                            <div>
+                                                <strong>Begrüßung und Zielbild</strong>
+                                                <small>15 Minuten</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="agenda-item is-highlighted">
+                                            <span>02</span>
+                                            <div>
+                                                <strong>Aktuelle Herausforderungen</strong>
+                                                <small>35 Minuten</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="agenda-item">
+                                            <span>03</span>
+                                            <div>
+                                                <strong>Lösungsansätze entwickeln</strong>
+                                                <small>45 Minuten</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="agenda-item">
+                                            <span>04</span>
+                                            <div>
+                                                <strong>Nächste Schritte</strong>
+                                                <small>20 Minuten</small>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="agenda-detail">
+                                        <span>ZIEL</span>
+                                        <h4>Gemeinsames Verständnis schaffen</h4>
+                                        <p>
+                                            Herausforderungen sammeln,
+                                            priorisieren und erste
+                                            Handlungsfelder definieren.
+                                        </p>
+
+                                        <div class="participant-stack">
+                                            <i>LM</i>
+                                            <i>SK</i>
+                                            <i>JB</i>
+                                            <i>+5</i>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Live -->
+
+                            <div class="app-screen" data-screen-content="live">
+
+                                <div class="screen-header">
+                                    <div>
+                                        <span class="screen-live-label">
+                                            <i></i> LIVE
+                                        </span>
+                                        <h3>Strategie Workshop</h3>
+                                    </div>
+
+                                    <span class="live-time">
+                                        01:24:38
+                                    </span>
+                                </div>
+
+                                <div class="live-layout">
+
+                                    <div class="live-transcript screen-panel">
+
+                                        <div class="panel-heading">
+                                            <strong>Live-Transkript</strong>
+                                            <span>Automatisch</span>
+                                        </div>
+
+                                        <div class="transcript-line">
+                                            <span>LM</span>
+                                            <p>
+                                                Unser größtes Potenzial liegt
+                                                aktuell in der besseren
+                                                Vernetzung der Teams.
+                                            </p>
+                                        </div>
+
+                                        <div class="transcript-line">
+                                            <span>SK</span>
+                                            <p>
+                                                Das sollten wir direkt als
+                                                Handlungsfeld priorisieren.
+                                            </p>
+                                        </div>
+
+                                        <div class="transcript-line active">
+                                            <span>JB</span>
+                                            <p>
+                                                Ich ergänze dazu noch die
+                                                Abhängigkeit zur Roadmap.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="live-insights">
+
+                                        <div class="live-insight">
+                                            <span>THEMA ERKANNT</span>
+                                            <strong>Teamübergreifende Zusammenarbeit</strong>
+                                        </div>
+
+                                        <div class="live-insight">
+                                            <span>ENTSCHEIDUNG</span>
+                                            <strong>Priorisierung im nächsten Review</strong>
+                                        </div>
+
+                                        <div class="live-insight">
+                                            <span>AUFGABE</span>
+                                            <strong>Abhängigkeiten zur Roadmap prüfen</strong>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Ergebnisse -->
+
+                            <div class="app-screen" data-screen-content="results">
+
+                                <div class="screen-header">
+                                    <div>
+                                        <span class="screen-kicker">ERGEBNISSE</span>
+                                        <h3>Alles strukturiert zusammengefasst.</h3>
+                                    </div>
+
+                                    <button class="screen-action">
+                                        Freigeben
+                                    </button>
+                                </div>
+
+                                <div class="results-grid">
+
+                                    <div class="result-panel">
+                                        <span>Zusammenfassung</span>
+                                        <h4>Strategische Ausrichtung 2027</h4>
+                                        <p>
+                                            Drei zentrale Handlungsfelder
+                                            wurden identifiziert und
+                                            priorisiert.
+                                        </p>
+                                    </div>
+
+                                    <div class="result-panel">
+                                        <span>Entscheidungen</span>
+                                        <strong>6</strong>
+                                        <small>2 noch offen</small>
+                                    </div>
+
+                                    <div class="result-panel">
+                                        <span>Aufgaben</span>
+                                        <strong>14</strong>
+                                        <small>9 zugewiesen</small>
+                                    </div>
+
+                                    <div class="result-panel result-wide">
+                                        <span>Nächste Schritte</span>
+
+                                        <div class="result-task">
+                                            <i></i>
+                                            Roadmap-Abhängigkeiten prüfen
+                                        </div>
+
+                                        <div class="result-task">
+                                            <i></i>
+                                            Verantwortlichkeiten festlegen
+                                        </div>
+
+                                        <div class="result-task">
+                                            <i></i>
+                                            Review-Termin vorbereiten
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Memory -->
+
+                            <div class="app-screen" data-screen-content="memory">
+
+                                <div class="screen-header">
+                                    <div>
+                                        <span class="screen-kicker">WISSENSSPEICHER</span>
+                                        <h3>Wissen langfristig nutzen.</h3>
+                                    </div>
+
+                                    <div class="memory-search">
+                                        Suchen …
+                                    </div>
+                                </div>
+
+                                <div class="memory-layout">
+
+                                    <div class="memory-categories">
+                                        <button class="active">Alle Inhalte</button>
+                                        <button>Strategie</button>
+                                        <button>Produkte</button>
+                                        <button>Kunden</button>
+                                        <button>Organisation</button>
+                                    </div>
+
+                                    <div class="memory-content">
+
+                                        <div class="memory-entry">
+                                            <span>STRATEGIE</span>
+                                            <strong>Strategische Ausrichtung 2027</strong>
+                                            <p>28 Erkenntnisse · 6 Entscheidungen</p>
+                                        </div>
+
+                                        <div class="memory-entry">
+                                            <span>KUNDEN</span>
+                                            <strong>Kundenbedürfnisse DACH</strong>
+                                            <p>18 Erkenntnisse · 9 Themen</p>
+                                        </div>
+
+                                        <div class="memory-entry">
+                                            <span>PRODUKT</span>
+                                            <strong>Roadmap Prioritäten</strong>
+                                            <p>14 Erkenntnisse · 5 Aufgaben</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- To-dos -->
+
+                            <div class="app-screen" data-screen-content="todos">
+
+                                <div class="screen-header">
+                                    <div>
+                                        <span class="screen-kicker">TO-DOS</span>
+                                        <h3>Den Überblick behalten.</h3>
+                                    </div>
+                                </div>
+
+                                <div class="todo-list">
+
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>
+                                            Roadmap-Abhängigkeiten prüfen
+                                            <small>Fällig morgen · Strategie 2027</small>
+                                        </span>
+                                        <b>Hoch</b>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>
+                                            Review-Termin koordinieren
+                                            <small>Fällig Freitag · Projektteam</small>
+                                        </span>
+                                        <b>Mittel</b>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" checked>
+                                        <span>
+                                            Workshop-Zusammenfassung freigeben
+                                            <small>Heute erledigt</small>
+                                        </span>
+                                        <b>Erledigt</b>
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Datenschutz -->
+
+                            <div class="app-screen" data-screen-content="privacy">
+
+                                <div class="screen-header">
+                                    <div>
+                                        <span class="screen-kicker">DATENSCHUTZ</span>
+                                        <h3>Transparenz und Sicherheit.</h3>
+                                    </div>
+                                </div>
+
+                                <div class="privacy-grid">
+
+                                    <div class="privacy-panel">
+                                        <span>Löschfristen</span>
+                                        <strong>30 Tage</strong>
+                                        <small>Automatische Löschung aktiv</small>
+                                    </div>
+
+                                    <div class="privacy-panel">
+                                        <span>Audiodaten</span>
+                                        <strong>Nicht gespeichert</strong>
+                                        <small>Direkte Verarbeitung</small>
+                                    </div>
+
+                                    <div class="privacy-panel">
+                                        <span>Freigaben</span>
+                                        <strong>4 offen</strong>
+                                        <small>Manuelle Kontrolle aktiv</small>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Rollen -->
+
+                            <div class="app-screen" data-screen-content="roles">
+
+                                <div class="screen-header">
+                                    <div>
+                                        <span class="screen-kicker">ROLLEN & RECHTE</span>
+                                        <h3>Kontrolle über alle Zugriffe.</h3>
+                                    </div>
+                                </div>
+
+                                <div class="roles-list">
+
+                                    <div>
+                                        <span>LM</span>
+                                        <div>
+                                            <strong>Lea Müller</strong>
+                                            <small>Administratorin</small>
+                                        </div>
+                                        <b>Vollzugriff</b>
+                                    </div>
+
+                                    <div>
+                                        <span>SK</span>
+                                        <div>
+                                            <strong>Simon Keller</strong>
+                                            <small>Moderator</small>
+                                        </div>
+                                        <b>Bearbeiten</b>
+                                    </div>
+
+                                    <div>
+                                        <span>JB</span>
+                                        <div>
+                                            <strong>Julia Braun</strong>
+                                            <small>Teilnehmerin</small>
+                                        </div>
+                                        <b>Ansehen</b>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Einstellungen -->
+
+                            <div class="app-screen" data-screen-content="settings">
+
+                                <div class="screen-header">
+                                    <div>
+                                        <span class="screen-kicker">EINSTELLUNGEN</span>
+                                        <h3>Flexibel anpassbar.</h3>
+                                    </div>
+                                </div>
+
+                                <div class="settings-list">
+
+                                    <div>
+                                        <span>
+                                            KI-Unterstützung
+                                            <small>Intelligente Vorschläge aktivieren</small>
+                                        </span>
+                                        <i class="toggle active"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>
+                                            Automatische Zusammenfassungen
+                                            <small>Nach jedem Workshop erstellen</small>
+                                        </span>
+                                        <i class="toggle active"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>
+                                            E-Mail-Benachrichtigungen
+                                            <small>Bei neuen Freigaben informieren</small>
+                                        </span>
+                                        <i class="toggle"></i>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </main>
+
+                    </div>
+
                 </div>
-              </div>
+
             </div>
-          </main>
+
+
+            <!-- Rechte Navigation -->
+
+            <div class="app-navigation">
+
+                <button class="app-nav-item is-active" data-screen="dashboard">
+
+                    <span class="app-nav-icon">⌂</span>
+
+                    <span class="app-nav-content">
+                        <strong>Dashboard</strong>
+                        <small>
+                            Alles auf einen Blick
+                        </small>
+                    </span>
+
+                    <span class="app-nav-arrow">→</span>
+
+                </button>
+
+
+                <button class="app-nav-item" data-screen="workshops">
+
+                    <span class="app-nav-icon">▣</span>
+
+                    <span class="app-nav-content">
+                        <strong>Workshops</strong>
+                        <small>
+                            Zusammenarbeit zentral organisieren
+                        </small>
+                    </span>
+
+                    <span class="app-nav-arrow">→</span>
+
+                </button>
+
+
+                <button class="app-nav-item" data-screen="agenda">
+
+                    <span class="app-nav-icon">≡</span>
+
+                    <span class="app-nav-content">
+                        <strong>Agenda</strong>
+                        <small>
+                            Strukturiert starten
+                        </small>
+                    </span>
+
+                    <span class="app-nav-arrow">→</span>
+
+                </button>
+
+
+                <button class="app-nav-item" data-screen="live">
+
+                    <span class="app-nav-icon">●</span>
+
+                    <span class="app-nav-content">
+                        <strong>Live-Ansicht</strong>
+                        <small>
+                            In Echtzeit dabei
+                        </small>
+                    </span>
+
+                    <span class="app-nav-arrow">→</span>
+
+                </button>
+
+
+                <button class="app-nav-item" data-screen="results">
+
+                    <span class="app-nav-icon">✓</span>
+
+                    <span class="app-nav-content">
+                        <strong>Ergebnisse</strong>
+                        <small>
+                            Strukturiert zusammengefasst
+                        </small>
+                    </span>
+
+                    <span class="app-nav-arrow">→</span>
+
+                </button>
+
+
+                <button class="app-nav-item" data-screen="todos">
+
+                    <span class="app-nav-icon">☑</span>
+
+                    <span class="app-nav-content">
+                        <strong>To-dos</strong>
+                        <small>
+                            Den Überblick behalten
+                        </small>
+                    </span>
+
+                    <span class="app-nav-arrow">→</span>
+
+                </button>
+
+
+                <button class="app-nav-item" data-screen="memory">
+
+                    <span class="app-nav-icon">◇</span>
+
+                    <span class="app-nav-content">
+                        <strong>Wissensspeicher</strong>
+                        <small>
+                            Wissen langfristig nutzen
+                        </small>
+                    </span>
+
+                    <span class="app-nav-arrow">→</span>
+
+                </button>
+
+
+                <button class="app-nav-item" data-screen="privacy">
+
+                    <span class="app-nav-icon">▢</span>
+
+                    <span class="app-nav-content">
+                        <strong>Datenschutz</strong>
+                        <small>
+                            Transparenz und Sicherheit
+                        </small>
+                    </span>
+
+                    <span class="app-nav-arrow">→</span>
+
+                </button>
+
+
+                <button class="app-nav-item" data-screen="roles">
+
+                    <span class="app-nav-icon">♙</span>
+
+                    <span class="app-nav-content">
+                        <strong>Rollen & Rechte</strong>
+                        <small>
+                            Kontrolle über alle Zugriffe
+                        </small>
+                    </span>
+
+                    <span class="app-nav-arrow">→</span>
+
+                </button>
+
+
+                <button class="app-nav-item" data-screen="settings">
+
+                    <span class="app-nav-icon">⚙</span>
+
+                    <span class="app-nav-content">
+                        <strong>Einstellungen</strong>
+                        <small>
+                            Flexibel anpassbar
+                        </small>
+                    </span>
+
+                    <span class="app-nav-arrow">→</span>
+
+                </button>
+
+            </div>
+
         </div>
-      </div>
+
     </div>
 
-    <div class="app-showcase__cards">
-      <div class="info-card">
-        <span>▣</span>
-        <div>
-          <h4>1. Vorbereitung</h4>
-          <p>Agenda, Ziele und Teilnehmende werden vor dem Meeting organisiert.</p>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <span>≋</span>
-        <div>
-          <h4>2. Live-Ansicht</h4>
-          <p>Transkripte, Whiteboards und Markierungen werden während des Meetings sichtbar.</p>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <span>✓</span>
-        <div>
-          <h4>3. Ergebnisse</h4>
-          <p>Zusammenfassungen, Entscheidungen und Aufgaben werden automatisch strukturiert.</p>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <span>◎</span>
-        <div>
-          <h4>4. Wissensspeicher</h4>
-          <p>Erkenntnisse bleiben langfristig auffindbar und wiederverwendbar.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </section>
 
 <section class="temi-section" id="temi">
@@ -851,41 +1570,362 @@ Anonymisierte Verarbeitung, rollenbasierte Freigaben und Human-in-the-Loop schaf
     </div>
 </section>
     
-<section class="features-section">
-    <p class="section-tag">UNSERE KERNKOMPETENZEN </p>
+<section class="core-section" id="kernkompetenzen">
 
-    <h2>Mehr als Dokumentation: <br>Intelligenz, die Mehrwert schafft</h2>
+    <div class="core-container">
 
-    <div class="feature-grid">
-        <div class="feature-box">
-            <div class="feature-icon">🎙️</div>
-            <h3> CAPTURE: Alles Wichtige erfassen </h3>
-            <p>Gespräche, Whiteboards, Moderationsmaterial und Dokumente werden automatisch 
-            erfasst und zentral zusammengeführt – ohne zusätzlichen Dokumentationsaufwand.</p>
-            <span>✓ Kein manuelles Mitschreiben </span>
-             <span>✓  Alle Informationen an einem Ort </span>
-              <span>✓  Nichts Wichtiges geht verloren </span>
+        <!-- Überschrift -->
+
+        <header class="core-heading">
+
+            <span class="core-eyebrow">
+                UNSERE KERNKOMPETENZEN
+            </span>
+
+            <h2>
+                 Mehr als Dokumentation:<br>
+                Intelligenz, die Mehrwert schafft.
+            </h2>
+
+            <p>
+                Avelue verbindet automatische Erfassung, intelligente Analyse
+                und langfristiges Wissensmanagement zu einem durchgängigen
+                System für moderne Workshops.
+            </p>
+
+        </header>
+
+
+        <!-- Informationen ohne farbige Kästen -->
+
+        <div class="core-information">
+
+            <!-- Capture -->
+
+            <article class="core-info-item core-info-capture">
+
+                <div class="core-info-top">
+
+                    <span class="core-info-number">
+                        01
+                    </span>
+
+                    <span class="core-info-label">
+                        <span class="core-info-symbol"></span>
+                        Capture
+                    </span>
+
+                </div>
+
+                <h3>
+                    Alles Wichtige erfassen
+                </h3>
+
+                <p class="core-info-description">
+                    Gespräche, Whiteboards, Moderationsmaterial und Dokumente
+                    werden automatisch erfasst und zentral zusammengeführt –
+                    ohne zusätzlichen Dokumentationsaufwand.
+                </p>
+
+                <div class="core-info-benefits">
+
+                    <h4>
+                        Das bedeutet für Sie:
+                    </h4>
+
+                    <ul>
+                        <li>Kein manuelles Mitschreiben</li>
+                        <li>Alle Informationen an einem Ort</li>
+                        <li>Nichts Wichtiges geht verloren</li>
+                    </ul>
+
+                </div>
+
+                <div class="core-info-functions">
+
+                    <strong>
+                        Erfasst automatisch
+                    </strong>
+
+                    <div class="core-info-tags">
+                        <span>🎤 Sprache</span>
+                        <span>📝 Notizen</span>
+                        <span>🖼 Whiteboards</span>
+                        <span>📄 Dokumente</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Intelligence -->
+
+            <article class="core-info-item core-info-intelligence">
+
+                <div class="core-info-top">
+
+                    <span class="core-info-number">
+                        02
+                    </span>
+
+                    <span class="core-info-label">
+                        <span class="core-info-symbol"></span>
+                        Intelligence
+                    </span>
+
+                </div>
+
+                <h3>
+                    Zusammenhänge sichtbar machen
+                </h3>
+
+                <p class="core-info-description">
+                    Die KI erkennt Themen, Entscheidungen, Aufgaben und
+                    Prioritäten und verbindet Informationen zu verständlichen
+                    Erkenntnissen – für mehr Klarheit und fundierte
+                    Entscheidungen.
+                </p>
+
+                <div class="core-info-benefits">
+
+                    <h4>
+                        Das bedeutet für Sie:
+                    </h4>
+
+                    <ul>
+                        <li>Themen automatisch erkennen</li>
+                        <li>Entscheidungen nachvollziehbar dokumentieren</li>
+                        <li>Aufgaben intelligent ableiten</li>
+                    </ul>
+
+                </div>
+
+                <div class="core-info-functions">
+
+                    <strong>
+                        Erkennt und strukturiert
+                    </strong>
+
+                    <div class="core-info-tags">
+                        <span>🔗 Themen-Clustering</span>
+                        <span>💡 Entscheidungen</span>
+                        <span>✅ Aufgaben</span>
+                        <span>📊 Prioritäten</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Memory -->
+
+            <article class="core-info-item core-info-memory">
+
+                <div class="core-info-top">
+
+                    <span class="core-info-number">
+                        03
+                    </span>
+
+                    <span class="core-info-label">
+                        <span class="core-info-symbol"></span>
+                        Memory
+                    </span>
+
+                </div>
+
+                <h3>
+                    Wissen langfristig nutzbar machen
+                </h3>
+
+                <p class="core-info-description">
+                    Alle Erkenntnisse fließen in eine durchsuchbare
+                    Wissensbasis und bleiben langfristig verfügbar – für
+                    zukünftige Projekte, neue Teams und wiederkehrende
+                    Fragestellungen.
+                </p>
+
+                <div class="core-info-benefits">
+
+                    <h4>
+                        Das bedeutet für Sie:
+                    </h4>
+
+                    <ul>
+                        <li>Wissen zentral speichern</li>
+                        <li>Inhalte jederzeit wiederfinden</li>
+                        <li>Erkenntnisse einfach weiterverwenden</li>
+                    </ul>
+
+                </div>
+
+                <div class="core-info-functions">
+
+                    <strong>
+                        Langfristig verfügbar
+                    </strong>
+
+                    <div class="core-info-tags">
+                        <span>📚 Wissensspeicher</span>
+                        <span>🔍 Intelligente Suche</span>
+                        <span>💬 KI-Chat</span>
+                        <span>♻️ Wiederverwendung</span>
+                    </div>
+
+                </div>
+
+            </article>
+
         </div>
 
-        <div class="feature-box">
-            <div class="feature-icon">🔗</div>
-            <h3> INTELLIGENCE </h3>
-            <p>Die KI erkennt Themen, Entscheidungen, Aufgaben und Prioritäten und verbindet
-                 Informationen zu verständlichen Erkenntnissen – für mehr Klarheit und fundierte Entscheidungen. </p>
-            <span>✓ Themen automatisch erkennen</span>
-            <span>✓ Entscheidungen nachvollziehbar dokumentieren</span>
-            <span>✓ Aufgaben intelligent ableiten</span>
+
+        <!-- Drei visuelle Kästen -->
+
+        <div class="core-visuals">
+
+            <!-- Capture -->
+
+            <article class="core-visual-card core-visual-capture">
+
+                <span class="core-visual-label">
+                    Capture
+                </span>
+
+                <h3>
+                    Alles Wichtige erfassen.
+                </h3>
+
+                <p>
+                    Relevante Informationen werden automatisch aufgenommen,
+                    zusammengeführt und für die weitere Verarbeitung
+                    vorbereitet.
+                </p>
+
+                <div class="core-audio-visual" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </article>
+
+
+            <!-- Intelligence -->
+
+            <article class="core-visual-card core-visual-intelligence">
+
+                <span class="core-visual-label">
+                    Intelligence
+                </span>
+
+                <h3>
+                    Die KI versteht Inhalte.
+                </h3>
+
+                <p>
+                    Informationen werden miteinander verbunden und zu
+                    verständlichen Erkenntnissen strukturiert.
+                </p>
+
+                <div class="core-network-visual" aria-hidden="true">
+
+                    <span class="core-network-line core-line-1"></span>
+                    <span class="core-network-line core-line-2"></span>
+                    <span class="core-network-line core-line-3"></span>
+                    <span class="core-network-line core-line-4"></span>
+                    <span class="core-network-line core-line-5"></span>
+
+                    <span class="core-network-node core-node-1"></span>
+                    <span class="core-network-node core-node-2"></span>
+                    <span class="core-network-node core-node-3"></span>
+                    <span class="core-network-node core-node-4"></span>
+                    <span class="core-network-node core-node-5"></span>
+                    <span class="core-network-node core-node-6"></span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Memory -->
+
+            <article class="core-visual-card core-visual-memory">
+
+                <span class="core-visual-label">
+                    Memory
+                </span>
+
+                <h3>
+                    Wissen bleibt erhalten.
+                </h3>
+
+                <p>
+                    Erkenntnisse werden dauerhaft gespeichert und bleiben
+                    jederzeit auffindbar und wiederverwendbar.
+                </p>
+
+                <div class="core-memory-visual">
+
+                    <div>
+                        <span>Strategie Q2</span>
+                        <small>12 Erkenntnisse</small>
+                    </div>
+
+                    <div>
+                        <span>Kundenbedürfnisse</span>
+                        <small>8 Themen</small>
+                    </div>
+
+                    <div>
+                        <span>Roadmap Diskussion</span>
+                        <small>6 Entscheidungen</small>
+                    </div>
+
+                </div>
+
+            </article>
+
         </div>
 
-        <div class="feature-box">
-            <div class="feature-icon">📄</div>
-            <h3>MEMORY</h3>
-            <p>Wissen langfristig nutzbar machen. 
-                Alle Erkenntnisse fließen in eine durchsuchbare Wissensbasis und bleiben langfristig verfügbar – für zukünftige Projekte, neue Teams und wiederkehrende Fragestellungen. </p>
-            <span>✓ Wissen zentral speichern </span>
-            <span>✓ Inhalte jederzeit wiederfinden</span>
-            <span>✓ Erkenntnisse einfach weiterverwenden</span>
+
+        <!-- Abschlusstext -->
+
+        <div class="core-conclusion">
+
+            <p>
+                Gemeinsam bilden
+
+                <strong class="core-text-capture">
+                    Capture
+                </strong>,
+
+                <strong class="core-text-intelligence">
+                    Intelligence
+                </strong>
+
+                und
+
+                <strong class="core-text-memory">
+                    Memory
+                </strong>
+
+                die Grundlage für fundierte Entscheidungen, effizientere
+                Prozesse und nachhaltigen Mehrwert.
+            </p>
+
         </div>
+
     </div>
 
 </section>
