@@ -6,6 +6,12 @@
     <title>Landingpage</title>
 
     <link rel="stylesheet" href="style.css">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.25.19/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.25.19/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.25.19/dist/js/uikit-icons.min.js"></script>
     
 </head>
 
@@ -81,11 +87,11 @@
 
     </div>
 
-    <div class="problem-wrapper" >
+    <div class="problem-wrapper">
 
         <!-- Vorher -->
 
-        <div class="problem-before">
+        <div class="problem-before" uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay: 800">
 
             <div class="status before">
                 VORHER: Zusammenarbeit heute
@@ -122,7 +128,7 @@
 
         <!-- Pfeil -->
 
-        <div class="problem-arrow">
+        <div class="problem-arrow" uk-scrollspy="cls: uk-animation-fade; repeat: true; delay: 500">
 
             →
 
@@ -131,7 +137,7 @@
 
        <!-- Nachher -->
 
-        <div class="problem-after">
+        <div class="problem-after" uk-scrollspy="cls: uk-animation-slide-right; repeat: true; delay: 800">
 
             <div class="status after">
                 NACHHER: Zusammenarbeit mit Avelue
@@ -376,27 +382,27 @@
 
     </div>
 
-    <div class="solution-right">
+    <div class="solution-right" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
 
-        <div class="feature-card">
+        <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
             <span>01</span>
             <h3>Erfassen</h3>
             <p>Gespräche, Ideen und visuelle Inhalte werden automatisch erfasst.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
             <span>02</span>
             <h3>Verstehen</h3>
             <p> KI erkennt Themen, Zusammenhänge und Entscheidungen.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
             <span>03</span>
             <h3>Strukturieren</h3>
             <p> Erkenntnisse werden in klare Ergebnisse und Aufgaben überführt.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
             <span>04</span>
             <h3>Weiterentwickeln</h3>
             <p> Alle Erkenntnisse fließen in eine gemeinsame Wissensbasis und schaffen nachhaltigen Mehrwert.</p>
