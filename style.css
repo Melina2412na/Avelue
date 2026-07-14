@@ -548,6 +548,10 @@ button:hover{
     transform: translateY(-12px);
 }
 
+.comparison-card-highlight:hover {
+    border-color: #ff6428;
+}
+
 .comparison-label-highlight {
     color: var(--comparison-orange);
 }
