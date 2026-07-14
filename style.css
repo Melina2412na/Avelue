@@ -817,6 +817,13 @@ button:hover{
 
 }
 
+.step:hover .step-number{
+
+    background:#ff6b00;
+    color:white;
+
+}
+
 .step-icon{
 
     color:#ff6b35;
