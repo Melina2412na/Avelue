@@ -4338,6 +4338,10 @@ min-height:auto;
     border: 1px solid rgba(255,255,255,0.4);
 }
 
+.cta-btn.secondary:hover {
+    border-color: #ff6b00;
+}
+
 .cta-visual {
     width: 40%;
     display: flex;
