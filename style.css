@@ -4273,6 +4273,10 @@ min-height:auto;
     color: #14254d;
 }
 
+.faq-right summary:hover {
+    color: #ff6b00;
+}
+
 .faq-right details p {
     margin-top: 16px;
     color: #475569;
