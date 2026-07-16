@@ -1667,10 +1667,13 @@ function showUsecase(type) {
     </div>
 </section>
 
+<section class="cta" id="abschluss">
 
-<section class="cta" uk-scrollspy="cls:uk-animation-fade; delay: 800">
     <div class="cta-text">
-        <h2>Bereit für intelligentere Workshops?</h2>
+
+        <h2>
+            Bereit für intelligentere Workshops?
+        </h2>
 
         <p>
             Erleben Sie, wie Avelue Ihre Workshops automatisch erkennt,
@@ -1678,135 +1681,70 @@ function showUsecase(type) {
         </p>
 
         <div class="cta-buttons">
-            <a href="#" class="cta-btn primary">Demo anfordern</a>
-            <a href="#" class="cta-btn secondary">Kostenlos testen</a>
+
+            <a href="#" class="cta-btn primary">
+                Demo anfordern
+            </a>
+
+            <a href="#" class="cta-btn secondary">
+                Kostenlos testen
+            </a>
+
         </div>
+
     </div>
+
 
     <div class="cta-visual">
-        <img src="bilder/roboter.png" alt="Avelue Roboter">
-    </div>
-</section>
-<section class="project-study">
 
-    <div class="project-header" uk-scrollspy="cls:uk-animation-fade">
-        <p class="section-tag">PROJEKTSTUDIUM</p>
+        <div class="robot-track" aria-hidden="true"></div>
 
-        <h2>
-            Entwickelt im Rahmen<br>
-            unseres Projektstudiums.
-        </h2>
+        <img
+            src="Bilder/roboter.png"
+            alt="Temi-Roboter als intelligente Assistenz für Avelue"
+            class="cta-robot"
+        >
 
-        <p>
-            Avelue ist als gemeinsames Projekt von acht Studierenden entstanden.
-            Unser Ziel war es, eine moderne Lösung zu entwickeln, die Workshop-Wissen
-            sichtbar, strukturiert und langfristig nutzbar macht.
-        </p>
-    </div>
-
-    <div class="project-content">
-
-        <div class="project-info" uk-scrollspy="cls:uk-animation-fade">
-            <h3>Unser Projektteam</h3>
-
-            <p>
-                Von der ersten Idee über das Wireframing bis zur Umsetzung
-                haben wir Avelue gemeinsam geplant, gestaltet und entwickelt.
-            </p>
-
-            <div class="project-facts">
-                <div>
-                    <strong>8</strong>
-                    <span>Teammitglieder</span>
-                </div>
-
-                <div>
-                    <strong>1</strong>
-                    <span>gemeinsame Vision</span>
-                </div>
-
-                <div>
-                    <strong>100%</strong>
-                    <span>Projektstudium</span>
-                </div>
-            </div>
-        </div>
-
-    <div class="team-grid">
-
-        <div class="team-member" uk-scrollspy="cls:uk-animation-fade">
-            <img src="Bilder/AmaBild.jpeg" alt="Foto von Nana Amma Dewaa">
-            <h4>Nana Amma Dewaa</h4>
-            <span>Cluster </span>
-        </div>
-        <div class="team-member" uk-scrollspy="cls:uk-animation-fade; delay: 300">
-            <img src="Bilder/Danuella Bild.jpeg" alt="Foto von Danuella Njohndon">
-            <h4>Danuella Njohndon</h4>
-            <span>Cluster</span>
-        </div>
-
-        <div class="team-member" uk-scrollspy="cls:uk-animation-fade; delay: 600">
-            <img class="leonie-img" src="Bilder/LeonieBild.jpeg" alt="Foto von Leonie Schmidt">
-            <h4>Leonie Schmidt</h4>
-            <span>Cluster</span>
-        </div>
-
-        <div class="team-member" uk-scrollspy="cls:uk-animation-fade; delay: 900">
-            <img src="Bilder/MelinaBild.jpeg" alt="Foto von Melina Nakas">
-            <h4>Melina Nakas</h4>
-            <span>Cluster</span>
-        </div>
-
-        <div class="team-member" uk-scrollspy="cls:uk-animation-fade; delay: 1200">
-            <img src="Bilder/NoahBild.jpeg" alt="Foto von Noah Chaloupka">
-            <h4>Noah Chaloupka</h4>
-            <span>Cluster</span>
-        </div>
-
-        <div class="team-member" uk-scrollspy="cls:uk-animation-fade; delay: 1500">
-            <img src="Bilder/SudeBild.jpeg" alt="Foto von Sude Ümütlü">
-            <h4>Sude Ümütlü</h4>
-            <span>Cluster</span>
-        </div>
-
-        <div class="team-member" uk-scrollspy="cls:uk-animation-fade; delay: 1800">
-            <img src="Bilder/SuryBild.jpeg" alt="Foto von Surya Fiedler">
-            <h4>Surya Fiedler</h4>
-            <span>Cluster</span>
-        </div>
-
-        <div class="team-member" uk-scrollspy="cls:uk-animation-fade; delay: 2100">
-            <img src="Bilder/YasminBild.jpeg" alt="Foto von Yasmin Stroh">
-            <h4>Yasmin Stroh </h4>
-            <span>Cluster</span>
-        </div>
-    </div>
-
-</div>
-
-</section>
-<section class="presentation-section">
-
-    <div class="presentation-header" uk-scrollspy="cls:uk-animation-fade; delay: 500">
-        <p class="section-tag">PRÄSENTATION</p>
-
-        <h2>Unser Projekt als Präsentation.</h2>
-
-        <p>
-            Hier können Sie unsere Canva-Präsentation direkt ansehen
-            und durch die Folien klicken.
-        </p>
-    </div>
-
-    <div class="canva-wrapper">
-        <iframe 
-            src="https://canva.link/yppb1k6xo08r8id"
-            allowfullscreen="allowfullscreen"
-            allow="fullscreen">
-        </iframe>
     </div>
 
 </section>
+<script>
+    const ctaSection = document.querySelector(".cta");
+    const ctaRobot = document.querySelector(".cta-robot");
+
+    if (ctaSection && ctaRobot) {
+
+        const robotObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+                        ctaSection.classList.add("robot-active");
+                    } else {
+                        ctaSection.classList.remove("robot-active");
+
+                        /*
+                         * Animation sauber zurücksetzen,
+                         * damit sie beim erneuten Scrollen
+                         * wieder abgespielt wird.
+                         */
+                        ctaRobot.style.animation = "none";
+
+                        requestAnimationFrame(() => {
+                            ctaRobot.style.animation = "";
+                        });
+                    }
+
+                });
+            },
+            {
+                threshold: 0.55
+            }
+        );
+
+        robotObserver.observe(ctaSection);
+    }
+</script>
 </body>
 
 <footer>
