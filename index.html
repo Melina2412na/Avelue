@@ -1411,6 +1411,7 @@ Anonymisierte Verarbeitung, rollenbasierte Freigaben und Human-in-the-Loop schaf
     </div>
 
 </section>
+
 <section class="usecases" uk-scrollspy="cls:uk-animation-fade; delay: 500">
     <div class="usecases-header">
         <p class="section-tag">EINSATZBEREICHE</p>
@@ -1443,10 +1444,13 @@ Anonymisierte Verarbeitung, rollenbasierte Freigaben und Human-in-the-Loop schaf
 
            <div class="usecase-visual">
 
-    <img src="Bilder/LaptopBild.png" alt="Avelue Dashboard">
+    <img
+        id="usecase-image"
+        src="Bilder/WorkshopBild.png"
+        alt="Workshop mit Temi und mehreren Teilnehmenden"
+    >
 
-    </div>
-
+</div>
 </div>
         </div>
     </div>
@@ -1603,29 +1607,180 @@ function showUsecase(type) {
     </div>
 </section>
 
-<section class="vision">
+<section class="vision-network" id="vision">
 
-    <div class="vision-text" uk-scrollspy="cls:uk-animation-fade; delay: 500">
-        <p class="section-tag">UNSERE VISION</p>
+    <div class="vision-network-container">
 
-        <h2>
-            Wir glauben,<br>
-            dass Wissen niemals<br>
-            verloren gehen sollte.
-        </h2>
+        <!-- Linke Textseite -->
 
-        <p>
-            Avelue macht aus jedem Workshop dauerhaftes Wissen.
-            Unser Ziel ist eine Welt, in der Ideen, Entscheidungen
-            und Erkenntnisse verstanden, bewahrt und weiterentwickelt werden.
-        </p>
+        <div class="vision-network-copy">
 
-        <a href="#" class="vision-btn">Mehr über Avelue</a>
-    </div>
+            <span class="vision-network-eyebrow">
+                UNSERE VISION
+            </span>
 
-    <div class="vision-visual">
-        <div class="vision-circle"></div>
-        <img src="Bilder/roboter.png" alt="Avelue Roboter">
+            <h2>
+                Wir glauben,<br>
+                dass Wissen niemals<br>
+                verloren gehen sollte.
+            </h2>
+
+            <p>
+                Avelue macht aus jedem Workshop dauerhaftes Wissen.
+                Unser Ziel ist eine Welt, in der Ideen, Entscheidungen
+                und Erkenntnisse verstanden, bewahrt und
+                weiterentwickelt werden.
+            </p>
+
+            <a href="#" class="vision-network-button">
+                Mehr über Avelue
+            </a>
+
+        </div>
+
+
+        <!-- Rechte Visualisierung -->
+
+        <div class="vision-network-visual">
+
+            <!-- Verbindungskreise -->
+
+            <div class="vision-orbit vision-orbit-large"></div>
+            <div class="vision-orbit vision-orbit-small"></div>
+
+
+            <!-- Mittelpunkt -->
+
+            <div class="vision-center">
+
+                <div class="vision-center-logo">
+                    <span class="vision-logo-shape vision-logo-blue"></span>
+                    <span class="vision-logo-shape vision-logo-orange"></span>
+                </div>
+
+                <img
+                    src="Bilder/roboter.png"
+                    alt="Temi-Roboter als sichtbare KI-Assistenz von Avelue"
+                >
+
+            </div>
+
+
+            <!-- Gespräche -->
+
+            <article class="vision-node vision-node-talk">
+
+                <div class="vision-node-icon">
+                    💬
+                </div>
+
+                <div>
+                    <h3>Gespräche</h3>
+
+                    <p>
+                        Workshops, Meetings und Interviews werden erfasst.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Whiteboards -->
+
+            <article class="vision-node vision-node-whiteboard">
+
+                <div class="vision-node-icon">
+                    🖼
+                </div>
+
+                <div>
+                    <h3>Whiteboards</h3>
+
+                    <p>
+                        Ideen, Skizzen und Brainstormings bleiben erhalten.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Entscheidungen -->
+
+            <article class="vision-node vision-node-decisions">
+
+                <div class="vision-node-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <h3>Entscheidungen</h3>
+
+                    <p>
+                        Wichtige Entscheidungen werden nachvollziehbar.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Aufgaben -->
+
+            <article class="vision-node vision-node-tasks">
+
+                <div class="vision-node-icon">
+                    ☑
+                </div>
+
+                <div>
+                    <h3>Aufgaben & To-dos</h3>
+
+                    <p>
+                        Nächste Schritte werden erkannt und zugeordnet.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Wissensbasis -->
+
+            <article class="vision-node vision-node-memory">
+
+                <div class="vision-node-icon">
+                    📚
+                </div>
+
+                <div>
+                    <h3>Wissensbasis</h3>
+
+                    <p>
+                        Alles wird strukturiert, durchsuchbar und sicher.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Teams -->
+
+            <article class="vision-node vision-node-teams">
+
+                <div class="vision-node-icon">
+                    👥
+                </div>
+
+                <div>
+                    <h3>Teams profitieren</h3>
+
+                    <p>
+                        Wissen bleibt für alle verfügbar und nutzbar.
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+
     </div>
 
 </section>
