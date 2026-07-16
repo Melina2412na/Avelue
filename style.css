@@ -3683,15 +3683,30 @@ min-height:auto;
     margin-right: 10px;
 }
 
-.usecase-visual {
-    width: 45%;
-    height: 280px;
-    background: white;
-    border-radius: 24px;
-    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.usecase-visual{
+    width:100%;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:none;
+    padding:0;
+    border:none;
+    box-shadow:none;
+}
+.usecase-visual img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    display:block;
+
 }
 
 .screen {
@@ -3949,89 +3964,511 @@ min-height:auto;
 /* ===========================
    Vision
 =========================== */
+:root {
+    --vision-dark: #0d1d30;
+    --vision-text: #74808d;
+    --vision-orange: #ff642e;
+    --vision-light: #f6f8fa;
+    --vision-border: #e1e7ec;
+    --vision-white: #ffffff;
+}
 
-.vision {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 70px;
-    padding: 120px 70px;
-    background: #ffffff;
+* {
+    box-sizing: border-box;
+}
+
+
+/* Gesamte Section */
+
+.vision-network {
+    width: 100%;
+    padding: 110px 32px;
     overflow: hidden;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.vision-text {
-    width: 45%;
-}
+.vision-network-container {
+    width: min(1380px, 100%);
+    margin: 0 auto;
 
-.vision-text h2 {
-    font-size: 56px;
-    line-height: 1.1;
-    color: #14254d;
-    margin-bottom: 28px;
-}
-
-.vision-text p {
-    font-size: 20px;
-    line-height: 1.7;
-    color: #475569;
-    margin-bottom: 35px;
-}
-
-.vision-btn {
-    display: inline-block;
-    text-decoration: none;
-    background: #07172f;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 40px;
-    font-weight: 700;
-    transition: 0.3s ease;
-}
-
-.vision-btn:hover {
-    background: #ff6b00;
-    color: #fff;
-}
-
-.vision-visual {
-    width: 45%;
-    position: relative;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: minmax(340px, 0.72fr) minmax(700px, 1.28fr);
+    gap: 80px;
     align-items: center;
 }
 
-.vision-circle {
-    position: absolute;
-    width: 460px;
-    height: 460px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,107,0,0.22), rgba(255,107,0,0) 70%);
-    z-index: 0;
+
+/* Linker Textbereich */
+
+.vision-network-copy {
+    max-width: 560px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.vision-visual img {
-    width: 80%;
-    max-width: 420px;
+.vision-network-eyebrow {
+    display: block;
+    margin-bottom: 20px;
+
+    color: var(--vision-orange);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.vision-network-copy h2 {
+    margin: 0;
+
+    color: var(--vision-dark);
+    font-size: clamp(42px, 4.7vw, 66px);
+    font-weight: 700;
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+}
+
+.vision-network-copy > p {
+    max-width: 540px;
+    margin: 28px 0 0;
+
+    color: var(--vision-text);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.vision-network-button {
+    margin-top: 34px;
+    padding: 17px 25px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+    background: var(--vision-orange);
+
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.vision-network-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(255, 100, 46, 0.23);
+}
+
+
+/* Rechte Visualisierung */
+
+.vision-network-visual {
     position: relative;
-    z-index: 2;
+
+    width: 100%;
+    min-height: 690px;
+
+    border-radius: 34px;
+
+    background:
+        radial-gradient(
+            circle at 50% 48%,
+            rgba(255, 100, 46, 0.08),
+            transparent 34%
+        ),
+        #fbfcfd;
 }
 
-@media (max-width: 900px) {
-    .vision {
-        flex-direction: column;
-        text-align: center;
-        padding: 90px 25px;
+
+/* Umlaufbahnen */
+
+.vision-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border: 1px dashed #d9e1e7;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.vision-orbit-large {
+    width: 470px;
+    height: 470px;
+}
+
+.vision-orbit-small {
+    width: 290px;
+    height: 290px;
+
+    border-color: rgba(255, 100, 46, 0.22);
+}
+
+
+/* Zentrum */
+
+.vision-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+
+    width: 235px;
+    height: 430px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    transform: translate(-50%, -50%);
+}
+
+.vision-center img {
+    width: 210px;
+    max-height: 350px;
+
+    display: block;
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 22px 28px rgba(13, 29, 48, 0.2)
+    );
+}
+
+.vision-center-logo {
+    position: absolute;
+    top: 0;
+
+    width: 90px;
+    height: 90px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: #ffffff;
+
+    box-shadow: 0 15px 38px rgba(13, 29, 48, 0.12);
+}
+
+.vision-logo-shape {
+    position: absolute;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50% 50% 45% 55%;
+    opacity: 0.94;
+}
+
+.vision-logo-blue {
+    left: 18px;
+
+    background: var(--vision-dark);
+    transform: rotate(35deg);
+}
+
+.vision-logo-orange {
+    right: 18px;
+
+    background: var(--vision-orange);
+    transform: rotate(-35deg);
+}
+
+
+/* Wissenskarten */
+
+.vision-node {
+    position: absolute;
+    z-index: 5;
+
+    width: 260px;
+    min-height: 108px;
+    padding: 18px;
+
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 14px;
+    align-items: center;
+
+    border: 1px solid var(--vision-border);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.94);
+
+    box-shadow: 0 16px 38px rgba(13, 29, 48, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.vision-node::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+
+    width: 70px;
+    height: 1px;
+
+    background: repeating-linear-gradient(
+        to right,
+        rgba(255, 100, 46, 0.42) 0,
+        rgba(255, 100, 46, 0.42) 4px,
+        transparent 4px,
+        transparent 9px
+    );
+}
+
+.vision-node:hover {
+    z-index: 10;
+
+    border-color: rgba(255, 100, 46, 0.35);
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 22px 46px rgba(13, 29, 48, 0.14);
+}
+
+.vision-node-icon {
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+    background: #f3f6f8;
+
+    font-size: 19px;
+}
+
+.vision-node h3 {
+    margin: 0 0 6px;
+
+    color: var(--vision-dark);
+    font-size: 15px;
+    line-height: 1.25;
+}
+
+.vision-node p {
+    margin: 0;
+
+    color: var(--vision-text);
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+
+/* Linke Karten */
+
+.vision-node-talk {
+    top: 58px;
+    left: 18px;
+}
+
+.vision-node-whiteboard {
+    top: 245px;
+    left: -18px;
+}
+
+.vision-node-decisions {
+    bottom: 58px;
+    left: 26px;
+}
+
+.vision-node-talk::after,
+.vision-node-whiteboard::after,
+.vision-node-decisions::after {
+    right: -70px;
+}
+
+
+/* Rechte Karten */
+
+.vision-node-tasks {
+    top: 58px;
+    right: 18px;
+}
+
+.vision-node-memory {
+    top: 245px;
+    right: -18px;
+}
+
+.vision-node-teams {
+    right: 26px;
+    bottom: 58px;
+}
+
+.vision-node-tasks::after,
+.vision-node-memory::after,
+.vision-node-teams::after {
+    left: -70px;
+}
+
+
+/* Dezente Bewegung */
+
+.vision-center {
+    animation: visionRobotFloat 4.5s ease-in-out infinite;
+}
+
+@keyframes visionRobotFloat {
+    0%,
+    100% {
+        transform: translate(-50%, -50%);
     }
 
-    .vision-text,
-    .vision-visual {
+    50% {
+        transform: translate(-50%, calc(-50% - 6px));
+    }
+}
+
+
+/* Tablet */
+
+@media (max-width: 1200px) {
+    .vision-network-container {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-network-copy {
+        max-width: 760px;
+    }
+
+    .vision-network-visual {
+        min-height: 720px;
+    }
+}
+
+
+/* Kleinere Tablets */
+
+@media (max-width: 900px) {
+    .vision-network {
+        padding: 85px 24px;
+    }
+
+    .vision-network-visual {
+        min-height: auto;
+        padding: 35px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .vision-orbit {
+        display: none;
+    }
+
+    .vision-center {
+        position: relative;
+        top: auto;
+        left: auto;
+
+        width: 100%;
+        height: 420px;
+
+        grid-column: 1 / -1;
+
+        transform: none;
+    }
+
+    .vision-center {
+        animation: none;
+    }
+
+    .vision-center-logo {
+        top: 8px;
+    }
+
+    .vision-node,
+    .vision-node-talk,
+    .vision-node-whiteboard,
+    .vision-node-decisions,
+    .vision-node-tasks,
+    .vision-node-memory,
+    .vision-node-teams {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+
         width: 100%;
     }
 
-    .vision-text h2 {
+    .vision-node::after {
+        display: none;
+    }
+}
+
+
+/* Smartphone */
+
+@media (max-width: 650px) {
+    .vision-network {
+        padding: 70px 20px;
+    }
+
+    .vision-network-copy h2 {
         font-size: 40px;
+    }
+
+    .vision-network-copy > p {
+        font-size: 16px;
+    }
+
+    .vision-network-visual {
+        padding: 22px;
+
+        grid-template-columns: 1fr;
+
+        border-radius: 24px;
+    }
+
+    .vision-center {
+        height: 350px;
+        grid-column: auto;
+    }
+
+    .vision-center img {
+        width: 180px;
+        max-height: 290px;
+    }
+
+    .vision-center-logo {
+        width: 72px;
+        height: 72px;
+    }
+
+    .vision-logo-shape {
+        width: 34px;
+        height: 34px;
+    }
+
+    .vision-logo-blue {
+        left: 14px;
+    }
+
+    .vision-logo-orange {
+        right: 14px;
+    }
+
+    .vision-node {
+        min-height: auto;
     }
 }
 
