@@ -35,24 +35,30 @@ body{
 
 /* Header */
 header{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
 
     padding:20px 60px;
-    background:white;
-}
-
-
-
-.nav-wrapper{
-    position: sticky;
-    top: 0;
-    z-index:1000;
 
     background:rgba(255,255,255,.95);
+
     backdrop-filter:blur(15px);
     -webkit-backdrop-filter:blur(15px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
 }
 
 
@@ -61,6 +67,14 @@ header{
     display: flex;
     align-items: center;
     gap: 0px;
+    text-decoration:none;
+    color:inherit;
+}
+
+.logo:hover{
+
+    text-decoration:none;
+
 }
 
 .logo img{
