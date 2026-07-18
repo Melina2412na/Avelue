@@ -5770,6 +5770,7 @@ height:420px;
     .hero-buttons {
         flex-direction: column;
         gap: 18px;
+        display: flex;
     }
 
     .hero-buttons button {
@@ -5780,16 +5781,94 @@ height:420px;
         font-weight: 600;
     }
 
-    .hero-buttons button:first-child {
-        background: #020817;
-        color: #ffffff;
-    }
+    .hero-btn-primary,
+    .hero-btn-secondary{
 
-    .hero-buttons button:last-child {
-        background: #ffffff;
-        color: #020817;
-        border: 1px solid #cbd5e1;
+        min-width:190px;
+        height:56px;
+
+        padding:0 32px;
+
+        border-radius:40px;
+
+        font-size:16px;
+        font-weight:600;
+
+        cursor:pointer;
+
+        transition:.3s ease;
+
     }
+}
+
+.hero-btn-primary{
+
+    background:#ff6b00;
+    color:white;
+
+    border:none;
+
+}
+
+.hero-btn-primary:hover{
+
+    background:#e45f00;
+
+    transform:translateY(-2px);
+
+}
+
+.hero-btn-secondary{
+
+    background:white;
+
+    color:#14254d;
+
+    border:1px solid #d9e1ea;
+
+}
+
+.hero-btn-secondary:hover{
+
+    background:#14254d;
+
+    color:white;
+
+    border-color:#14254d;
+
+    transform:translateY(-2px);
+
+}
+
+.hero-buttons .hero-btn-primary{
+
+    background:#ff6b00 !important;
+    color:white;
+
+}
+
+.hero-buttons .hero-btn-primary:hover{
+
+    background:#e45f00 !important;
+
+}
+
+.hero-buttons .hero-btn-secondary{
+
+    background:white !important;
+
+    color:#14254d !important;
+
+    border:1px solid #d9e1ea;
+
+}
+
+.hero-buttons .hero-btn-secondary:hover{
+
+    border-color:#14254d !important;
+
+    color:#14254d !important;
+
 }
 
 /* =========================================
