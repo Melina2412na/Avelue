@@ -1869,6 +1869,10 @@ min-height:auto;
     text-decoration: none;
 }
 
+.app-prototype-link:hover {
+color: #ff642e;
+}
+
 .app-prototype-link span {
     color: #ff642e;
     transition: transform 0.25s ease;
@@ -3017,6 +3021,7 @@ min-height:auto;
     color: var(--core-white);
 }
 
+
 .core-visual-intelligence {
     border: 1px solid var(--core-border);
     background: var(--core-white);
@@ -4076,6 +4081,7 @@ min-height:auto;
 .vision-network-button:hover {
     transform: translateY(-4px);
     box-shadow: 0 14px 30px rgba(255, 100, 46, 0.23);
+    color: #ffffff;
 }
 
 
@@ -4628,7 +4634,7 @@ min-height:auto;
 }
 
 .cta-btn.secondary:hover {
-    border-color: #ffffff;
+    border-color: #ff642e;
 }
 
 
