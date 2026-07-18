@@ -5781,24 +5781,30 @@ height:420px;
         font-weight: 600;
     }
 
-    .hero-btn-primary,
-    .hero-btn-secondary{
+.hero-buttons{
 
-        min-width:190px;
-        height:56px;
+    display:flex;
+    gap:15px;
 
-        padding:0 32px;
+}
 
-        border-radius:40px;
+.hero-btn-primary,
+.hero-btn-secondary{
 
-        font-size:16px;
-        font-weight:600;
+    min-width:190px;
+    height:56px;
 
-        cursor:pointer;
+    padding:0 32px;
 
-        transition:.3s ease;
+    border-radius:40px;
 
-    }
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
 }
 
 .hero-btn-primary{
@@ -5865,9 +5871,9 @@ height:420px;
 
 .hero-buttons .hero-btn-secondary:hover{
 
-    border-color:#14254d !important;
+    background:#14254d !important;
 
-    color:#14254d !important;
+    color:white !important;
 
 }
 
