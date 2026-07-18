@@ -5765,3 +5765,151 @@ height:420px;
         border: 1px solid #cbd5e1;
     }
 }
+
+/* =========================================
+   EINHEITLICHE TYPOGRAFIE
+========================================= */
+
+:root {
+    --font-main: Arial, Helvetica, sans-serif;
+
+    --color-heading: #14254d;
+    --color-text: #64748b;
+    --color-accent: #ff6b00;
+
+    --size-section-title: clamp(42px, 5vw, 58px);
+    --size-section-text: 18px;
+    --size-eyebrow: 14px;
+    --size-card-title: 24px;
+}
+
+
+/* Einheitliche Schriftart */
+
+body,
+button,
+input,
+textarea,
+select {
+    font-family: var(--font-main);
+}
+
+
+/* Alle großen Abschnittsüberschriften */
+
+.problem-header h2,
+.comparison-heading h2,
+.solution-left h2,
+.temi-text h2,
+.workflow h2,
+.app-heading h2,
+.video-header h2,
+.core-heading h2,
+.value-intro h2,
+.trust-header h2,
+.usecases-header h2,
+.pricing-header h2,
+.vision-network-copy h2,
+.faq-left h2,
+.av-project-header h2,
+.av-presentation-header h2 {
+    color: var(--color-heading);
+    font-size: var(--size-section-title);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+
+/* Kleine Überschriften über den großen Überschriften */
+
+.problem-tag,
+.comparison-eyebrow,
+.solution-tag,
+.temi-eyebrow,
+.workflow-tag,
+.app-eyebrow,
+.section-tag,
+.core-eyebrow,
+.vision-network-eyebrow,
+.av-project-eyebrow,
+.av-presentation-eyebrow {
+    color: var(--color-accent);
+    font-size: var(--size-eyebrow);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+/* Beschreibungstexte unter den Überschriften */
+
+.problem-text,
+.comparison-heading p,
+.solution-text,
+.temi-description,
+.workflow-intro,
+.app-heading p,
+.video-header p:last-child,
+.core-heading > p,
+.value-intro p,
+.trust-header > p,
+.usecases-header > p,
+.pricing-header > p,
+.vision-network-copy > p,
+.faq-left > p,
+.av-project-header > p,
+.av-presentation-header > p {
+    color: var(--color-text);
+    font-size: var(--size-section-text);
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+
+/* Überschriften in Karten */
+
+.solution-card h3,
+.feature-card h3,
+.temi-feature h3,
+.step h3,
+.core-visual-card h3,
+.security-card h3,
+#usecase-text h3,
+.price-card h3,
+.av-project-info-card h3
+
+ {
+    color: var(--color-heading);
+    font-size: var(--size-card-title);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+/* Kleine orange Abschnittsüberschriften erzwingen */
+
+.faq-left p.section-tag,
+.trust-header p.section-tag,
+.usecases-header p.section-tag,
+.pricing-header p.section-tag,
+.trusted p.section-tag {
+    color: #ff6b00;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    :root {
+        --size-section-title: 40px;
+        --size-section-text: 16px;
+        --size-card-title: 22px;
+    }
+
+}
