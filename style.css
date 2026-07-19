@@ -102,6 +102,7 @@ nav a:hover{
     color:orange;
 }
 
+
 /* Button */
 button{
     background:#ff6b00;
@@ -114,7 +115,18 @@ button{
 
 button:hover{
     background:#e45f00;
+    text-decoration:none;
 }
+
+button > a {
+    color: #fff;
+}
+
+button > a:hover {
+    color: #fff;
+    text-decoration:none;
+}
+
 
 .hero {
     display: flex;
@@ -984,11 +996,13 @@ min-height:auto;
     text-decoration:none;
     border-radius:40px;
     transition:.3s;
+    
 }
 
 .solution-btn:hover{
     background:#ff6b00;
     color:#fff;
+    text-decoration:none;
 }
 
 /* Mitte */
@@ -1829,6 +1843,10 @@ min-height:auto;
     color: #74808d;
     font-size: 15px;
     line-height: 1.65;
+}
+
+.app-prototype-info > a:hover {
+    text-decoration: none;
 }
 
 .app-prototype-features {
@@ -3951,6 +3969,7 @@ color: #ff642e;
 .price-btn:hover {
     background: #e45f00;
     color: #fff;
+    text-decoration: none;
 }
 
 .price-btn.secondary {
@@ -4082,6 +4101,7 @@ color: #ff642e;
     transform: translateY(-4px);
     box-shadow: 0 14px 30px rgba(255, 100, 46, 0.23);
     color: #ffffff;
+    text-decoration: none;
 }
 
 
@@ -4620,6 +4640,7 @@ color: #ff642e;
 
 .cta-btn:hover {
     transform: translateY(-4px);
+    text-decoration: none;
 }
 
 .cta-btn.primary {
