@@ -5038,8 +5038,8 @@ color: #ff642e;
     margin: 18px auto 0;
 
     color: #7e8997;
-    font-size: 13px;
-    line-height: 1.65;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 
@@ -5080,8 +5080,8 @@ color: #ff642e;
     margin: 0 0 28px;
 
     color: #7c8795;
-    font-size: 12px;
-    line-height: 1.65;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 
@@ -5118,7 +5118,7 @@ color: #ff642e;
 
 .av-project-fact span {
     color: #4f6380;
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.25;
 }
@@ -5181,7 +5181,7 @@ color: #ff642e;
     margin: 0;
 
     color: #263c63;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.35;
 }
