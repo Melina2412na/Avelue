@@ -39,7 +39,7 @@
         </nav>
     </div>
 
-    <button><a href="#abschluss">Kontakt aufnehmen</a></button>
+    <button onclick="openContactModal()"><a>Kontakt aufnehmen</a></button>
 
 </header>
 
@@ -1569,7 +1569,7 @@ function showUsecase(type) {
 
         <div class="price-card" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 300;">
             <h3>Starter</h3>
-            <p class="price-subtitle">Kostenlos testen</p>
+            <p class="price-subtitle" onclick="openContactModal()">Kostenlos testen</p>
 
             <div class="price">0 €</div>
 
@@ -1580,7 +1580,7 @@ function showUsecase(type) {
                 <li>E-Mail Support</li>
             </ul>
 
-            <a href="#" class="price-btn secondary">Kostenlos starten</a>
+            <a class="price-btn secondary" onclick="openContactModal()">Kostenlos starten</a>
         </div>
 
         <div class="price-card highlight" uk-scrollspy="cls: uk-animation-slide-top; delay: 300;">
@@ -1599,7 +1599,7 @@ function showUsecase(type) {
                 <li>Priorisierter Support</li>
             </ul>
 
-            <a href="#" class="price-btn">Jetzt starten</a>
+            <a class="price-btn" onclick="openContactModal()">Jetzt starten</a>
         </div>
 
         <div class="price-card" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 300;">
@@ -1615,7 +1615,7 @@ function showUsecase(type) {
                 <li>Persönlicher Support</li>
             </ul>
 
-            <a href="#" class="price-btn secondary">Kontakt aufnehmen</a>
+            <a class="price-btn secondary" onclick="openContactModal()">Kontakt aufnehmen</a>
         </div>
 
     </div>
@@ -1851,14 +1851,16 @@ function showUsecase(type) {
         </p>
 
         <div class="cta-buttons">
-
-            <a href="#" class="cta-btn primary">
-                Kontakt aufnehmen
-            </a>
-
-            <a href="#" class="cta-btn secondary">
-                Kostenlos testen
-            </a>
+            <button class="cta-btn primary" onclick="openContactModal()">
+                <a>
+                    Kontakt aufnehmen
+                </a>
+            </button>
+            <button class="cta-btn secondary" onclick="openContactModal()">
+                <a>
+                    Kostenlos testen
+                </a>
+            </button>
 
         </div>
 
@@ -2046,6 +2048,135 @@ function showUsecase(type) {
         robotObserver.observe(ctaSection);
     }
 </script>
+
+<!-- Kontaktformular Modal -->
+<div class="contact-modal-overlay" id="contactModal" aria-hidden="true">
+  <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <button class="contact-modal-close" onclick="closeContactModal()" aria-label="Schließen">&times;</button>
+
+    <h2 id="contactModalTitle">Kontakt aufnehmen</h2>
+    <p class="contact-modal-sub">Wir melden uns schnellstmöglich bei Ihnen zurück.</p>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="form-group">
+        <label for="cf-name">Name <span class="req">*</span></label>
+        <input type="text" id="cf-name" name="name" required>
+        <small class="form-error" data-for="cf-name">Bitte geben Sie Ihren Namen an.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="cf-email">E-Mail <span class="req">*</span></label>
+        <input type="email" id="cf-email" name="email" required>
+        <small class="form-error" data-for="cf-email">Bitte geben Sie eine gültige E-Mail-Adresse an.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="cf-company">Unternehmen</label>
+        <input type="text" id="cf-company" name="company">
+      </div>
+
+      <div class="form-group">
+        <label for="cf-message">Ihr Anliegen <span class="req">*</span></label>
+        <textarea id="cf-message" name="message" rows="5" required></textarea>
+        <small class="form-error" data-for="cf-message">Bitte beschreiben Sie kurz Ihr Anliegen.</small>
+      </div>
+
+      <div class="form-check">
+        <label>
+          <input type="checkbox" id="cf-agb" name="agb" required>
+          Ich habe die AGB und Datenschutzbedingungen gelesen. <span class="req">*</span>
+        </label>
+        <small class="form-error" data-for="cf-agb">Bitte bestätigen Sie die AGB und Datenschutzbedingungen.</small>
+      </div>
+
+      <div class="form-check">
+        <label>
+          <input type="checkbox" id="cf-news" name="newsletter">
+          Ich möchte Newsletter und Infos per Mail erhalten.
+        </label>
+      </div>
+
+      <button type="submit" class="contact-submit">Absenden</button>
+    </form>
+
+    <!-- Erfolgs-Toast -->
+    <div class="contact-success" id="contactSuccess">
+      <i class="fa-solid fa-circle-check"></i>
+      <span>Ihre Anfrage wurde verschickt. Vielen Dank!</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = () => document.getElementById('contactModal');
+
+  function openContactModal() {
+    modal().classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeContactModal() {
+    modal().classList.remove('is-open');
+    document.body.style.overflow = '';
+    // Reset nach Animation
+    setTimeout(() => {
+      const f = document.getElementById('contactForm');
+      f.reset();
+      document.querySelectorAll('.contact-form .form-error.show').forEach(e => e.classList.remove('show'));
+      document.querySelectorAll('.contact-form .invalid').forEach(e => e.classList.remove('invalid'));
+      document.getElementById('contactSuccess').classList.remove('show');
+      document.getElementById('contactForm').style.display = '';
+    }, 350);
+  }
+
+  // Schließen bei Klick auf Overlay
+  document.addEventListener('click', (e) => {
+    if (e.target.id === 'contactModal') closeContactModal();
+  });
+  // Schließen mit ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal().classList.contains('is-open')) closeContactModal();
+  });
+
+  // Validierung + Submit
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const fields = [
+      { id: 'cf-name',    test: v => v.trim().length > 1 },
+      { id: 'cf-email',   test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+      { id: 'cf-message', test: v => v.trim().length > 3 },
+    ];
+    let ok = true;
+    fields.forEach(f => {
+      const el = document.getElementById(f.id);
+      const err = document.querySelector(`.form-error[data-for="${f.id}"]`);
+      if (!f.test(el.value)) { ok = false; el.classList.add('invalid'); err.classList.add('show'); }
+      else { el.classList.remove('invalid'); err.classList.remove('show'); }
+    });
+    const agb = document.getElementById('cf-agb');
+    const agbErr = document.querySelector('.form-error[data-for="cf-agb"]');
+    if (!agb.checked) { ok = false; agbErr.classList.add('show'); }
+    else { agbErr.classList.remove('show'); }
+
+    if (!ok) return;
+
+    // Erfolg anzeigen
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('contactSuccess').classList.add('show');
+    setTimeout(closeContactModal, 1800);
+  });
+
+  // Fehler live entfernen bei Eingabe
+  document.querySelectorAll('#contactForm input, #contactForm textarea').forEach(el => {
+    el.addEventListener('input', () => {
+      el.classList.remove('invalid');
+      const err = document.querySelector(`.form-error[data-for="${el.id}"]`);
+      if (err) err.classList.remove('show');
+    });
+  });
+</script>
+
+
+
 </body>
 
 <footer>
