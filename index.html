@@ -65,7 +65,7 @@
                 Kontakt aufnehmen
             </button>
 
-            <button class="hero-btn-secondary" onclick="openContactModal()">
+            <button class="hero-btn-secondary" onclick="openInfoModal()">
                 Mehr erfahren
             </button>
 
@@ -2110,6 +2110,33 @@ function showUsecase(type) {
   </div>
 </div>
 
+<!-- Info / "In Bearbeitung" Modal -->
+<div class="contact-modal-overlay" id="infoModal" aria-hidden="true">
+  <div class="contact-modal info-modal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
+    <button class="contact-modal-close" onclick="closeInfoModal()" aria-label="Schließen">&times;</button>
+
+    <div class="info-modal-icon">
+      <i class="fa-solid fa-helmet-safety"></i>
+    </div>
+
+    <h2 id="infoModalTitle">Hier entsteht gerade etwas Neues</h2>
+    <p class="contact-modal-sub">
+      Diese Unterseite befindet sich noch im Aufbau. Avelue ist aktuell ein Prototyp –
+      wir arbeiten mit Hochdruck daran, die weiterführenden Inhalte zu „Mehr erfahren" 
+      in den kommenden Wochen bereitzustellen.
+    </p>
+    <p class="contact-modal-sub">
+      Sie haben schon jetzt Fragen oder möchten mehr über Avelue erfahren? 
+      Nehmen Sie gerne direkt Kontakt mit uns auf – wir freuen uns auf den Austausch.
+    </p>
+
+    <button type="button" class="contact-submit info-modal-cta" onclick="switchToContactModal()">
+      Kontakt aufnehmen
+    </button>
+  </div>
+</div>
+
+
 <script>
   const modal = () => document.getElementById('contactModal');
 
@@ -2176,6 +2203,33 @@ function showUsecase(type) {
       if (err) err.classList.remove('show');
     });
   });
+
+  // ==== Info-Modal ("Mehr erfahren") ====
+  const infoModal = () => document.getElementById('infoModal');
+
+  function openInfoModal() {
+    infoModal().classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeInfoModal() {
+    infoModal().classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  function switchToContactModal() {
+    closeInfoModal();
+    // Warten, bis die Schließ-Animation durch ist, dann Kontaktformular öffnen
+    setTimeout(openContactModal, 380);
+  }
+
+  // Overlay-Klick schließt Info-Modal
+  document.addEventListener('click', (e) => {
+    if (e.target.id === 'infoModal') closeInfoModal();
+  });
+  // ESC schließt Info-Modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && infoModal().classList.contains('is-open')) closeInfoModal();
+  });
+
 </script>
 
 
