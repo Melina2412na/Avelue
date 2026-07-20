@@ -4964,6 +4964,12 @@ letter-spacing: -0.04em;
 .footer-logo-link:hover {
     text-decoration: none;
 }
+.footer-logo a h2:hover{
+
+    text-decoration:none;
+
+}
+
 
 .team-member:hover{
 
