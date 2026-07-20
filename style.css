@@ -457,12 +457,14 @@ button > a:hover {
 
 .comparison-eyebrow {
     display: inline-block;
-    margin-bottom: 18px;
+    margin-bottom: 20;
     color: var(--comparison-orange);
-    font-size: 13px;
+    font-size: 14x;
     font-weight: 700;
     letter-spacing: 0.18em;
 }
+ 
+
 
 .comparison-heading {
     margin-bottom: 48px;
@@ -746,11 +748,12 @@ button > a:hover {
 .workflow-tag{
 
     color:#ff6b35;
-    font-size:13px;
+    font-size:14px;
     font-weight:700;
     letter-spacing:.18em;
 
 }
+ 
 
 .workflow h2{
 
@@ -960,19 +963,10 @@ min-height:auto;
     font-size:14px;
     margin-bottom:20px;
     position:relative;
-    padding-left:60px;
+    padding-left:0px;
 }
 
-.solution-tag::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:50%;
-    width:40px;
-    height:3px;
-    background:#ff6b00;
-    transform:translateY(-50%);
-}
+
 
 .solution-left h2{
     font-size:60px;
@@ -1770,7 +1764,7 @@ min-height:auto;
     margin-bottom: 20px;
 
     color: #ff642e;
-    font-size: 13px;
+    font-size: 14x;
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
