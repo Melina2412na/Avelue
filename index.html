@@ -354,10 +354,25 @@
 
         </div>
 
-
-
-
     </div>
+
+    <div class="compare-actions">
+    <button class="hero-btn-secondary" onclick="openLightbox([
+        './workshop.png',
+        './workshop.png',
+        './workshop.png'
+    ])">
+        Wettbewerbsanalyse
+    </button>
+
+    <button class="hero-btn-secondary" onclick="openLightbox([
+        'bilder/preise-slide-1.jpg',
+        'bilder/preise-slide-2.jpg'
+    ])">
+        Zielgruppe
+    </button>
+</div>
+
 
 </section>
 
@@ -2230,8 +2245,66 @@ function showUsecase(type) {
     if (e.key === 'Escape' && infoModal().classList.contains('is-open')) closeInfoModal();
   });
 
+
+
+
+let lightboxImages = [];
+let lightboxIndex = 0;
+
+function openLightbox(images){
+    // images = Array von Bild-URLs, ODER ein einzelner String
+    lightboxImages = Array.isArray(images) ? images : [images];
+    lightboxIndex = 0;
+    updateLightbox();
+    const overlay = document.getElementById('lightboxOverlay');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+    const overlay = document.getElementById('lightboxOverlay');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+function closeLightboxOnBg(e){
+    if(e.target.id === 'lightboxOverlay') closeLightbox();
+}
+function lightboxPrev(){
+    lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
+    updateLightbox();
+}
+function lightboxNext(){
+    lightboxIndex = (lightboxIndex + 1) % lightboxImages.length;
+    updateLightbox();
+}
+function updateLightbox(){
+    document.getElementById('lightboxImage').src = lightboxImages[lightboxIndex];
+    document.getElementById('lightboxCounter').textContent =
+        lightboxImages.length > 1 ? `${lightboxIndex + 1} / ${lightboxImages.length}` : '';
+    const showArrows = lightboxImages.length > 1;
+    document.querySelector('.lightbox-prev').style.display = showArrows ? 'flex' : 'none';
+    document.querySelector('.lightbox-next').style.display = showArrows ? 'flex' : 'none';
+}
+// ESC-Taste + Pfeiltasten
+document.addEventListener('keydown', (e) => {
+    if(!document.getElementById('lightboxOverlay').classList.contains('active')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') lightboxPrev();
+    if(e.key === 'ArrowRight') lightboxNext();
+});
 </script>
 
+</script>
+
+<!-- ===== Wiederverwendbare Lightbox ===== -->
+<div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightboxOnBg(event)">
+    <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Schließen">✕</button>
+        <button class="lightbox-arrow lightbox-prev" onclick="lightboxPrev()" aria-label="Zurück">‹</button>
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        <button class="lightbox-arrow lightbox-next" onclick="lightboxNext()" aria-label="Weiter">›</button>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+</div>
 
 
 </body>
