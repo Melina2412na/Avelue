@@ -4888,8 +4888,9 @@ letter-spacing: -0.04em;
 
 .project-content {
     display: flex;
-    gap: 50px;
     align-items: center;
+    justify-content:center;
+    margin-top:60px;
 }
 
 .project-info {
