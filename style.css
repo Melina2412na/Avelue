@@ -241,7 +241,7 @@ button > a:hover {
 }
 
 .problem {
-    padding: 110px 70px;
+    padding: 120px 70px;
     background: #ffffff;
 }
 
@@ -445,14 +445,15 @@ button > a:hover {
 
 .comparison-section {
     width: 100%;
-    padding: 90px 32px;
+    padding: 90px 70px;
     background: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .comparison-container {
-    width: min(1240px, 100%);
-    margin: 0 auto;
+    max-width: 1400px;
+margin: 0 auto;
+   
 }
 
 .comparison-eyebrow {
@@ -739,9 +740,8 @@ button > a:hover {
 }
 
 .workflow-container{
-
-    max-width:1400px;
-    margin:auto;
+max-width: 1400px;
+margin: 0 auto;
 
 }
 
@@ -960,7 +960,7 @@ min-height:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:80px 70px;
+    padding:120px 70px;
     background:#fff;
     gap:60px;
 }
@@ -1757,14 +1757,15 @@ min-height:auto;
 ============================*/
 .app-section {
     width: 100%;
-    padding: 100px 32px;
+    padding: 100px 70px;
     background: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .app-container {
-    width: min(1380px, 100%);
-    margin: 0 auto;
+    max-width: 1400px;
+margin: 0 auto;
+    
 }
 
 
@@ -2059,13 +2060,13 @@ color: #ff642e;
 
 .temi-section {
     width: 100%;
-    padding: 70px 32px;
+    padding: 120px 70px;
     background: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .temi-content {
-    width: min(1180px, 100%);
+   max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
@@ -2498,7 +2499,7 @@ color: #ff642e;
 }
 
 .core-container {
-    width: min(1240px, 100%);
+     max-width: 1400px;
     margin: 0 auto;
 }
 
