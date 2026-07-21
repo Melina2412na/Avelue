@@ -6572,3 +6572,73 @@ section{
     .lightbox-next{ right: 5px; }
     .lightbox-close{ top: -45px; right: 0; }
 }
+
+
+
+/* =========================================
+   Team-Karten Flip
+========================================= */
+.team-member {
+    padding: 0;                 /* Padding wandert auf die Seiten */
+    perspective: 1200px;
+    overflow: hidden;           /* damit die Rückseite beim Flippen nicht rausblitzt */
+}
+
+.team-member .card-inner {
+    position: relative;
+    width: 100%;
+    min-height: 420px;          /* gleiche Höhe wie zuvor min-height der Karte */
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+/* Desktop: Hover flippt */
+@media (hover: hover) {
+    .team-member:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Touch / kein Hover: per .is-flipped Klasse (durch JS) */
+.team-member.is-flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 35px 22px;         /* identisch zum ursprünglichen .team-member padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 22px;
+    background: white;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    justify-content: center;    /* Text mittig auf der Rückseite */
+}
+
+.card-back p {
+    /* Gleicher Stil wie .description auf der Vorderseite */
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Auf Mobile die feste Höhe beibehalten (nicht auto), damit die Karte
+   auch nach dem Flip immer gleich groß bleibt */
+@media (max-width: 650px) {
+    .team-member .card-inner {
+        min-height: 420px;
+    }
+}
