@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,450 +12,232 @@
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.25.19/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.25.19/dist/js/uikit-icons.min.js"></script>
-
+    
 </head>
 
 <body id="top">
 
-    <header class="main-header">
+<header class="main-header">
 
-        <a href="#top" class="logo">
+<a href="#top" class="logo">
 
-            <img src="Bilder/logo.png" alt="Avelue Logo">
+    <img src="Bilder/logo.png" alt="Avelue Logo">
 
-            <h2>Avelue</h2>
+    <h2>Avelue</h2>
 
-        </a>
+</a>
 
-        <div class="nav-wrapper">
-            <nav>
-                <a href="#loesung">Lösung</a>
-                <a href="#kernkompetenzen">Funktionen</a>
-                <a href="#einsatzbereiche">Einsatzbereiche</a>
-                <a href="#preise">Preise</a>
-                <a href="#projektstudium">Über uns</a>
-                <a href="#abschluss">Kontakt</a>
-            </nav>
+    <div class="nav-wrapper">
+        <nav>
+            <a href="#loesung">Lösung</a>
+            <a href="#kernkompetenzen">Funktionen</a>
+            <a href="#einsatzbereiche">Einsatzbereiche</a>
+            <a href="#preise">Preise</a>
+            <a href="#projektstudium">Über uns</a>
+            <a href="#abschluss">Kontakt</a>
+        </nav>
+    </div>
+
+    <button onclick="openContactModal()"><a>Kontakt aufnehmen</a></button>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>  Transform <br>conversations <br> into lasting value.  <br>
+            
+        </h1>
+
+
+        <p>
+           <span> Deliver structured insights, premium documentation and lasting value that goes far beyond the session itself. </span>  <br>
+            Avelue begleitet jede Form der Zusammenarbeit: Von der ersten Idee bis zur nachhaltigen Wissensbasis. Gespräche, 
+            visuelle Inhalte und Entscheidungen werden intelligent erfasst, strukturiert aufbereitet und langfristig nutzbar gemacht.
+             So entstehen fundierte Entscheidungen, effizientere Zusammenarbeit und nachhaltiger Mehrwert – unterstützt durch KI und 
+             robotische Assistenz, die Technologie sichtbar und vertrauenswürdig macht.  
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="hero-btn-primary" onclick="openContactModal()">
+                Kontakt aufnehmen
+            </button>
+
+            <button class="hero-btn-secondary" onclick="openInfoModal()">
+                Mehr erfahren
+            </button>
+
         </div>
 
-        <button onclick="openContactModal()"><a>Kontakt aufnehmen</a></button>
-
-    </header>
-
-    <section class="hero">
-
-        <div class="hero-text">
-
-            <h1> Transform <br>conversations <br> into lasting value. <br>
-
-            </h1>
-
-
-            <p>
-                <span> Deliver structured insights, premium documentation and lasting value that goes far beyond the
-                    session itself. </span> <br>
-                Avelue begleitet jede Form der Zusammenarbeit: Von der ersten Idee bis zur nachhaltigen Wissensbasis.
-                Gespräche,
-                visuelle Inhalte und Entscheidungen werden intelligent erfasst, strukturiert aufbereitet und langfristig
-                nutzbar gemacht.
-                So entstehen fundierte Entscheidungen, effizientere Zusammenarbeit und nachhaltiger Mehrwert –
-                unterstützt durch KI und
-                robotische Assistenz, die Technologie sichtbar und vertrauenswürdig macht.
-            </p>
-
-            <div class="hero-buttons">
-
-                <button class="hero-btn-primary" onclick="openContactModal()">
-                    Kontakt aufnehmen
-                </button>
-
-                <button class="hero-btn-secondary" onclick="openInfoModal()">
-                    Mehr erfahren
-                </button>
-
-            </div>
-
-            <div>
-                <button class="hero-btn-secondary" onclick="openLightbox([
+        <div>
+            <button class="hero-btn-secondary" onclick="openLightbox([
             './workshop-chaos.png',
             './workshop.png'
             ])" style="margin-top: 20px;">
-                    Markenname
-                </button>
-            </div>
-
+                Markenname
+            </button>
         </div>
 
-        <!-- 
+    </div>
+
+<!-- 
     <div class="hero-image">
         <img src="Bilder/Hero3.png" alt="Avelue Logo">
     </div> Falls wir doch nur da sbidl habe wollen  -->
 
-    </section>
+</section>
 
-    <section class="value-hub brand-story" id="nutzen">
 
-        <div class="brand-story-intro">
+<section class="problem">
 
-            <span class="brand-story-kicker" id="brandStoryKicker">
-                INSPIRED BY VALUE
-            </span>
+    <div class="problem-header" uk-scrollspy="cls:uk-animation-fade; delay: 500">
 
-            <h2 id="brandStoryTitle">
-                Warum <span>Avelue?</span>
-            </h2>
 
-            <p class="brand-story-lead" id="brandStoryLead">
-                Ein Name. Viele Bedeutungen. Ein Versprechen.
-            </p>
 
-            <p class="brand-story-description" id="brandStoryDescription">
-                Avelue ist inspiriert von dem, was wirklich zählt:
-                Value. Der Name vereint zentrale Funktionen unserer
-                Lösung und steht für den Mehrwert, der aus
-                Zusammenarbeit entsteht.
-            </p>
+        <h2>
+            Mehr als Dokumentation:
+            <br>
+            Eine neue Qualität der Zusammenarbeit 
+        </h2>
 
-            <div class="brand-story-tabs" role="tablist" aria-label="Informationen zur Marke Avelue">
+        <p class="problem-text">
+            Jede Zusammenarbeit bringt wertvolle Ideen, Entscheidungen und Erkenntnisse hervor.
+            Avelue verbindet Gespräche, visuelle Inhalte und Kontext effizient zu einer gemeinsamen Wissensbasis. 
+            So entstehen strukturierte Ergebnisse, nachvollziehbare Entscheidungen und nachhaltiger Mehrwert – 
+            bereits während der Zusammenarbeit. 
+        </p>
 
-                <button type="button" class="brand-story-tab active" id="brandTabMeaning" role="tab"
-                    aria-selected="true" aria-controls="brandPanelMeaning" data-brand-view="meaning">
-                    <span class="brand-story-tab-number">01</span>
+    </div>
 
-                    <span>
-                        <strong>Warum Avelue?</strong>
-                        <small>Der Name und seine Bedeutung</small>
-                    </span>
-                </button>
+    <div class="problem-wrapper">
 
-                <button type="button" class="brand-story-tab" id="brandTabValues" role="tab" aria-selected="false"
-                    aria-controls="brandPanelValues" data-brand-view="values">
-                    <span class="brand-story-tab-number">02</span>
+        <!-- Vorher -->
 
-                    <span>
-                        <strong>Wofür steht Avelue?</strong>
-                        <small>Unsere Werte und unser Anspruch</small>
-                    </span>
-                </button>
+        <div class="problem-before" uk-scrollspy="cls: uk-animation-slide-left; delay: 800">
+
+            <div class="status before">
+                VORHER: Zusammenarbeit heute
+            </div>
+
+            <div class="image-wrapper">
+
+                <img src="Bilder/workshop-chaos.png" alt="Workshop-Chaos">
+
+                <div class="floating-card card1">
+                    <span>❌</span>
+                    <p>Einzelne<br>Notizen</p>
+                </div>
+
+                <div class="floating-card card2">
+                    <span>❌</span>
+                    <p>Whiteboard-Fotos</p>
+                </div>
+
+                <div class="floating-card card3">
+                    <span>❌</span>
+                    <p>Verteile<br>Informationen</p>
+                </div>
+
+                <div class="floating-card card4">
+                    <span>❌</span>
+                    <p>Entscheidungen an<br>verschiedenen Orten</p>
+                </div>
 
             </div>
 
         </div>
 
 
-        <div class="brand-story-visual">
+        <!-- Pfeil -->
 
-            <!-- Warum Avelue? -->
+        <div class="problem-arrow" uk-scrollspy="cls: uk-animation-fade; delay: 500">
 
-            <div class="brand-story-panel active" id="brandPanelMeaning" role="tabpanel"
-                aria-labelledby="brandTabMeaning">
+            →
 
-                <div class="brand-orbit">
-
-                    <div class="brand-orbit-line"></div>
-
-                    <div class="brand-center">
-
-                        <h3>AVELUE</h3>
-
-                        <span class="brand-center-divider"></span>
-
-                        <p>
-                            Inspired by
-                            <strong>VALUE</strong>
-                        </p>
-
-                    </div>
+        </div>
 
 
-                    <article class="brand-node brand-node-1">
+       <!-- Nachher -->
 
-                        <div class="brand-node-icon">
-                            <i class="fa-regular fa-eye"></i>
-                        </div>
+        <div class="problem-after" uk-scrollspy="cls: uk-animation-slide-right; delay: 800">
 
-                        <div>
-                            <h4>Reveal</h4>
+            <div class="status after">
+                NACHHER: Zusammenarbeit mit Avelue
+            </div>
 
-                            <p>
-                                Verstecktes Wissen
-                                sichtbar machen.
-                            </p>
-                        </div>
+            <div class="solution-card">
 
-                    </article>
-
-
-                    <article class="brand-node brand-node-2">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-solid fa-people-arrows-left-right"></i>
-                        </div>
-
-                        <div>
-                            <h4>Connect</h4>
-
-                            <p>
-                                Menschen, Ideen und
-                                Entscheidungen verbinden.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-                    <article class="brand-node brand-node-3">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-solid fa-brain"></i>
-                        </div>
-
-                        <div>
-                            <h4>Intelligence</h4>
-
-                            <p>
-                                KI, die versteht,
-                                unterstützt und verbindet.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-                    <article class="brand-node brand-node-4">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-solid fa-arrow-trend-up"></i>
-                        </div>
-
-                        <div>
-                            <h4>Evolve</h4>
-
-                            <p>
-                                Wissen kontinuierlich
-                                weiterentwickeln.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-                    <article class="brand-node brand-node-5">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-regular fa-gem"></i>
-                        </div>
-
-                        <div>
-                            <h4>Value</h4>
-
-                            <p>
-                                Aus Informationen wird Wissen.
-                                Aus Wissen wird Mehrwert.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-                    <article class="brand-node brand-node-6">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-solid fa-people-group"></i>
-                        </div>
-
-                        <div>
-                            <h4>Collaboration</h4>
-
-                            <p>
-                                Zusammenarbeit fördern
-                                und erleichtern.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-                    <article class="brand-node brand-node-7">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-solid fa-list-check"></i>
-                        </div>
-
-                        <div>
-                            <h4>Evaluate</h4>
-
-                            <p>
-                                Inhalte verstehen,
-                                bewerten und priorisieren.
-                            </p>
-                        </div>
-
-                    </article>
-
+                <div class="icon">
+                    ✦
                 </div>
 
-                <div class="brand-story-statement">
+                <div>
 
-                    <span class="brand-story-spark">
-                        ✦
-                    </span>
+                    <h3>Themen erkannt</h3>
 
                     <p>
-                        Aus Gesprächen wird Wissen.<br>
-                        Aus Wissen wird <strong>Value.</strong><br>
-                        Dafür steht Avelue.
+                        Die KI identifiziert automatisch
+                        die wichtigsten Themen
+                        und Zusammenhänge.
                     </p>
 
                 </div>
 
             </div>
 
+            <div class="solution-card">
 
-            <!-- Wofür steht Avelue? -->
+                <div class="icon">
+                    💡
+                </div>
 
-            <div class="brand-story-panel" id="brandPanelValues" role="tabpanel" aria-labelledby="brandTabValues"
-                hidden>
+                <div>
 
-                <div class="brand-orbit">
+                    <h3>Entscheidungen dokumentiert</h3>
 
-                    <div class="brand-orbit-line"></div>
-
-                    <div class="brand-center">
-
-                        <h3>AVELUE</h3>
-
-                        <span class="brand-center-divider"></span>
-
-                        <p>
-                            Technologie im Dienst von
-                            <strong>Menschen</strong>
-                            und
-                            <strong>Wissen.</strong>
-                        </p>
-
-                    </div>
-
-
-                    <article class="brand-node brand-node-1">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-solid fa-user-group"></i>
-                        </div>
-
-                        <div>
-                            <h4>Menschlich</h4>
-
-                            <p>
-                                Im Mittelpunkt stehen Menschen
-                                und ihre Zusammenarbeit.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-                    <article class="brand-node brand-node-2">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-solid fa-brain"></i>
-                        </div>
-
-                        <div>
-                            <h4>Intelligent</h4>
-
-                            <p>
-                                KI-gestützt, verständlich und
-                                assistierend – nie ersetzend.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-                    <article class="brand-node brand-node-3">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-
-                        <div>
-                            <h4>Vertrauenswürdig</h4>
-
-                            <p>
-                                Sicher, transparent und
-                                verantwortungsvoll mit Daten.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-                    <article class="brand-node brand-node-4">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-solid fa-seedling"></i>
-                        </div>
-
-                        <div>
-                            <h4>Nachhaltig</h4>
-
-                            <p>
-                                Wissen bewahren,
-                                Mehrwert sichern und
-                                Zukunft gestalten.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-                    <article class="brand-node brand-node-5">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-solid fa-bullseye"></i>
-                        </div>
-
-                        <div>
-                            <h4>Zukunftsorientiert</h4>
-
-                            <p>
-                                Innovativ denken und
-                                kontinuierlich besser werden.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-                    <article class="brand-node brand-node-6">
-
-                        <div class="brand-node-icon">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-
-                        <div>
-                            <h4>Klar</h4>
-
-                            <p>
-                                Komplexität reduzieren und
-                                Erkenntnisse nutzbar machen.
-                            </p>
-                        </div>
-
-                    </article>
+                    <p>
+                        Alle Entscheidungen werden
+                        nachvollziehbar gespeichert.
+                    </p>
 
                 </div>
 
-                <div class="brand-story-statement">
+            </div>
 
-                    <span class="brand-story-spark">
-                        ✦
-                    </span>
+            <div class="solution-card">
+
+                <div class="icon">
+                    ☰
+                </div>
+
+                <div>
+
+                    <h3>Ergebnisse strukturiert</h3>
 
                     <p>
-                        Aus Zusammenarbeit echten
-                        <strong>Mehrwert</strong> schaffen.
+                        Aus Ideen und Diskussionen entstehen
+                        klare Workshop-Ergebnisse.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="solution-card">
+
+                <div class="icon">
+                    ☁
+                </div>
+
+                <div>
+
+                    <h3>Zentral nutzbares Wissen</h3>
+
+                    <p>
+                        Alles an einem Ort und
+                        jederzeit auffindbar.
                     </p>
 
                 </div>
@@ -465,2449 +246,2118 @@
 
         </div>
 
-    </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
+    </div>
 
-            const brandSection = document.querySelector(".brand-story");
+</section>
 
-            if (!brandSection) {
-                return;
-            }
+<section class="comparison-section" id="vergleich">
 
-            const tabs = brandSection.querySelectorAll(".brand-story-tab");
+    <div class="comparison-container" uk-scrollspy="cls:uk-animation-fade; delay: 500">
 
-            const meaningPanel = document.getElementById("brandPanelMeaning");
-            const valuesPanel = document.getElementById("brandPanelValues");
+        <span class="section-tag">VERGLEICH</span>
 
-            const kicker = document.getElementById("brandStoryKicker");
-            const title = document.getElementById("brandStoryTitle");
-            const lead = document.getElementById("brandStoryLead");
-            const description = document.getElementById("brandStoryDescription");
-
-
-            const content = {
-
-                meaning: {
-                    kicker: "INSPIRED BY VALUE",
-                    title: 'Warum <span>Avelue?</span>',
-                    lead: "Ein Name. Viele Bedeutungen. Ein Versprechen.",
-                    description:
-                        "Avelue ist inspiriert von dem, was wirklich zählt: Value. " +
-                        "Der Name vereint zentrale Funktionen unserer Lösung und steht " +
-                        "für den Mehrwert, der aus Zusammenarbeit entsteht."
-                },
-
-                values: {
-                    kicker: "UNSERE MARKE",
-                    title: 'Wofür steht <span>Avelue?</span>',
-                    lead:
-                        "Klare Werte für eine neue Qualität der Zusammenarbeit.",
-                    description:
-                        "Unsere Marke basiert auf Werten, die den Kern unserer Lösung " +
-                        "und unseren Anspruch widerspiegeln. Sie leiten unser Handeln " +
-                        "in der Technologie, in der Kommunikation und im " +
-                        "verantwortungsvollen Umgang mit Menschen und Wissen."
-                }
-
-            };
-
-
-            function switchBrandView(view) {
-
-                const showValues = view === "values";
-
-                brandSection.classList.toggle(
-                    "is-values",
-                    showValues
-                );
-
-
-                tabs.forEach(function (tab) {
-
-                    const isActive =
-                        tab.dataset.brandView === view;
-
-                    tab.classList.toggle(
-                        "active",
-                        isActive
-                    );
-
-                    tab.setAttribute(
-                        "aria-selected",
-                        String(isActive)
-                    );
-
-                });
-
-
-                const activePanel =
-                    showValues
-                        ? valuesPanel
-                        : meaningPanel;
-
-                const inactivePanel =
-                    showValues
-                        ? meaningPanel
-                        : valuesPanel;
-
-
-                inactivePanel.classList.remove("active");
-
-                window.setTimeout(function () {
-
-                    inactivePanel.hidden = true;
-
-                    activePanel.hidden = false;
-
-                    window.requestAnimationFrame(function () {
-
-                        activePanel.classList.add("active");
-
-                    });
-
-                }, 180);
-
-
-                kicker.textContent =
-                    content[view].kicker;
-
-                title.innerHTML =
-                    content[view].title;
-
-                lead.textContent =
-                    content[view].lead;
-
-                description.textContent =
-                    content[view].description;
-
-            }
-
-
-            tabs.forEach(function (tab) {
-
-                tab.addEventListener(
-                    "click",
-                    function () {
-
-                        switchBrandView(
-                            tab.dataset.brandView
-                        );
-
-                    }
-                );
-
-            });
-
-
-            tabs.forEach(function (tab, index) {
-
-                tab.addEventListener(
-                    "keydown",
-                    function (event) {
-
-                        if (
-                            event.key !== "ArrowRight" &&
-                            event.key !== "ArrowLeft"
-                        ) {
-                            return;
-                        }
-
-                        event.preventDefault();
-
-                        let nextIndex;
-
-                        if (event.key === "ArrowRight") {
-
-                            nextIndex =
-                                (index + 1) % tabs.length;
-
-                        } else {
-
-                            nextIndex =
-                                (index - 1 + tabs.length) %
-                                tabs.length;
-
-                        }
-
-                        tabs[nextIndex].focus();
-                        tabs[nextIndex].click();
-
-                    }
-                );
-
-            });
-
-        });
-    </script>
-    <section class="problem">
-
-        <div class="problem-header" uk-scrollspy="cls:uk-animation-fade; delay: 500">
-
-
-
+        <div class="comparison-heading">
             <h2>
-                Mehr als Dokumentation:
-                <br>
-                Eine neue Qualität der Zusammenarbeit
+                Dokumentation allein<br>
+                reicht nicht aus.
             </h2>
 
-            <p class="problem-text">
-                Jede Zusammenarbeit bringt wertvolle Ideen, Entscheidungen und Erkenntnisse hervor.
-                Avelue verbindet Gespräche, visuelle Inhalte und Kontext effizient zu einer gemeinsamen Wissensbasis.
-                So entstehen strukturierte Ergebnisse, nachvollziehbare Entscheidungen und nachhaltiger Mehrwert –
-                bereits während der Zusammenarbeit.
+            <p>
+                Klassische Dokumentation hält einzelne Ergebnisse fest.
+                Avelue verbindet Informationen, Entscheidungen und Aufgaben
+                zu einer wachsenden Wissensbasis.
             </p>
+        </div>
+
+
+        <div class="comparison-grid">
+
+            <!-- Meeting Assistant -->
+            <article class="comparison-card">
+
+                <span class="comparison-label">ALTERNATIVE</span>
+
+                <h3>Meeting Assistant</h3>
+
+                <ul class="comparison-list comparison-list-positive">
+                    <li>Erstellt Transkripte</li>
+                    <li>Fasst Gespräche zusammen</li>
+                    <li>Erkennt Sprecher</li>
+                </ul>
+
+                <div class="comparison-divider"></div>
+
+                <ul class="comparison-list comparison-list-negative">
+                    <li>Keine Workshoplogik</li>
+                    <li>Keine Zusammenhänge</li>
+                    <li>Kein Langzeitwissen</li>
+                </ul>
+
+            </article>
+
+
+            <!-- Whiteboard -->
+            <article class="comparison-card">
+
+                <span class="comparison-label">ALTERNATIVE</span>
+
+                <h3>Whiteboard</h3>
+
+                <ul class="comparison-list comparison-list-positive">
+                    <li>Visualisiert Ergebnisse</li>
+                    <li>Einfach dokumentiert</li>
+                </ul>
+
+                <div class="comparison-divider"></div>
+
+                <ul class="comparison-list comparison-list-negative">
+                    <li>Keine Diskussionen</li>
+                    <li>Keine Entscheidungen</li>
+                    <li>Kein Kontext</li>
+                </ul>
+
+            </article>
+
+
+            <!-- Protokoll -->
+            <article class="comparison-card">
+
+                <span class="comparison-label">ALTERNATIVE</span>
+
+                <h3>Klassisches Protokoll</h3>
+
+                <ul class="comparison-list comparison-list-positive">
+                    <li>Hält Entscheidungen fest</li>
+                    <li>Schnell teilbar</li>
+                </ul>
+
+                <div class="comparison-divider"></div>
+
+                <ul class="comparison-list comparison-list-negative">
+                    <li>Hoher Aufwand</li>
+                    <li>Subjektiv</li>
+                    <li>Zeitverzögert</li>
+                </ul>
+
+            </article>
+
+
+            <!-- Avelue -->
+            <article class="comparison-card comparison-card-highlight">
+
+                <span class="comparison-label comparison-label-highlight">
+                    ● AVELUE
+                </span>
+
+                <h3>Workshop Intelligence</h3>
+
+                <ul class="comparison-list comparison-list-avelue">
+                    <li>Verbindet alle Informationsquellen</li>
+                    <li>Erkennt Zusammenhänge</li>
+                    <li>Dokumentiert Entscheidungen</li>
+                    <li>Erstellt Aufgaben</li>
+                    <li>Baut Organisationswissen auf</li>
+                    <li>Macht Zusammenarbeit langfristig nutzbar</li>
+                </ul>
+
+            </article>
 
         </div>
 
-        <div class="problem-wrapper">
+    </div>
 
-            <!-- Vorher -->
-
-            <div class="problem-before" uk-scrollspy="cls: uk-animation-slide-left; delay: 800">
-
-                <div class="status before">
-                    VORHER: Zusammenarbeit heute
-                </div>
-
-                <div class="image-wrapper">
-
-                    <img src="Bilder/workshop-chaos.png" alt="Workshop-Chaos">
-
-                    <div class="floating-card card1">
-                        <span>❌</span>
-                        <p>Einzelne<br>Notizen</p>
-                    </div>
-
-                    <div class="floating-card card2">
-                        <span>❌</span>
-                        <p>Whiteboard-Fotos</p>
-                    </div>
-
-                    <div class="floating-card card3">
-                        <span>❌</span>
-                        <p>Verteile<br>Informationen</p>
-                    </div>
-
-                    <div class="floating-card card4">
-                        <span>❌</span>
-                        <p>Entscheidungen an<br>verschiedenen Orten</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Pfeil -->
-
-            <div class="problem-arrow" uk-scrollspy="cls: uk-animation-fade; delay: 500">
-
-                →
-
-            </div>
-
-
-            <!-- Nachher -->
-
-            <div class="problem-after" uk-scrollspy="cls: uk-animation-slide-right; delay: 800">
-
-                <div class="status after">
-                    NACHHER: Zusammenarbeit mit Avelue
-                </div>
-
-                <div class="solution-card">
-
-                    <div class="icon">
-                        ✦
-                    </div>
-
-                    <div>
-
-                        <h3>Themen erkannt</h3>
-
-                        <p>
-                            Die KI identifiziert automatisch
-                            die wichtigsten Themen
-                            und Zusammenhänge.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="solution-card">
-
-                    <div class="icon">
-                        💡
-                    </div>
-
-                    <div>
-
-                        <h3>Entscheidungen dokumentiert</h3>
-
-                        <p>
-                            Alle Entscheidungen werden
-                            nachvollziehbar gespeichert.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="solution-card">
-
-                    <div class="icon">
-                        ☰
-                    </div>
-
-                    <div>
-
-                        <h3>Ergebnisse strukturiert</h3>
-
-                        <p>
-                            Aus Ideen und Diskussionen entstehen
-                            klare Workshop-Ergebnisse.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="solution-card">
-
-                    <div class="icon">
-                        ☁
-                    </div>
-
-                    <div>
-
-                        <h3>Zentral nutzbares Wissen</h3>
-
-                        <p>
-                            Alles an einem Ort und
-                            jederzeit auffindbar.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="comparison-section" id="vergleich">
-
-        <div class="comparison-container" uk-scrollspy="cls:uk-animation-fade; delay: 500">
-
-            <span class="section-tag">VERGLEICH</span>
-
-            <div class="comparison-heading">
-                <h2>
-                    Dokumentation allein<br>
-                    reicht nicht aus.
-                </h2>
-
-                <p>
-                    Klassische Dokumentation hält einzelne Ergebnisse fest.
-                    Avelue verbindet Informationen, Entscheidungen und Aufgaben
-                    zu einer wachsenden Wissensbasis.
-                </p>
-            </div>
-
-
-            <div class="comparison-grid">
-
-                <!-- Meeting Assistant -->
-                <article class="comparison-card">
-
-                    <span class="comparison-label">ALTERNATIVE</span>
-
-                    <h3>Meeting Assistant</h3>
-
-                    <ul class="comparison-list comparison-list-positive">
-                        <li>Erstellt Transkripte</li>
-                        <li>Fasst Gespräche zusammen</li>
-                        <li>Erkennt Sprecher</li>
-                    </ul>
-
-                    <div class="comparison-divider"></div>
-
-                    <ul class="comparison-list comparison-list-negative">
-                        <li>Keine Workshoplogik</li>
-                        <li>Keine Zusammenhänge</li>
-                        <li>Kein Langzeitwissen</li>
-                    </ul>
-
-                </article>
-
-
-                <!-- Whiteboard -->
-                <article class="comparison-card">
-
-                    <span class="comparison-label">ALTERNATIVE</span>
-
-                    <h3>Whiteboard</h3>
-
-                    <ul class="comparison-list comparison-list-positive">
-                        <li>Visualisiert Ergebnisse</li>
-                        <li>Einfach dokumentiert</li>
-                    </ul>
-
-                    <div class="comparison-divider"></div>
-
-                    <ul class="comparison-list comparison-list-negative">
-                        <li>Keine Diskussionen</li>
-                        <li>Keine Entscheidungen</li>
-                        <li>Kein Kontext</li>
-                    </ul>
-
-                </article>
-
-
-                <!-- Protokoll -->
-                <article class="comparison-card">
-
-                    <span class="comparison-label">ALTERNATIVE</span>
-
-                    <h3>Klassisches Protokoll</h3>
-
-                    <ul class="comparison-list comparison-list-positive">
-                        <li>Hält Entscheidungen fest</li>
-                        <li>Schnell teilbar</li>
-                    </ul>
-
-                    <div class="comparison-divider"></div>
-
-                    <ul class="comparison-list comparison-list-negative">
-                        <li>Hoher Aufwand</li>
-                        <li>Subjektiv</li>
-                        <li>Zeitverzögert</li>
-                    </ul>
-
-                </article>
-
-
-                <!-- Avelue -->
-                <article class="comparison-card comparison-card-highlight">
-
-                    <span class="comparison-label comparison-label-highlight">
-                        ● AVELUE
-                    </span>
-
-                    <h3>Workshop Intelligence</h3>
-
-                    <ul class="comparison-list comparison-list-avelue">
-                        <li>Verbindet alle Informationsquellen</li>
-                        <li>Erkennt Zusammenhänge</li>
-                        <li>Dokumentiert Entscheidungen</li>
-                        <li>Erstellt Aufgaben</li>
-                        <li>Baut Organisationswissen auf</li>
-                        <li>Macht Zusammenarbeit langfristig nutzbar</li>
-                    </ul>
-
-                </article>
-
-            </div>
-
-        </div>
-
-        <div class="compare-actions">
-            <button class="hero-btn-secondary" onclick="openLightbox([
+    <div class="compare-actions">
+    <button class="hero-btn-secondary" onclick="openLightbox([
         './workshop.png',
         './workshop.png',
         './workshop.png'
     ])">
-                Wettbewerbsanalyse
-            </button>
+        Wettbewerbsanalyse
+    </button>
 
-            <button class="hero-btn-secondary" onclick="openLightbox([
+    <button class="hero-btn-secondary" onclick="openLightbox([
         './workshop.png',
         './workshop-chaos.png'
     ])">
-                Zielgruppe
-            </button>
+        Zielgruppe
+    </button>
+</div>
+
+
+</section>
+
+<section class="solution" id="loesung">
+
+    <div class="solution-left">
+
+        <p class="solution-tag">UNSERE LÖSUNG</p>
+
+        <h2>
+            Workshop-Inhalte<br>
+            werden automatisch<br>
+            sichtbar.
+        </h2>
+
+        <p class="solution-text">
+            Avelue begleitet Ihre Zusammenarbeit 
+            mit intelligenter KI und robotischer Assistenz. 
+            Während Gespräche entstehen, werden Erkenntnisse, 
+            Entscheidungen und visuelle Inhalte automatisch erfasst,
+             strukturiert und zu einer gemeinsamen Wissensbasis verbunden 
+             – für mehr Klarheit, effizientere Prozesse und nachhaltigen Mehrwert.
+        </p>
+
+        <a class="solution-btn" onclick="openContactModal()">
+            Kontakt aufnehmen
+        </a>
+
+    </div>
+
+    <div class="solution-center">
+
+        <div class="background-circle"></div>
+
+        <img src="Bilder/roboter.png" alt="Roboter">
+
+    </div>
+
+    <div class="solution-right" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+
+        <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
+            <span>01</span>
+            <h3>Erfassen</h3>
+            <p>Gespräche, Ideen und visuelle Inhalte werden automatisch erfasst.</p>
         </div>
 
+        <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
+            <span>02</span>
+            <h3>Verstehen</h3>
+            <p> KI erkennt Themen, Zusammenhänge und Entscheidungen.</p>
+        </div>
 
-    </section>
+        <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
+            <span>03</span>
+            <h3>Strukturieren</h3>
+            <p> Erkenntnisse werden in klare Ergebnisse und Aufgaben überführt.</p>
+        </div>
 
-    <section class="solution" id="loesung">
+        <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
+            <span>04</span>
+            <h3>Weiterentwickeln</h3>
+            <p> Alle Erkenntnisse fließen in eine gemeinsame Wissensbasis und schaffen nachhaltigen Mehrwert.</p>
+        </div>
 
-        <div class="solution-left">
+    </div>
 
-            <p class="solution-tag">UNSERE LÖSUNG</p>
+</section>
+
+<section class="value-hub" id="nutzen">
+
+    <div class="value-intro">
+        
+
+        <h2>
+            EIN PRODUKT<br>
+            <span>VIELE PERSPEKTIVEN</span>
+        </h2>
+
+        <p>
+            Jeder profitiert anders. Gemeinsam entsteht echter Mehrwert.
+        </p>
+    </div>
+
+    <div class="value-circle">
+
+        <div class="center-circle">
+            <h3>Avelue</h3>
+            <p>Aus Gesprächen werden Ergebnisse.</p>
+        </div>
+
+        <div class="value-item item-1">
+            <h4>Weniger Nacharbeit</h4>
+            <p>Automatische Erfassung spart Zeit und Aufwand.</p>
+        </div>
+
+        <div class="value-item item-2">
+            <h4>Mehr Transparenz</h4>
+            <p>Entscheidungen und Erkenntnisse bleiben nachvollziehbar.</p>
+        </div>
+
+        <div class="value-item item-3">
+            <h4>Bessere Zusammenarbeit</h4>
+            <p>Alle bleiben auf dem gleichen Stand.</p>
+        </div>
+
+        <div class="value-item item-4">
+            <h4>Wissen bleibt erhalten</h4>
+            <p>Ergebnisse bleiben zentral gespeichert und auffindbar.</p>
+        </div>
+
+        <div class="value-item item-5">
+            <h4>Klare Ergebnisse</h4>
+            <p>Strukturierte Protokolle statt unübersichtlicher Notizen.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="temi-section" id="temi">
+    <div class="temi-content">
+
+        <div class="temi-text">
+            <span class="temi-eyebrow">TECHNOLOGIE ZUM ANFASSEN </span>
 
             <h2>
-                Workshop-Inhalte<br>
-                werden automatisch<br>
-                sichtbar.
+                Vertrauen beginnt mit Sichtbarkeit.
             </h2>
 
-            <p class="solution-text">
-                Avelue begleitet Ihre Zusammenarbeit
-                mit intelligenter KI und robotischer Assistenz.
-                Während Gespräche entstehen, werden Erkenntnisse,
-                Entscheidungen und visuelle Inhalte automatisch erfasst,
-                strukturiert und zu einer gemeinsamen Wissensbasis verbunden
-                – für mehr Klarheit, effizientere Prozesse und nachhaltigen Mehrwert.
+            <p class="temi-description">
+                Gemeinsam mit unserem Hardwarepartner temi bringt Avelue künstliche Intelligenz
+                 dorthin, wo sie echten Mehrwert schafft: direkt in den Raum. 
+                 Die robotische Assistenz macht begleitet den gesamten Prozess und schafft einen transparenten, intuitiven Zugang zu moderner Technologie – immer mit dem Menschen im Mittelpunkt. 
             </p>
 
-            <a class="solution-btn" onclick="openContactModal()">
-                Kontakt aufnehmen
-            </a>
+            <div class="temi-features" uk-scrollspy="cls: uk-animation-fade; target: .temi-feature; delay: 600; repeat: true">
 
+                <article class="temi-feature">
+                    <h3>Transparenz </h3>
+                    <p>
+                        KI verständlich erleben 
+
+                        Avelue macht sichtbar, welche Informationen verarbeitet werden und wie daraus strukturierte Ergebnisse entstehen. 
+                    </p>
+                </article>
+
+                <article class="temi-feature">
+                    <h3>Vertrauen</h3>
+                    <p>
+                        Datenschutz von Anfang an mitgedacht 
+
+Anonymisierte Verarbeitung, rollenbasierte Freigaben und Human-in-the-Loop schaffen einen verantwortungsvollen Umgang mit KI. 
+
+ 
+                    </p>
+                </article>
+
+                <article class="temi-feature">
+                    <h3>Präsenz </h3>
+                    <p>
+                    Technologie dort, wo Menschen zusammenarbeiten
+                       Temi begleitet den Prozess direkt im Raum und 
+                       macht künstliche Intelligenz intuitiv erlebbar.
+                    </p>
+                </article>
+
+            </div>
         </div>
 
-        <div class="solution-center">
+       <div class="temi-visual">
 
-            <div class="background-circle"></div>
+    <div class="temi-image-wrapper">
 
-            <img src="Bilder/roboter.png" alt="Roboter">
+        <img src="Bilder/roboter.png" class="temi-image" alt="Bild von Temi">
 
-        </div>
+        <!-- Display -->
+        <button class="temi-marker marker-display">
+            <span class="marker-dot"></span>
 
-        <div class="solution-right" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+            <span class="marker-card">
+                <strong>🖥 Display</strong>
+                <h4>Transparenz auf einen Blick</h4>
 
-            <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
-                <span>01</span>
-                <h3>Erfassen</h3>
-                <p>Gespräche, Ideen und visuelle Inhalte werden automatisch erfasst.</p>
-            </div>
-
-            <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
-                <span>02</span>
-                <h3>Verstehen</h3>
-                <p> KI erkennt Themen, Zusammenhänge und Entscheidungen.</p>
-            </div>
-
-            <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
-                <span>03</span>
-                <h3>Strukturieren</h3>
-                <p> Erkenntnisse werden in klare Ergebnisse und Aufgaben überführt.</p>
-            </div>
-
-            <div class="feature-card" uk-scrollspy-class="uk-animation-slide-right">
-                <span>04</span>
-                <h3>Weiterentwickeln</h3>
-                <p> Alle Erkenntnisse fließen in eine gemeinsame Wissensbasis und schaffen nachhaltigen Mehrwert.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="value-hub" id="nutzen">
-
-        <div class="value-intro">
-
-
-            <h2>
-                EIN PRODUKT<br>
-                <span>VIELE PERSPEKTIVEN</span>
-            </h2>
-
-            <p>
-                Jeder profitiert anders. Gemeinsam entsteht echter Mehrwert.
-            </p>
-        </div>
-
-        <div class="value-circle">
-
-            <div class="center-circle">
-                <h3>Avelue</h3>
-                <p>Aus Gesprächen werden Ergebnisse.</p>
-            </div>
-
-            <div class="value-item item-1">
-                <h4>Weniger Nacharbeit</h4>
-                <p>Automatische Erfassung spart Zeit und Aufwand.</p>
-            </div>
-
-            <div class="value-item item-2">
-                <h4>Mehr Transparenz</h4>
-                <p>Entscheidungen und Erkenntnisse bleiben nachvollziehbar.</p>
-            </div>
-
-            <div class="value-item item-3">
-                <h4>Bessere Zusammenarbeit</h4>
-                <p>Alle bleiben auf dem gleichen Stand.</p>
-            </div>
-
-            <div class="value-item item-4">
-                <h4>Wissen bleibt erhalten</h4>
-                <p>Ergebnisse bleiben zentral gespeichert und auffindbar.</p>
-            </div>
-
-            <div class="value-item item-5">
-                <h4>Klare Ergebnisse</h4>
-                <p>Strukturierte Protokolle statt unübersichtlicher Notizen.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="temi-section" id="temi">
-        <div class="temi-content">
-
-            <div class="temi-text">
-                <span class="temi-eyebrow">TECHNOLOGIE ZUM ANFASSEN </span>
-
-                <h2>
-                    Vertrauen beginnt mit Sichtbarkeit.
-                </h2>
-
-                <p class="temi-description">
-                    Gemeinsam mit unserem Hardwarepartner temi bringt Avelue künstliche Intelligenz
-                    dorthin, wo sie echten Mehrwert schafft: direkt in den Raum.
-                    Die robotische Assistenz macht begleitet den gesamten Prozess und schafft einen transparenten,
-                    intuitiven Zugang zu moderner Technologie – immer mit dem Menschen im Mittelpunkt.
+                <p>
+                    Das Display informiert jederzeit über den aktuellen Status,
+                    erklärt die nächsten Schritte und macht die Arbeit der KI
+                    sichtbar und nachvollziehbar.
                 </p>
+            </span>
+        </button>
 
-                <div class="temi-features"
-                    uk-scrollspy="cls: uk-animation-fade; target: .temi-feature; delay: 600; repeat: true">
+        <!-- Kamera -->
+        <button class="temi-marker marker-camera">
+            <span class="marker-dot"></span>
 
-                    <article class="temi-feature">
-                        <h3>Transparenz </h3>
-                        <p>
-                            KI verständlich erleben
+            <span class="marker-card">
+                <strong>Kamera</strong>
+                <h4>Erkennt Inhalte – schützt Privatsphäre</h4>
 
-                            Avelue macht sichtbar, welche Informationen verarbeitet werden und wie daraus strukturierte
-                            Ergebnisse entstehen.
-                        </p>
-                    </article>
+                <p>
+                    Whiteboards und Moderationsmaterial werden intelligent
+                    erfasst und anonymisiert verarbeitet. Personenbilder werden
+                    nicht gespeichert.
+                </p>
+            </span>
+        </button>
 
-                    <article class="temi-feature">
-                        <h3>Vertrauen</h3>
-                        <p>
-                            Datenschutz von Anfang an mitgedacht
+        <!-- Mikrofon -->
+        <button class="temi-marker marker-microphone">
+            <span class="marker-dot"></span>
 
-                            Anonymisierte Verarbeitung, rollenbasierte Freigaben und Human-in-the-Loop schaffen einen
-                            verantwortungsvollen Umgang mit KI.
+            <span class="marker-card">
+                <strong> Mikrofon-Array</strong>
+                <h4>Erkennt Gespräche – ohne Audio zu speichern</h4>
 
+                <p>
+                    Gespräche werden in Echtzeit transkribiert und verarbeitet.
+                    Audiodaten werden nicht dauerhaft gespeichert.
+                </p>
+            </span>
+        </button>
 
-                        </p>
-                    </article>
+        <!-- Touch -->
+        <button class="temi-marker marker-touch">
+            <span class="marker-dot"></span>
 
-                    <article class="temi-feature">
-                        <h3>Präsenz </h3>
-                        <p>
-                            Technologie dort, wo Menschen zusammenarbeiten
-                            Temi begleitet den Prozess direkt im Raum und
-                            macht künstliche Intelligenz intuitiv erlebbar.
-                        </p>
-                    </article>
+            <span class="marker-card">
+                <strong>Touchdisplay</strong>
+                <h4>Intuitiv informieren und begleiten</h4>
 
-                </div>
-            </div>
+                <p>
+                    Informationen abrufen, Fragen stellen und Ergebnisse direkt
+                    am Display ansehen.
+                </p>
+            </span>
+        </button>
 
-            <div class="temi-visual">
+        <!-- Mobilität -->
+        <button class="temi-marker marker-presence">
+            <span class="marker-dot"></span>
 
-                <div class="temi-image-wrapper">
+            <span class="marker-card">
+                <strong> Präsenz</strong>
+                <h4>Dort präsent, wo Zusammenarbeit entsteht</h4>
 
-                    <img src="Bilder/roboter.png" class="temi-image" alt="Bild von Temi">
+                <p>
+                    Temi bewegt sich autonom und sicher durch den Raum und
+                    begleitet Workshops genau dort, wo Ideen entstehen.
+                </p>
+            </span>
+        </button>
 
-                    <!-- Display -->
-                    <button class="temi-marker marker-display">
-                        <span class="marker-dot"></span>
+    </div>
 
-                        <span class="marker-card">
-                            <strong>🖥 Display</strong>
-                            <h4>Transparenz auf einen Blick</h4>
-
-                            <p>
-                                Das Display informiert jederzeit über den aktuellen Status,
-                                erklärt die nächsten Schritte und macht die Arbeit der KI
-                                sichtbar und nachvollziehbar.
-                            </p>
-                        </span>
-                    </button>
-
-                    <!-- Kamera -->
-                    <button class="temi-marker marker-camera">
-                        <span class="marker-dot"></span>
-
-                        <span class="marker-card">
-                            <strong>Kamera</strong>
-                            <h4>Erkennt Inhalte – schützt Privatsphäre</h4>
-
-                            <p>
-                                Whiteboards und Moderationsmaterial werden intelligent
-                                erfasst und anonymisiert verarbeitet. Personenbilder werden
-                                nicht gespeichert.
-                            </p>
-                        </span>
-                    </button>
-
-                    <!-- Mikrofon -->
-                    <button class="temi-marker marker-microphone">
-                        <span class="marker-dot"></span>
-
-                        <span class="marker-card">
-                            <strong> Mikrofon-Array</strong>
-                            <h4>Erkennt Gespräche – ohne Audio zu speichern</h4>
-
-                            <p>
-                                Gespräche werden in Echtzeit transkribiert und verarbeitet.
-                                Audiodaten werden nicht dauerhaft gespeichert.
-                            </p>
-                        </span>
-                    </button>
-
-                    <!-- Touch -->
-                    <button class="temi-marker marker-touch">
-                        <span class="marker-dot"></span>
-
-                        <span class="marker-card">
-                            <strong>Touchdisplay</strong>
-                            <h4>Intuitiv informieren und begleiten</h4>
-
-                            <p>
-                                Informationen abrufen, Fragen stellen und Ergebnisse direkt
-                                am Display ansehen.
-                            </p>
-                        </span>
-                    </button>
-
-                    <!-- Mobilität -->
-                    <button class="temi-marker marker-presence">
-                        <span class="marker-dot"></span>
-
-                        <span class="marker-card">
-                            <strong> Präsenz</strong>
-                            <h4>Dort präsent, wo Zusammenarbeit entsteht</h4>
-
-                            <p>
-                                Temi bewegt sich autonom und sicher durch den Raum und
-                                begleitet Workshops genau dort, wo Ideen entstehen.
-                            </p>
-                        </span>
-                    </button>
-
-                </div>
-
-            </div>
+</div>
         </div>
 
-        </div>
-    </section>
+    </div>
+</section>
+    
 
 
 
+<section class="workflow">
 
-    <section class="workflow">
+    <div class="workflow-container">
 
-        <div class="workflow-container">
+        <span class="workflow-tag">DIE AVELUE JOURNEY</span>
 
-            <span class="workflow-tag">DIE AVELUE JOURNEY</span>
+        <h2>Der intelligente Weg zu besseren Ergebnissen</h2>
 
-            <h2>Der intelligente Weg zu besseren Ergebnissen</h2>
+        <p class="workflow-intro">
+            Von der Vorbereitung bis zur gemeinsamen Wissensbasis 
+        begleitet Avelue jede Phase intelligent und transparent.
+        Das spart Zeit, schafft Klarheit und macht wertvolle Erkenntnisse 
+        langfristig nutzbar.
+        </p>
 
-            <p class="workflow-intro">
-                Von der Vorbereitung bis zur gemeinsamen Wissensbasis
-                begleitet Avelue jede Phase intelligent und transparent.
-                Das spart Zeit, schafft Klarheit und macht wertvolle Erkenntnisse
-                langfristig nutzbar.
-            </p>
-
-            <button class="hero-btn-secondary" onclick="openLightbox([
+        <button class="hero-btn-secondary" onclick="openLightbox([
             './workshop-chaos.png',
             './workshop.png'
             ])" style="margin-bottom: 20px;">
                 Unser Workflow
-            </button>
+        </button>
 
-            <div class="workflow-steps" uk-scrollspy="cls: uk-animation-fade; target: .step; delay: 800;">
+        <div class="workflow-steps" uk-scrollspy="cls: uk-animation-fade; target: .step; delay: 800;">
 
-                <div class="workflow-line"></div>
+            <div class="workflow-line"></div>
 
-                <article class="step">
+            <article class="step">
 
-                    <div class="step-header">
-                        <div class="step-number">1</div>
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    
+                </div>
 
-                    </div>
+                <h3>Vorbereitung</h3>
 
-                    <h3>Vorbereitung</h3>
+                <p>
+                    Agenda definieren,
+                    Ziele festlegen,
+                    Teilnehmer einladen,
+                    Vorbereitung treffen
+                </p>
 
-                    <p>
-                        Agenda definieren,
-                        Ziele festlegen,
-                        Teilnehmer einladen,
-                        Vorbereitung treffen
-                    </p>
-
-                </article>
-
-
-                <article class="step">
-
-                    <div class="step-header">
-                        <div class="step-number">2</div>
-
-                    </div>
-
-                    <h3>Workshop</h3>
-
-                    <p>
-                        Workshop begrüßen,
-                        Ablauf modelieren,
-                        Teilnehmer einbinden,
-                        Auf Zeit & Fokus achten
-                    </p>
-
-                </article>
+            </article>
 
 
-                <article class="step">
+            <article class="step">
 
-                    <div class="step-header">
-                        <div class="step-number">3</div>
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                  
+                </div>
 
-                    </div>
+                <h3>Workshop</h3>
 
-                    <h3>Dokumentation</h3>
+                <p>
+                   Workshop begrüßen,
+                   Ablauf modelieren,
+                   Teilnehmer einbinden,
+                   Auf Zeit & Fokus achten
+                </p>
 
-                    <p>
-                        Diskussion leiten,
-                        Themen vertiefen,
-                        Entscheidungen sichern,
-                        Whiteboards begleiten
-                    </p>
-
-                </article>
+            </article>
 
 
-                <article class="step">
+            <article class="step">
 
-                    <div class="step-header">
-                        <div class="step-number">4</div>
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                   
+                </div>
 
-                    </div>
+                <h3>Dokumentation</h3>
 
-                    <h3>Analyse & Strukturierung</h3 <p>
+                <p>
+                    Diskussion leiten,
+                    Themen vertiefen,
+                    Entscheidungen sichern,
+                    Whiteboards begleiten
+                </p>
+
+            </article>
+
+
+            <article class="step">
+
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    
+                </div>
+
+                <h3>Analyse & Strukturierung</h3
+
+                <p>
                     Ergebnisse hinterfragen,
                     Priorisieren & clustern,
                     Struktur gemeinsam validieren
-                    </p>
+                </p>
 
-                </article>
+            </article>
 
 
-                <article class="step">
+            <article class="step">
 
-                    <div class="step-header">
-                        <div class="step-number">5</div>
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                  
+                </div>
 
-                    </div>
+                <h3>Erkentnisse & Maßnahmen</h3
 
-                    <h3>Erkentnisse & Maßnahmen</h3 <p>
+                <p>
                     Maßnahmen definieren,
                     Verantwortlichkeiten klären,
                     Nächste Schritte festlegen,
                     Umsetzbarkeit prüfen
-                    </p>
+                </p>
 
-                </article>
+            </article>
 
 
-                <article class="step">
+            <article class="step">
 
-                    <div class="step-header">
-                        <div class="step-number">6</div>
+                <div class="step-header">
+                    <div class="step-number">6</div>
+                  
+                </div>
 
-                    </div>
+                <h3>Abschluss & Nachbereitung </h3
 
-                    <h3>Abschluss & Nachbereitung </h3 <p>
+                <p>
                     Rohdaten, Zusammenfassung und Bericht prüfen,
                     Mit KI-App überarbeiten,
                     Ergebnisse finalisieren,
                     Teilnehmer infomieren
-                    </p>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="app-section" id="app">
-
-        <div class="app-container">
-
-            <header class="app-heading">
-
-                <span class="section-tag">
-                    DIE AVELUE APP
-                </span>
-
-                <h2>
-                    Eine App:<br>
-                    Der komplette Überblick.
-                </h2>
-
-                <p>
-                    Von der Vorbereitung bis zum Wissensspeicher vereint die
-                    Avelue App alle Informationen an einem Ort. Testen Sie den
-                    Klickprototyp direkt auf dieser Seite und entdecken Sie die
-                    einzelnen Funktionen interaktiv.
                 </p>
 
-            </header>
-
-
-            <div class="app-prototype-layout">
-
-                <!-- Linke Navigation / Erklärung -->
-
-                <aside class="app-prototype-info">
-
-                    <span class="app-prototype-label">
-                        INTERAKTIVER PROTOTYP
-                    </span>
-
-                    <h3>
-                        Erleben Sie Avelue direkt.
-                    </h3>
-
-                    <p>
-                        Navigieren Sie durch Dashboard, Workshops, Agenda,
-                        Einladungen, Live-Ansicht und Ergebnisse. Der Prototyp
-                        lässt sich direkt innerhalb der Landingpage bedienen.
-                    </p>
-
-                    <ul class="app-prototype-features">
-                        <li>Dashboard und Übersicht</li>
-                        <li>Workshop anlegen</li>
-                        <li>Agenda mit KI erstellen</li>
-                        <li>Einladung vorbereiten</li>
-                        <li>Ergebnisse prüfen</li>
-                    </ul>
-
-                    <a class="app-prototype-link"
-                        href="https://lovable.dev/share-preview/b58264fe-a5ff-4025-8138-f0f10fcc6c36#preview_url=https%3A%2F%2Fid-preview--b58264fe-a5ff-4025-8138-f0f10fcc6c36.lovable.app%2F%3F__lovable_token%3DeyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9%252EeyJ1c2VyX2lkIjoiTERVT3k1UUJEWlprZ2ZoNkowYlJQWmZnVHNyMiIsInByb2plY3RfaWQiOiJiNTgyNjRmZS1hNWZmLTQwMjUtODEzOC1mMGYxMGZjYzZjMzYiLCJhY2Nlc3NfdHlwZSI6InByb2plY3QiLCJpc3MiOiJsb3ZhYmxlLWFwaSIsInN1YiI6ImI1ODI2NGZlLWE1ZmYtNDAyNS04MTM4LWYwZjEwZmNjNmMzNiIsImF1ZCI6WyJsb3ZhYmxlLWFwcCJdLCJleHAiOjE3ODQyNzQ3OTEsIm5iZiI6MTc4MzY2OTk5MSwiaWF0IjoxNzgzNjY5OTkxfQ%252EEdbrV43JlGe2lSc5XMhw3zrJqXHvKDd05CHn2PnXkLgyuFlC6Fr7vpSNhenyha4jd4PmrqvWxDYoTwrvoNf9VmppQpbGjXhhIkFaHLtZ8MaAJWTm9HxoLNaopxo2QXCjuDTMGjg4ocsv61Vxkw_FcCmUjAwIn-lOtj6Q6jQnjoZQaGAmKbrBFB57GJokrcjOhsajALMkbgkrbJbgyCxdNka2OyHbaSTR5tC-42godiRnxlAblTm--BKW5NysyKBFbnm6mFek64_BjT4XkxbXSGrAYiXOebQa41dbEMdmEbHVSfqfiCj262zdQtt0KbZpkA3MKo3RuUyMUdQRHtGWTi3PLt_ffQGDz_IPCMWTMm6mM_Rl8LzyRwB_wKSrWZ4FZiKMyZLvLeubZ9SDxo3g8S32v3-hH4P2o_gHjeOe4301rlpRRFmY-0l1J_-P3Vs1C0Ga0jtjXiFRP72WQ87wO9z14rC-SUr_rmN3nduHVJrUDS8_GZNrdKc7kwNxqYUyiYZ8-N4uy0KPmErBow8jRpTCksYMBRDaSI7Er63lGOhfZHXKSm3yncuz0vhSKsTMUt_jHaWRddAJ4JSqm9RdJg-fANqn-eU3MsPvlJjr0h-MsqlvGbum0B-UlR2qUT9oakAXScQnFBMFcWCDocAw6XAJsK7R-bEKLts_NzTXwpE"
-                        target="_blank" rel="noopener noreferrer">
-                        Prototyp im Vollbild öffnen
-                        <span>↗</span>
-                    </a>
-
-                </aside>
-
-
-                <!-- Lovable-Klickdummy -->
-
-                <div class="app-prototype-frame">
-
-                    <div class="prototype-browser-bar">
-
-                        <div class="prototype-browser-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <span class="prototype-browser-title">
-                            Avelue App
-                        </span>
-
-                        <a href="https://lovable.dev/share-preview/b58264fe-a5ff-4025-8138-f0f10fcc6c36#preview_url=https%3A%2F%2Fid-preview--b58264fe-a5ff-4025-8138-f0f10fcc6c36.lovable.app%2F%3F__lovable_token%3DeyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9%252EeyJ1c2VyX2lkIjoiTERVT3k1UUJEWlprZ2ZoNkowYlJQWmZnVHNyMiIsInByb2plY3RfaWQiOiJiNTgyNjRmZS1hNWZmLTQwMjUtODEzOC1mMGYxMGZjYzZjMzYiLCJhY2Nlc3NfdHlwZSI6InByb2plY3QiLCJpc3MiOiJsb3ZhYmxlLWFwaSIsInN1YiI6ImI1ODI2NGZlLWE1ZmYtNDAyNS04MTM4LWYwZjEwZmNjNmMzNiIsImF1ZCI6WyJsb3ZhYmxlLWFwcCJdLCJleHAiOjE3ODQyNzQ3OTEsIm5iZiI6MTc4MzY2OTk5MSwiaWF0IjoxNzgzNjY5OTkxfQ%252EEdbrV43JlGe2lSc5XMhw3zrJqXHvKDd05CHn2PnXkLgyuFlC6Fr7vpSNhenyha4jd4PmrqvWxDYoTwrvoNf9VmppQpbGjXhhIkFaHLtZ8MaAJWTm9HxoLNaopxo2QXCjuDTMGjg4ocsv61Vxkw_FcCmUjAwIn-lOtj6Q6jQnjoZQaGAmKbrBFB57GJokrcjOhsajALMkbgkrbJbgyCxdNka2OyHbaSTR5tC-42godiRnxlAblTm--BKW5NysyKBFbnm6mFek64_BjT4XkxbXSGrAYiXOebQa41dbEMdmEbHVSfqfiCj262zdQtt0KbZpkA3MKo3RuUyMUdQRHtGWTi3PLt_ffQGDz_IPCMWTMm6mM_Rl8LzyRwB_wKSrWZ4FZiKMyZLvLeubZ9SDxo3g8S32v3-hH4P2o_gHjeOe4301rlpRRFmY-0l1J_-P3Vs1C0Ga0jtjXiFRP72WQ87wO9z14rC-SUr_rmN3nduHVJrUDS8_GZNrdKc7kwNxqYUyiYZ8-N4uy0KPmErBow8jRpTCksYMBRDaSI7Er63lGOhfZHXKSm3yncuz0vhSKsTMUt_jHaWRddAJ4JSqm9RdJg-fANqn-eU3MsPvlJjr0h-MsqlvGbum0B-UlR2qUT9oakAXScQnFBMFcWCDocAw6XAJsK7R-bEKLts_NzTXwpE"
-                            target="_blank" rel="noopener noreferrer"
-                            aria-label="Avelue-Prototyp in neuem Fenster öffnen">
-                            ↗
-                        </a>
-
-                    </div>
-
-                    <iframe
-                        src="https://lovable.dev/share-preview/b58264fe-a5ff-4025-8138-f0f10fcc6c36#preview_url=https%3A%2F%2Fid-preview--b58264fe-a5ff-4025-8138-f0f10fcc6c36.lovable.app%2F%3F__lovable_token%3DeyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9%252EeyJ1c2VyX2lkIjoiTERVT3k1UUJEWlprZ2ZoNkowYlJQWmZnVHNyMiIsInByb2plY3RfaWQiOiJiNTgyNjRmZS1hNWZmLTQwMjUtODEzOC1mMGYxMGZjYzZjMzYiLCJhY2Nlc3NfdHlwZSI6InByb2plY3QiLCJpc3MiOiJsb3ZhYmxlLWFwaSIsInN1YiI6ImI1ODI2NGZlLWE1ZmYtNDAyNS04MTM4LWYwZjEwZmNjNmMzNiIsImF1ZCI6WyJsb3ZhYmxlLWFwcCJdLCJleHAiOjE3ODQyNzQ3OTEsIm5iZiI6MTc4MzY2OTk5MSwiaWF0IjoxNzgzNjY5OTkxfQ%252EEdbrV43JlGe2lSc5XMhw3zrJqXHvKDd05CHn2PnXkLgyuFlC6Fr7vpSNhenyha4jd4PmrqvWxDYoTwrvoNf9VmppQpbGjXhhIkFaHLtZ8MaAJWTm9HxoLNaopxo2QXCjuDTMGjg4ocsv61Vxkw_FcCmUjAwIn-lOtj6Q6jQnjoZQaGAmKbrBFB57GJokrcjOhsajALMkbgkrbJbgyCxdNka2OyHbaSTR5tC-42godiRnxlAblTm--BKW5NysyKBFbnm6mFek64_BjT4XkxbXSGrAYiXOebQa41dbEMdmEbHVSfqfiCj262zdQtt0KbZpkA3MKo3RuUyMUdQRHtGWTi3PLt_ffQGDz_IPCMWTMm6mM_Rl8LzyRwB_wKSrWZ4FZiKMyZLvLeubZ9SDxo3g8S32v3-hH4P2o_gHjeOe4301rlpRRFmY-0l1J_-P3Vs1C0Ga0jtjXiFRP72WQ87wO9z14rC-SUr_rmN3nduHVJrUDS8_GZNrdKc7kwNxqYUyiYZ8-N4uy0KPmErBow8jRpTCksYMBRDaSI7Er63lGOhfZHXKSm3yncuz0vhSKsTMUt_jHaWRddAJ4JSqm9RdJg-fANqn-eU3MsPvlJjr0h-MsqlvGbum0B-UlR2qUT9oakAXScQnFBMFcWCDocAw6XAJsK7R-bEKLts_NzTXwpE"
-                        title="Interaktiver Klickprototyp der Avelue App" loading="lazy"
-                        allow="clipboard-read; clipboard-write; fullscreen" allowfullscreen></iframe>
-
-                </div>
-
-            </div>
+            </article>
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
-    <section class="video-showcase">
+<section class="app-section" id="app">
 
-        <div class="video-header" uk-scrollspy="cls:uk-animation-fade; delay: 500">
+    <div class="app-container">
 
-            <p class="section-tag">
-                AVELUE IN AKTION
-            </p>
+        <header class="app-heading">
+
+            <span class="section-tag">
+                DIE AVELUE APP
+            </span>
 
             <h2>
-                Wenn Technologie Zusammenarbeit natürlich unterstützt
+                Eine App:<br>
+                Der komplette Überblick.
             </h2>
 
             <p>
-                Intelligente Unterstützung, genau dann, wenn sie gebraucht wird.
-                Avelue verbindet Gespräche, Ideen und Entscheidungen in Echtzeit und schafft
-                daraus strukturierte Erkenntnisse für weniger Nachbereitungsaufwand und
-                langfristigen Mehrwer
+                Von der Vorbereitung bis zum Wissensspeicher vereint die
+                Avelue App alle Informationen an einem Ort. Testen Sie den
+                Klickprototyp direkt auf dieser Seite und entdecken Sie die
+                einzelnen Funktionen interaktiv.
             </p>
 
-            <button class="hero-btn-secondary" onclick="openLightbox([
+        </header>
+
+
+        <div class="app-prototype-layout">
+
+            <!-- Linke Navigation / Erklärung -->
+
+            <aside class="app-prototype-info">
+
+                <span class="app-prototype-label">
+                    INTERAKTIVER PROTOTYP
+                </span>
+
+                <h3>
+                    Erleben Sie Avelue direkt.
+                </h3>
+
+                <p>
+                    Navigieren Sie durch Dashboard, Workshops, Agenda,
+                    Einladungen, Live-Ansicht und Ergebnisse. Der Prototyp
+                    lässt sich direkt innerhalb der Landingpage bedienen.
+                </p>
+
+                <ul class="app-prototype-features">
+                    <li>Dashboard und Übersicht</li>
+                    <li>Workshop anlegen</li>
+                    <li>Agenda mit KI erstellen</li>
+                    <li>Einladung vorbereiten</li>
+                    <li>Ergebnisse prüfen</li>
+                </ul>
+
+                <a
+                    class="app-prototype-link"
+                    href="https://lovable.dev/share-preview/b58264fe-a5ff-4025-8138-f0f10fcc6c36#preview_url=https%3A%2F%2Fid-preview--b58264fe-a5ff-4025-8138-f0f10fcc6c36.lovable.app%2F%3F__lovable_token%3DeyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9%252EeyJ1c2VyX2lkIjoiTERVT3k1UUJEWlprZ2ZoNkowYlJQWmZnVHNyMiIsInByb2plY3RfaWQiOiJiNTgyNjRmZS1hNWZmLTQwMjUtODEzOC1mMGYxMGZjYzZjMzYiLCJhY2Nlc3NfdHlwZSI6InByb2plY3QiLCJpc3MiOiJsb3ZhYmxlLWFwaSIsInN1YiI6ImI1ODI2NGZlLWE1ZmYtNDAyNS04MTM4LWYwZjEwZmNjNmMzNiIsImF1ZCI6WyJsb3ZhYmxlLWFwcCJdLCJleHAiOjE3ODQyNzQ3OTEsIm5iZiI6MTc4MzY2OTk5MSwiaWF0IjoxNzgzNjY5OTkxfQ%252EEdbrV43JlGe2lSc5XMhw3zrJqXHvKDd05CHn2PnXkLgyuFlC6Fr7vpSNhenyha4jd4PmrqvWxDYoTwrvoNf9VmppQpbGjXhhIkFaHLtZ8MaAJWTm9HxoLNaopxo2QXCjuDTMGjg4ocsv61Vxkw_FcCmUjAwIn-lOtj6Q6jQnjoZQaGAmKbrBFB57GJokrcjOhsajALMkbgkrbJbgyCxdNka2OyHbaSTR5tC-42godiRnxlAblTm--BKW5NysyKBFbnm6mFek64_BjT4XkxbXSGrAYiXOebQa41dbEMdmEbHVSfqfiCj262zdQtt0KbZpkA3MKo3RuUyMUdQRHtGWTi3PLt_ffQGDz_IPCMWTMm6mM_Rl8LzyRwB_wKSrWZ4FZiKMyZLvLeubZ9SDxo3g8S32v3-hH4P2o_gHjeOe4301rlpRRFmY-0l1J_-P3Vs1C0Ga0jtjXiFRP72WQ87wO9z14rC-SUr_rmN3nduHVJrUDS8_GZNrdKc7kwNxqYUyiYZ8-N4uy0KPmErBow8jRpTCksYMBRDaSI7Er63lGOhfZHXKSm3yncuz0vhSKsTMUt_jHaWRddAJ4JSqm9RdJg-fANqn-eU3MsPvlJjr0h-MsqlvGbum0B-UlR2qUT9oakAXScQnFBMFcWCDocAw6XAJsK7R-bEKLts_NzTXwpE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Prototyp im Vollbild öffnen
+                    <span>↗</span>
+                </a>
+
+            </aside>
+
+
+            <!-- Lovable-Klickdummy -->
+
+            <div class="app-prototype-frame">
+
+                <div class="prototype-browser-bar">
+
+                    <div class="prototype-browser-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <span class="prototype-browser-title">
+                        Avelue App
+                    </span>
+
+                    <a
+                        href="https://lovable.dev/share-preview/b58264fe-a5ff-4025-8138-f0f10fcc6c36#preview_url=https%3A%2F%2Fid-preview--b58264fe-a5ff-4025-8138-f0f10fcc6c36.lovable.app%2F%3F__lovable_token%3DeyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9%252EeyJ1c2VyX2lkIjoiTERVT3k1UUJEWlprZ2ZoNkowYlJQWmZnVHNyMiIsInByb2plY3RfaWQiOiJiNTgyNjRmZS1hNWZmLTQwMjUtODEzOC1mMGYxMGZjYzZjMzYiLCJhY2Nlc3NfdHlwZSI6InByb2plY3QiLCJpc3MiOiJsb3ZhYmxlLWFwaSIsInN1YiI6ImI1ODI2NGZlLWE1ZmYtNDAyNS04MTM4LWYwZjEwZmNjNmMzNiIsImF1ZCI6WyJsb3ZhYmxlLWFwcCJdLCJleHAiOjE3ODQyNzQ3OTEsIm5iZiI6MTc4MzY2OTk5MSwiaWF0IjoxNzgzNjY5OTkxfQ%252EEdbrV43JlGe2lSc5XMhw3zrJqXHvKDd05CHn2PnXkLgyuFlC6Fr7vpSNhenyha4jd4PmrqvWxDYoTwrvoNf9VmppQpbGjXhhIkFaHLtZ8MaAJWTm9HxoLNaopxo2QXCjuDTMGjg4ocsv61Vxkw_FcCmUjAwIn-lOtj6Q6jQnjoZQaGAmKbrBFB57GJokrcjOhsajALMkbgkrbJbgyCxdNka2OyHbaSTR5tC-42godiRnxlAblTm--BKW5NysyKBFbnm6mFek64_BjT4XkxbXSGrAYiXOebQa41dbEMdmEbHVSfqfiCj262zdQtt0KbZpkA3MKo3RuUyMUdQRHtGWTi3PLt_ffQGDz_IPCMWTMm6mM_Rl8LzyRwB_wKSrWZ4FZiKMyZLvLeubZ9SDxo3g8S32v3-hH4P2o_gHjeOe4301rlpRRFmY-0l1J_-P3Vs1C0Ga0jtjXiFRP72WQ87wO9z14rC-SUr_rmN3nduHVJrUDS8_GZNrdKc7kwNxqYUyiYZ8-N4uy0KPmErBow8jRpTCksYMBRDaSI7Er63lGOhfZHXKSm3yncuz0vhSKsTMUt_jHaWRddAJ4JSqm9RdJg-fANqn-eU3MsPvlJjr0h-MsqlvGbum0B-UlR2qUT9oakAXScQnFBMFcWCDocAw6XAJsK7R-bEKLts_NzTXwpE"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Avelue-Prototyp in neuem Fenster öffnen"
+                    >
+                        ↗
+                    </a>
+
+                </div>
+
+                <iframe
+                    src="https://lovable.dev/share-preview/b58264fe-a5ff-4025-8138-f0f10fcc6c36#preview_url=https%3A%2F%2Fid-preview--b58264fe-a5ff-4025-8138-f0f10fcc6c36.lovable.app%2F%3F__lovable_token%3DeyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9%252EeyJ1c2VyX2lkIjoiTERVT3k1UUJEWlprZ2ZoNkowYlJQWmZnVHNyMiIsInByb2plY3RfaWQiOiJiNTgyNjRmZS1hNWZmLTQwMjUtODEzOC1mMGYxMGZjYzZjMzYiLCJhY2Nlc3NfdHlwZSI6InByb2plY3QiLCJpc3MiOiJsb3ZhYmxlLWFwaSIsInN1YiI6ImI1ODI2NGZlLWE1ZmYtNDAyNS04MTM4LWYwZjEwZmNjNmMzNiIsImF1ZCI6WyJsb3ZhYmxlLWFwcCJdLCJleHAiOjE3ODQyNzQ3OTEsIm5iZiI6MTc4MzY2OTk5MSwiaWF0IjoxNzgzNjY5OTkxfQ%252EEdbrV43JlGe2lSc5XMhw3zrJqXHvKDd05CHn2PnXkLgyuFlC6Fr7vpSNhenyha4jd4PmrqvWxDYoTwrvoNf9VmppQpbGjXhhIkFaHLtZ8MaAJWTm9HxoLNaopxo2QXCjuDTMGjg4ocsv61Vxkw_FcCmUjAwIn-lOtj6Q6jQnjoZQaGAmKbrBFB57GJokrcjOhsajALMkbgkrbJbgyCxdNka2OyHbaSTR5tC-42godiRnxlAblTm--BKW5NysyKBFbnm6mFek64_BjT4XkxbXSGrAYiXOebQa41dbEMdmEbHVSfqfiCj262zdQtt0KbZpkA3MKo3RuUyMUdQRHtGWTi3PLt_ffQGDz_IPCMWTMm6mM_Rl8LzyRwB_wKSrWZ4FZiKMyZLvLeubZ9SDxo3g8S32v3-hH4P2o_gHjeOe4301rlpRRFmY-0l1J_-P3Vs1C0Ga0jtjXiFRP72WQ87wO9z14rC-SUr_rmN3nduHVJrUDS8_GZNrdKc7kwNxqYUyiYZ8-N4uy0KPmErBow8jRpTCksYMBRDaSI7Er63lGOhfZHXKSm3yncuz0vhSKsTMUt_jHaWRddAJ4JSqm9RdJg-fANqn-eU3MsPvlJjr0h-MsqlvGbum0B-UlR2qUT9oakAXScQnFBMFcWCDocAw6XAJsK7R-bEKLts_NzTXwpE"
+                    title="Interaktiver Klickprototyp der Avelue App"
+                    loading="lazy"
+                    allow="clipboard-read; clipboard-write; fullscreen"
+                    allowfullscreen
+                ></iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="video-showcase">
+
+    <div class="video-header" uk-scrollspy="cls:uk-animation-fade; delay: 500">
+
+        <p class="section-tag">
+            AVELUE IN AKTION
+        </p>
+
+        <h2>
+            Wenn Technologie Zusammenarbeit natürlich unterstützt 
+        </h2>
+
+        <p>
+            Intelligente Unterstützung, genau dann, wenn sie gebraucht wird.  
+            Avelue verbindet Gespräche, Ideen und Entscheidungen in Echtzeit und schafft 
+            daraus strukturierte Erkenntnisse für weniger Nachbereitungsaufwand und 
+            langfristigen Mehrwer
+        </p>
+
+        <button class="hero-btn-secondary" onclick="openLightbox([
             './workshop-chaos.png',
             './workshop.png'
             ])">
                 Robotik
-            </button>
+        </button>
 
-        </div>
+    </div>
 
 
-        <div class="video-container">
+    <div class="video-container">
 
-            <video autoplay muted loop playsinline preload="auto">
+        <video
+            autoplay
+            muted 
+            loop
+            playsinline
+            preload="auto">
 
-                <source src="videos/WhatsApp Video 2026-05-20 at 14.56.00.mp4" type="video/mp4">
+            <source src="videos/WhatsApp Video 2026-05-20 at 14.56.00.mp4" type="video/mp4">
 
-            </video>
+        </video>
 
-        </div>
+    </div>
 
-    </section>
+</section>
+    
+<section class="core-section" id="kernkompetenzen">
 
-    <section class="core-section" id="kernkompetenzen">
+    <div class="core-container">
 
-        <div class="core-container">
+        <!-- Überschrift -->
 
-            <!-- Überschrift -->
+        <header class="core-heading">
 
-            <header class="core-heading">
-
-                <span class="core-eyebrow">
-                    UNSERE KERNKOMPETENZEN
-                </span>
-
-                <h2>
-                    Mehr als Dokumentation:<br>
-                    Intelligenz, die Mehrwert schafft.
-                </h2>
-
-                <p>
-                    Avelue verbindet automatische Erfassung, intelligente Analyse
-                    und langfristiges Wissensmanagement zu einem durchgängigen
-                    System für moderne Workshops.
-                </p>
-
-            </header>
-
-
-            <!-- Farbige Karten zuerst -->
-
-            <div class="core-visuals">
-
-                <!-- Capture -->
-
-                <article class="core-visual-card core-visual-capture">
-
-                    <span class="core-visual-label">
-                        Capture
-                    </span>
-
-                    <h3>
-                        Alles Wichtige erfassen.
-                    </h3>
-
-                    <p>
-                        Relevante Informationen werden automatisch aufgenommen,
-                        zusammengeführt und für die weitere Verarbeitung
-                        vorbereitet.
-                    </p>
-
-                    <div class="core-audio-visual" aria-hidden="true">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                </article>
-
-
-                <!-- Intelligence -->
-
-                <article class="core-visual-card core-visual-intelligence">
-
-                    <span class="core-visual-label">
-                        Intelligence
-                    </span>
-
-                    <h3>
-                        Die KI versteht Inhalte.
-                    </h3>
-
-                    <p>
-                        Informationen werden miteinander verbunden und zu
-                        verständlichen Erkenntnissen strukturiert.
-                    </p>
-
-                    <div class="core-network-visual" aria-hidden="true">
-
-                        <span class="core-network-line core-line-1"></span>
-                        <span class="core-network-line core-line-2"></span>
-                        <span class="core-network-line core-line-3"></span>
-                        <span class="core-network-line core-line-4"></span>
-                        <span class="core-network-line core-line-5"></span>
-
-                        <span class="core-network-node core-node-1"></span>
-                        <span class="core-network-node core-node-2"></span>
-                        <span class="core-network-node core-node-3"></span>
-                        <span class="core-network-node core-node-4"></span>
-                        <span class="core-network-node core-node-5"></span>
-                        <span class="core-network-node core-node-6"></span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Memory -->
-
-                <article class="core-visual-card core-visual-memory">
-
-                    <span class="core-visual-label">
-                        Memory
-                    </span>
-
-                    <h3>
-                        Wissen bleibt erhalten.
-                    </h3>
-
-                    <p>
-                        Erkenntnisse werden dauerhaft gespeichert und bleiben
-                        jederzeit auffindbar und wiederverwendbar.
-                    </p>
-
-                    <div class="core-memory-visual">
-
-                        <div>
-                            <span>Strategie Q2</span>
-                            <small>12 Erkenntnisse</small>
-                        </div>
-
-                        <div>
-                            <span>Kundenbedürfnisse</span>
-                            <small>8 Themen</small>
-                        </div>
-
-                        <div>
-                            <span>Roadmap Diskussion</span>
-                            <small>6 Entscheidungen</small>
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-
-            <!-- Aufklappbare Informationen -->
-
-            <div class="core-accordion">
-
-                <!-- Capture Toggle -->
-
-                <details class="core-toggle core-toggle-capture">
-
-                    <summary>
-
-                        <span class="core-toggle-number">01</span>
-
-                        <span class="core-toggle-title">
-                            <small>Capture</small>
-                            <strong>Alles Wichtige erfassen</strong>
-                        </span>
-
-                        <span class="core-toggle-icon"></span>
-
-                    </summary>
-
-                    <div class="core-toggle-content">
-
-                        <p class="core-toggle-description">
-                            Gespräche, Whiteboards, Moderationsmaterial und Dokumente
-                            werden automatisch erfasst und zentral zusammengeführt –
-                            ohne zusätzlichen Dokumentationsaufwand.
-                        </p>
-
-                        <div class="core-toggle-columns">
-
-                            <div class="core-toggle-benefits">
-
-                                <h4>Das bedeutet für Sie:</h4>
-
-                                <ul>
-                                    <li>Kein manuelles Mitschreiben</li>
-                                    <li>Alle Informationen an einem Ort</li>
-                                    <li>Nichts Wichtiges geht verloren</li>
-                                </ul>
-
-                            </div>
-
-                            <div class="core-toggle-functions">
-
-                                <h4>Erfasst automatisch</h4>
-
-                                <div class="core-toggle-tags">
-                                    <span>🎤 Sprache</span>
-                                    <span>📝 Notizen</span>
-                                    <span>🖼 Whiteboards</span>
-                                    <span>📄 Dokumente</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </details>
-
-
-                <!-- Intelligence Toggle -->
-
-                <details class="core-toggle core-toggle-intelligence">
-
-                    <summary>
-
-                        <span class="core-toggle-number">02</span>
-
-                        <span class="core-toggle-title">
-                            <small>Intelligence</small>
-                            <strong>Zusammenhänge sichtbar machen</strong>
-                        </span>
-
-                        <span class="core-toggle-icon"></span>
-
-                    </summary>
-
-                    <div class="core-toggle-content">
-
-                        <p class="core-toggle-description">
-                            Die KI erkennt Themen, Entscheidungen, Aufgaben und
-                            Prioritäten und verbindet Informationen zu verständlichen
-                            Erkenntnissen – für mehr Klarheit und fundierte
-                            Entscheidungen.
-                        </p>
-
-                        <div class="core-toggle-columns">
-
-                            <div class="core-toggle-benefits">
-
-                                <h4>Das bedeutet für Sie:</h4>
-
-                                <ul>
-                                    <li>Themen automatisch erkennen</li>
-                                    <li>Entscheidungen nachvollziehbar dokumentieren</li>
-                                    <li>Aufgaben intelligent ableiten</li>
-                                </ul>
-
-                            </div>
-
-                            <div class="core-toggle-functions">
-
-                                <h4>Erkennt und strukturiert</h4>
-
-                                <div class="core-toggle-tags">
-                                    <span>🔗 Themen-Clustering</span>
-                                    <span>💡 Entscheidungen</span>
-                                    <span>✅ Aufgaben</span>
-                                    <span>📊 Prioritäten</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </details>
-
-
-                <!-- Memory Toggle -->
-
-                <details class="core-toggle core-toggle-memory">
-
-                    <summary>
-
-                        <span class="core-toggle-number">03</span>
-
-                        <span class="core-toggle-title">
-                            <small>Memory</small>
-                            <strong>Wissen langfristig nutzbar machen</strong>
-                        </span>
-
-                        <span class="core-toggle-icon"></span>
-
-                    </summary>
-
-                    <div class="core-toggle-content">
-
-                        <p class="core-toggle-description">
-                            Alle Erkenntnisse fließen in eine durchsuchbare
-                            Wissensbasis und bleiben langfristig verfügbar – für
-                            zukünftige Projekte, neue Teams und wiederkehrende
-                            Fragestellungen.
-                        </p>
-
-                        <div class="core-toggle-columns">
-
-                            <div class="core-toggle-benefits">
-
-                                <h4>Das bedeutet für Sie:</h4>
-
-                                <ul>
-                                    <li>Wissen zentral speichern</li>
-                                    <li>Inhalte jederzeit wiederfinden</li>
-                                    <li>Erkenntnisse einfach weiterverwenden</li>
-                                </ul>
-
-                            </div>
-
-                            <div class="core-toggle-functions">
-
-                                <h4>Langfristig verfügbar</h4>
-
-                                <div class="core-toggle-tags">
-                                    <span>📚 Wissensspeicher</span>
-                                    <span>🔍 Intelligente Suche</span>
-                                    <span>💬 KI-Chat</span>
-                                    <span>♻️ Wiederverwendung</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </details>
-
-            </div>
-
-
-            <!-- Abschlusstext -->
-
-            <div class="core-conclusion">
-
-                <p>
-                    Gemeinsam bilden
-
-                    <strong class="core-text-capture">
-                        Capture
-                    </strong>,
-
-                    <strong class="core-text-intelligence">
-                        Intelligence
-                    </strong>
-
-                    und
-
-                    <strong class="core-text-memory">
-                        Memory
-                    </strong>
-
-                    die Grundlage für fundierte Entscheidungen, effizientere
-                    Prozesse und nachhaltigen Mehrwert.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="trust">
-
-        <div class="trust-header" uk-scrollspy="cls:uk-animation-fade; delay: 500">
-
-            <span class="section-tag">
-                DATENSCHUTZ & VERTRAUEN
+            <span class="core-eyebrow">
+                UNSERE KERNKOMPETENZEN
             </span>
 
             <h2>
-                Vertrauen beginnt <span>mit Verantwortung </span>
+                Mehr als Dokumentation:<br>
+                Intelligenz, die Mehrwert schafft.
             </h2>
 
             <p>
-                Datenschutz ist für Avelue kein Zusatz,
-                sondern Teil des Produktkonzepts. Von der anonymisierten Verarbeitung
-                über rollenbasierte Freigaben bis hin zum europäischen Hosting – jede Funktion
-                wurde entwickelt, um Sicherheit, Transparenz und Vertrauen miteinander zu verbinden.
+                Avelue verbindet automatische Erfassung, intelligente Analyse
+                und langfristiges Wissensmanagement zu einem durchgängigen
+                System für moderne Workshops.
             </p>
 
+        </header>
+
+
+        <!-- Farbige Karten zuerst -->
+
+        <div class="core-visuals">
+
+            <!-- Capture -->
+
+            <article class="core-visual-card core-visual-capture">
+
+                <span class="core-visual-label">
+                    Capture
+                </span>
+
+                <h3>
+                    Alles Wichtige erfassen.
+                </h3>
+
+                <p>
+                    Relevante Informationen werden automatisch aufgenommen,
+                    zusammengeführt und für die weitere Verarbeitung
+                    vorbereitet.
+                </p>
+
+                <div class="core-audio-visual" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </article>
+
+
+            <!-- Intelligence -->
+
+            <article class="core-visual-card core-visual-intelligence">
+
+                <span class="core-visual-label">
+                    Intelligence
+                </span>
+
+                <h3>
+                    Die KI versteht Inhalte.
+                </h3>
+
+                <p>
+                    Informationen werden miteinander verbunden und zu
+                    verständlichen Erkenntnissen strukturiert.
+                </p>
+
+                <div class="core-network-visual" aria-hidden="true">
+
+                    <span class="core-network-line core-line-1"></span>
+                    <span class="core-network-line core-line-2"></span>
+                    <span class="core-network-line core-line-3"></span>
+                    <span class="core-network-line core-line-4"></span>
+                    <span class="core-network-line core-line-5"></span>
+
+                    <span class="core-network-node core-node-1"></span>
+                    <span class="core-network-node core-node-2"></span>
+                    <span class="core-network-node core-node-3"></span>
+                    <span class="core-network-node core-node-4"></span>
+                    <span class="core-network-node core-node-5"></span>
+                    <span class="core-network-node core-node-6"></span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Memory -->
+
+            <article class="core-visual-card core-visual-memory">
+
+                <span class="core-visual-label">
+                    Memory
+                </span>
+
+                <h3>
+                    Wissen bleibt erhalten.
+                </h3>
+
+                <p>
+                    Erkenntnisse werden dauerhaft gespeichert und bleiben
+                    jederzeit auffindbar und wiederverwendbar.
+                </p>
+
+                <div class="core-memory-visual">
+
+                    <div>
+                        <span>Strategie Q2</span>
+                        <small>12 Erkenntnisse</small>
+                    </div>
+
+                    <div>
+                        <span>Kundenbedürfnisse</span>
+                        <small>8 Themen</small>
+                    </div>
+
+                    <div>
+                        <span>Roadmap Diskussion</span>
+                        <small>6 Entscheidungen</small>
+                    </div>
+
+                </div>
+
+            </article>
+
         </div>
 
 
-        <!-- Sicherheitskarten -->
+        <!-- Aufklappbare Informationen -->
 
-        <div class="security-grid" uk-scrollspy="cls: uk-animation-fade; target: .security-card; delay: 600;">
+        <div class="core-accordion">
 
-            <div class="security-card">
+            <!-- Capture Toggle -->
 
-                <div class="security-icon">
-                    <img src="./bilder/icons/privacy.png" alt="Icon für Privacy by Design">
+            <details class="core-toggle core-toggle-capture">
+
+                <summary>
+
+                    <span class="core-toggle-number">01</span>
+
+                    <span class="core-toggle-title">
+                        <small>Capture</small>
+                        <strong>Alles Wichtige erfassen</strong>
+                    </span>
+
+                    <span class="core-toggle-icon"></span>
+
+                </summary>
+
+                <div class="core-toggle-content">
+
+                    <p class="core-toggle-description">
+                        Gespräche, Whiteboards, Moderationsmaterial und Dokumente
+                        werden automatisch erfasst und zentral zusammengeführt –
+                        ohne zusätzlichen Dokumentationsaufwand.
+                    </p>
+
+                    <div class="core-toggle-columns">
+
+                        <div class="core-toggle-benefits">
+
+                            <h4>Das bedeutet für Sie:</h4>
+
+                            <ul>
+                                <li>Kein manuelles Mitschreiben</li>
+                                <li>Alle Informationen an einem Ort</li>
+                                <li>Nichts Wichtiges geht verloren</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="core-toggle-functions">
+
+                            <h4>Erfasst automatisch</h4>
+
+                            <div class="core-toggle-tags">
+                                <span>🎤 Sprache</span>
+                                <span>📝 Notizen</span>
+                                <span>🖼 Whiteboards</span>
+                                <span>📄 Dokumente</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <h3> Privacy by Design</h3>
-
-                <p>
-                    Datenschutz ist von Anfang an Bestandteil der Systemarchitektur.
-                    Inhalte werden datenschutzkonform verarbeitet und personenbezogene Informationen auf das notwendige
-                    Maß reduziert.
-
-            </div>
+            </details>
 
 
-            <div class="security-card">
+            <!-- Intelligence Toggle -->
 
-                <div class="security-icon">
-                    <img src="./bilder/icons/human.png" alt="Icon für Human in the Loop">
+            <details class="core-toggle core-toggle-intelligence">
+
+                <summary>
+
+                    <span class="core-toggle-number">02</span>
+
+                    <span class="core-toggle-title">
+                        <small>Intelligence</small>
+                        <strong>Zusammenhänge sichtbar machen</strong>
+                    </span>
+
+                    <span class="core-toggle-icon"></span>
+
+                </summary>
+
+                <div class="core-toggle-content">
+
+                    <p class="core-toggle-description">
+                        Die KI erkennt Themen, Entscheidungen, Aufgaben und
+                        Prioritäten und verbindet Informationen zu verständlichen
+                        Erkenntnissen – für mehr Klarheit und fundierte
+                        Entscheidungen.
+                    </p>
+
+                    <div class="core-toggle-columns">
+
+                        <div class="core-toggle-benefits">
+
+                            <h4>Das bedeutet für Sie:</h4>
+
+                            <ul>
+                                <li>Themen automatisch erkennen</li>
+                                <li>Entscheidungen nachvollziehbar dokumentieren</li>
+                                <li>Aufgaben intelligent ableiten</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="core-toggle-functions">
+
+                            <h4>Erkennt und strukturiert</h4>
+
+                            <div class="core-toggle-tags">
+                                <span>🔗 Themen-Clustering</span>
+                                <span>💡 Entscheidungen</span>
+                                <span>✅ Aufgaben</span>
+                                <span>📊 Prioritäten</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <h3> Human in the Loop </h3>
-
-                <p>
-                    KI unterstützt Entscheidungen, trifft sie aber nicht selbst.
-                    Ergebnisse werden vor der Freigabe von verantwortlichen Personen geprüft, ergänzt und freigegeben.
-                </p>
-
-            </div>
+            </details>
 
 
-            <div class="security-card">
+            <!-- Memory Toggle -->
 
-                <div class="security-icon">
-                    <img src="./bilder/icons/EU.png" alt="Icon für Europäische Union">
+            <details class="core-toggle core-toggle-memory">
+
+                <summary>
+
+                    <span class="core-toggle-number">03</span>
+
+                    <span class="core-toggle-title">
+                        <small>Memory</small>
+                        <strong>Wissen langfristig nutzbar machen</strong>
+                    </span>
+
+                    <span class="core-toggle-icon"></span>
+
+                </summary>
+
+                <div class="core-toggle-content">
+
+                    <p class="core-toggle-description">
+                        Alle Erkenntnisse fließen in eine durchsuchbare
+                        Wissensbasis und bleiben langfristig verfügbar – für
+                        zukünftige Projekte, neue Teams und wiederkehrende
+                        Fragestellungen.
+                    </p>
+
+                    <div class="core-toggle-columns">
+
+                        <div class="core-toggle-benefits">
+
+                            <h4>Das bedeutet für Sie:</h4>
+
+                            <ul>
+                                <li>Wissen zentral speichern</li>
+                                <li>Inhalte jederzeit wiederfinden</li>
+                                <li>Erkenntnisse einfach weiterverwenden</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="core-toggle-functions">
+
+                            <h4>Langfristig verfügbar</h4>
+
+                            <div class="core-toggle-tags">
+                                <span>📚 Wissensspeicher</span>
+                                <span>🔍 Intelligente Suche</span>
+                                <span>💬 KI-Chat</span>
+                                <span>♻️ Wiederverwendung</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <h3>Europäisches Hosting </h3>
-
-                <p>
-                    Ihre Daten bleiben innerhalb Europas und können auf Wunsch
-                    ausschließlich auf deutscher Infrastruktur verarbeitet und gespeichert werden.
-                </p>
-
-            </div>
-
-
-            <div class="security-card">
-
-                <div class="security-icon">
-                    <img src="./bilder/icons/schloss.png" alt="Icon für Verschlüsselte Verarbeitung">
-                </div>
-
-                <h3>Verschlüsselte Verarbeitung</h3>
-
-                <p>
-                    Alle Daten werden während der Übertragung und
-                    Speicherung nach aktuellen Sicherheitsstandards verschlüsselt verarbeitet.
-                </p>
-
-            </div>
-
-
-            <div class="security-card">
-
-                <div class="security-icon">
-                    <img src="./bilder/icons/rollen.png" alt="Icon für Rollen & Berechtigungen">
-                </div>
-
-                <h3>Rollen & Berechtigungen </h3>
-
-                <p>
-                    Individuelle Zugriffsrechte stellen sicher,
-                    dass Informationen nur für berechtigte Personen sichtbar und bearbeitbar sind.
-                </p>
-
-            </div>
-
-
-            <div class="security-card">
-
-                <div class="security-icon">
-                    <img src="./bilder/icons/delete.png" alt="Icon für Transparente Löschfristen">
-                </div>
-
-                <h3>Transparente Löschfristen </h3>
-
-                <p>
-                    Audioaufnahmen werden nicht dauerhaft gespeichert. Transkripte,
-                    Bilder und Ergebnisse unterliegen klar definierten Lösch- und Aufbewahrungsregeln und bleiben
-                    jederzeit kontrollierbar.
-                </p>
-
-            </div>
+            </details>
 
         </div>
 
 
-        <!-- Kundenlogos -->
+        <!-- Abschlusstext -->
 
-        <div class="trusted">
-
-            <h3>BEREITS IM EINSATZ</h3>
-
-            <p class="section-tag"> Unternehmen, die auf Avelue vertrauen
-            </p>
-
-            <p> Führende Unternehmen, Hochschulen und Organisationen setzen Avelue ein,
-                um Zusammenarbeit effizienter zu gestalten und wertvolles Wissen
-                langfristig nutzbar zu machen. </p>
-
-            <div class="logo-wall">
-
-                <img src="Bilder/Logo1.png" alt="Logo eines Muster-Unternehmens">
-                <img src="Bilder/Logo2.png" alt="Logo eines Muster-Unternehmens">
-                <img src="Bilder/Logo3.png" alt="Logo eines Muster-Unternehmens">
-                <img src="Bilder/Logo1.png" alt="Logo eines Muster-Unternehmens">
-                <img src="Bilder/Logo2.png" alt="Logo eines Muster-Unternehmens">
-                <img src="Bilder/Logo3.png" alt="Logo eines Muster-Unternehmens">
-
-
-            </div>
-
-        </div>
         <div class="core-conclusion">
+
+            <p>
+                Gemeinsam bilden
+
+                <strong class="core-text-capture">
+                    Capture
+                </strong>,
+
+                <strong class="core-text-intelligence">
+                    Intelligence
+                </strong>
+
+                und
+
+                <strong class="core-text-memory">
+                    Memory
+                </strong>
+
+                die Grundlage für fundierte Entscheidungen, effizientere
+                Prozesse und nachhaltigen Mehrwert.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="trust">
+
+    <div class="trust-header" uk-scrollspy="cls:uk-animation-fade; delay: 500">
+
+        <span class="section-tag">
+            DATENSCHUTZ & VERTRAUEN 
+        </span>
+
+        <h2>
+            Vertrauen beginnt <span>mit Verantwortung </span>
+        </h2>
+
+        <p>
+            Datenschutz ist für Avelue kein Zusatz, 
+            sondern Teil des Produktkonzepts. Von der anonymisierten Verarbeitung 
+            über rollenbasierte Freigaben bis hin zum europäischen Hosting – jede Funktion 
+            wurde entwickelt, um Sicherheit, Transparenz und Vertrauen miteinander zu verbinden. 
+        </p>
+
+    </div>
+
+
+ <!-- Sicherheitskarten -->
+
+    <div class="security-grid" uk-scrollspy="cls: uk-animation-fade; target: .security-card; delay: 600;">
+
+        <div class="security-card">
+
+            <div class="security-icon">
+                 <img src="./bilder/icons/privacy.png" alt="Icon für Privacy by Design">
+            </div>
+
+            <h3> Privacy by Design</h3>
+
+            <p>
+                Datenschutz ist von Anfang an Bestandteil der Systemarchitektur. 
+                Inhalte werden datenschutzkonform verarbeitet und personenbezogene Informationen auf das notwendige Maß reduziert.
+
+        </div>
+
+
+        <div class="security-card">
+
+            <div class="security-icon">
+                 <img src="./bilder/icons/human.png" alt="Icon für Human in the Loop">
+            </div>
+
+            <h3> Human in the Loop </h3>
+
+            <p>
+                KI unterstützt Entscheidungen, trifft sie aber nicht selbst. 
+                Ergebnisse werden vor der Freigabe von verantwortlichen Personen geprüft, ergänzt und freigegeben. 
+            </p>
+
+        </div>
+
+
+        <div class="security-card">
+
+            <div class="security-icon">
+                <img src="./bilder/icons/EU.png" alt="Icon für Europäische Union">
+            </div>
+
+            <h3>Europäisches Hosting </h3>
+
+            <p>
+                Ihre Daten bleiben innerhalb Europas und können auf Wunsch 
+                ausschließlich auf deutscher Infrastruktur verarbeitet und gespeichert werden.
+            </p>
+
+        </div>
+
+
+        <div class="security-card">
+
+            <div class="security-icon">
+                <img src="./bilder/icons/schloss.png" alt="Icon für Verschlüsselte Verarbeitung">
+            </div>
+
+            <h3>Verschlüsselte Verarbeitung</h3>
+
+            <p>
+               Alle Daten werden während der Übertragung und 
+               Speicherung nach aktuellen Sicherheitsstandards verschlüsselt verarbeitet.
+            </p>
+
+        </div>
+
+
+        <div class="security-card">
+
+            <div class="security-icon">
+                 <img src="./bilder/icons/rollen.png" alt="Icon für Rollen & Berechtigungen">
+            </div>
+
+            <h3>Rollen & Berechtigungen </h3>
+
+            <p>
+                Individuelle Zugriffsrechte stellen sicher, 
+                dass Informationen nur für berechtigte Personen sichtbar und bearbeitbar sind.
+            </p>
+
+        </div>
+
+
+        <div class="security-card">
+
+            <div class="security-icon">
+                <img src="./bilder/icons/delete.png" alt="Icon für Transparente Löschfristen">
+            </div>
+
+            <h3>Transparente Löschfristen </h3>
+
+            <p>
+               Audioaufnahmen werden nicht dauerhaft gespeichert. Transkripte,
+            Bilder und Ergebnisse unterliegen klar definierten Lösch- und Aufbewahrungsregeln und bleiben jederzeit kontrollierbar.
+            </p>
+
+        </div>
+
+        
+
+    </div>
+      <div class="core-conclusion">
 
             <p>
 
 
                 <strong class="core-text-capture">
-                    DSGVO-konform , EU AI Act Ready
+                    DSGVO-konform ,  EU AI Act Ready<br><br>
                 </strong>
 
+               <br>
 
         </div>
 
 
-    </section>
 
-    <section class="usecases" uk-scrollspy="cls:uk-animation-fade; delay: 500" id="einsatzbereiche">
-        <div class="usecases-header">
-            <span class="section-tag">EINSATZBEREICHE</span>
-            <h2>So vielseitig wie Ihre Zusammenarbeit </h2>
-            <p>Avelue passt sich an Ihre Arbeitsweise an und unterstützt Sie in jedem Anwendungsfall.</p>
-        </div>
+    <!-- Kundenlogos -->
 
-        <div class="usecases-content">
-            <div class="usecase-tabs">
-                <button class="usecase-btn active" onclick="showUsecase('workshops', event)">Workshops</button>
-                <button class="usecase-btn" onclick="showUsecase('design', event)">Meetings</button>
-                <button class="usecase-btn" onclick="showUsecase('projekt', event)">Design Thinking</button>
-                <button class="usecase-btn" onclick="showUsecase('forschung', event)">Strategie & Innovation</button>
-                <button class="usecase-btn" onclick="showUsecase('hochschule', event)">Trainings & Akademien</button>
-                <button class="usecase-btn" onclick="showUsecase('unternehmen', event)">Forschung & Hochschulen</button>
+    <div class="trusted">
+
+        <h3>BEREITS IM EINSATZ</h3>
+
+        <p class="section-tag"> Unternehmen, die auf Avelue vertrauen 
+        </p>
+
+     <p>  Führende Unternehmen, Hochschulen und Organisationen setzen Avelue ein,
+         um Zusammenarbeit effizienter zu gestalten und wertvolles Wissen
+          langfristig nutzbar zu machen. </p>
+
+            <div class="logo-wall">
+
+                <img src="Bilder/Logo1.png" alt="Logo eines Muster-Unternehmens">
+                <img src= "Bilder/Logo2.png" alt="Logo eines Muster-Unternehmens">
+                <img src= "Bilder/Logo3.png" alt="Logo eines Muster-Unternehmens">
+                <img src="Bilder/Logo1.png" alt="Logo eines Muster-Unternehmens">
+                <img src="Bilder/Logo2.png" alt="Logo eines Muster-Unternehmens">
+                <img src="Bilder/Logo3.png" alt="Logo eines Muster-Unternehmens">
+
+            
             </div>
 
-            <div class="usecase-box">
-                <div id="usecase-text">
-                    <h3>Workshops</h3>
-                    <p>Workshops effizient begleiten. </p>
-                    <p>Avelue dokumentiert Diskussionen in Echtzeit, erkennt Themen und Entscheidungen und erstellt
-                        strukturierte Ergebnisse – automatisch und nachvollziehbar. </p>
+    </div>
+   
+    
+</section>
 
-                    <ul>
-                        <li>KI dokumentiert Diskussionen Gespräche intelligent erfassen</li>
-                        <li>Themen & Entscheidungen erkennen </li>
-                        <li>Aufgaben automatisch ableiten </li>
-                        <li>Ergebnisse flexibel exportieren </li>
-                    </ul>
-                </div>
+<section class="usecases" uk-scrollspy="cls:uk-animation-fade; delay: 500" id="einsatzbereiche">
+    <div class="usecases-header">
+        <span class="section-tag">EINSATZBEREICHE</span>
+        <h2>So vielseitig wie Ihre Zusammenarbeit </h2>
+        <p>Avelue passt sich an Ihre Arbeitsweise an und unterstützt Sie in jedem Anwendungsfall.</p>
+    </div>
 
-                <div class="usecase-visual">
+    <div class="usecases-content">
+        <div class="usecase-tabs">
+           <button class="usecase-btn active" onclick="showUsecase('workshops', event)">Workshops</button>
+<button class="usecase-btn" onclick="showUsecase('design', event)">Meetings</button>
+<button class="usecase-btn" onclick="showUsecase('projekt', event)">Design Thinking</button>
+<button class="usecase-btn" onclick="showUsecase('forschung', event)">Strategie & Innovation</button>
+<button class="usecase-btn" onclick="showUsecase('hochschule', event)">Trainings & Akademien</button>
+<button class="usecase-btn" onclick="showUsecase('unternehmen', event)">Forschung & Hochschulen</button>
+        </div>
 
-                    <img id="usecase-image" src="Bilder/WorkshopBild.png"
-                        alt="Workshop mit Temi und mehreren Teilnehmenden">
+        <div class="usecase-box">
+            <div id="usecase-text">
+                <h3>Workshops</h3>
+                <p>Workshops effizient begleiten. </p>
+                <p>Avelue dokumentiert Diskussionen in Echtzeit, erkennt Themen und Entscheidungen und erstellt strukturierte Ergebnisse – automatisch und nachvollziehbar. </p>
 
-                </div>
+                <ul>
+                    <li>KI dokumentiert Diskussionen Gespräche intelligent erfassen</li>
+                    <li>Themen & Entscheidungen erkennen </li>
+                    <li>Aufgaben automatisch ableiten </li>
+                    <li>Ergebnisse flexibel exportieren </li>
+                </ul>
             </div>
+
+           <div class="usecase-visual">
+
+    <img
+        id="usecase-image"
+        src="Bilder/WorkshopBild.png"
+        alt="Workshop mit Temi und mehreren Teilnehmenden"
+    >
+
+</div>
+</div>
         </div>
-        </div>
-    </section>
-    <script>
-        function showUsecase(type, event) {
-            const buttons = document.querySelectorAll(".usecase-btn");
+    </div>
+</section>
+<script>
+function showUsecase(type, event) {
+    const buttons = document.querySelectorAll(".usecase-btn");
 
-            buttons.forEach(button => {
-                button.classList.remove("active");
-            });
+    buttons.forEach(button => {
+        button.classList.remove("active");
+    });
 
-            event.currentTarget.classList.add("active");
+    event.currentTarget.classList.add("active");
 
-            const content = {
-                workshops: {
-                    title: "Workshops",
-                    subtitle: "Workshops effizient begleiten.",
-                    text: "Avelue dokumentiert Diskussionen in Echtzeit, erkennt Themen und Entscheidungen und erstellt strukturierte Ergebnisse – automatisch und nachvollziehbar.",
-                    points: [
-                        "Gespräche intelligent erfassen",
-                        "Themen & Entscheidungen erkennen",
-                        "Aufgaben automatisch ableiten",
-                        "Ergebnisse flexibel exportieren"
-                    ]
-                },
+    const content = {
+        workshops: {
+            title: "Workshops",
+            subtitle: "Workshops effizient begleiten.",
+            text: "Avelue dokumentiert Diskussionen in Echtzeit, erkennt Themen und Entscheidungen und erstellt strukturierte Ergebnisse – automatisch und nachvollziehbar.",
+            points: [
+                "Gespräche intelligent erfassen",
+                "Themen & Entscheidungen erkennen",
+                "Aufgaben automatisch ableiten",
+                "Ergebnisse flexibel exportieren"
+            ]
+        },
 
-                design: {
-                    title: "Meetings",
-                    subtitle: "Aus Meetings werden klare Entscheidungen.",
-                    text: "Alle relevanten Informationen werden automatisch dokumentiert und zentral bereitgestellt. So bleiben Beschlüsse, Verantwortlichkeiten und nächste Schritte jederzeit nachvollziehbar.",
-                    points: [
-                        "Entscheidungen dokumentieren",
-                        "Aufgaben zuweisen",
-                        "Gemeinsamen Wissensstand schaffen",
-                        "Nachbereitung reduzieren"
-                    ]
-                },
+        design: {
+            title: "Meetings",
+            subtitle: "Aus Meetings werden klare Entscheidungen.",
+            text: "Alle relevanten Informationen werden automatisch dokumentiert und zentral bereitgestellt. So bleiben Beschlüsse, Verantwortlichkeiten und nächste Schritte jederzeit nachvollziehbar.",
+            points: [
+                "Entscheidungen dokumentieren",
+                "Aufgaben zuweisen",
+                "Gemeinsamen Wissensstand schaffen",
+                "Nachbereitung reduzieren"
+            ]
+        },
 
-                projekt: {
-                    title: "Design Thinking",
-                    subtitle: "Ideen strukturiert weiterentwickeln.",
-                    text: "Von der ersten Idee bis zum fertigen Konzept erkennt Avelue Zusammenhänge, dokumentiert Kreativprozesse und macht Ergebnisse langfristig nutzbar.",
-                    points: [
-                        "Whiteboards erfassen",
-                        "Ideen clustern",
-                        "Erkenntnisse verknüpfen",
-                        "Wissensbasis aufbauen"
-                    ]
-                },
+        projekt: {
+            title: "Design Thinking",
+            subtitle: "Ideen strukturiert weiterentwickeln.",
+            text: "Von der ersten Idee bis zum fertigen Konzept erkennt Avelue Zusammenhänge, dokumentiert Kreativprozesse und macht Ergebnisse langfristig nutzbar.",
+            points: [
+                "Whiteboards erfassen",
+                "Ideen clustern",
+                "Erkenntnisse verknüpfen",
+                "Wissensbasis aufbauen"
+            ]
+        },
 
-                forschung: {
-                    title: "Strategie & Innovation",
-                    subtitle: "Komplexität verständlich machen.",
-                    text: "Strategische Diskussionen, Roadmaps und Innovationsprozesse werden automatisch strukturiert und nachvollziehbar dokumentiert.",
-                    points: [
-                        "Prioritäten erkennen",
-                        "Roadmaps dokumentieren",
-                        "Maßnahmen ableiten",
-                        "Entscheidungen nachvollziehen"
-                    ]
-                },
+        forschung: {
+            title: "Strategie & Innovation",
+            subtitle: "Komplexität verständlich machen.",
+            text: "Strategische Diskussionen, Roadmaps und Innovationsprozesse werden automatisch strukturiert und nachvollziehbar dokumentiert.",
+            points: [
+                "Prioritäten erkennen",
+                "Roadmaps dokumentieren",
+                "Maßnahmen ableiten",
+                "Entscheidungen nachvollziehen"
+            ]
+        },
 
-                hochschule: {
-                    title: "Trainings & Akademien",
-                    subtitle: "Wissen nachhaltig vermitteln.",
-                    text: "Trainings, Schulungen und interne Akademien profitieren von einer strukturierten Dokumentation und einer langfristig nutzbaren Wissensbasis.",
-                    points: [
-                        "Lerninhalte sichern",
-                        "Ergebnisse teilen",
-                        "Wissensspeicher aufbauen",
-                        "Einarbeitung beschleunigen"
-                    ]
-                },
+        hochschule: {
+            title: "Trainings & Akademien",
+            subtitle: "Wissen nachhaltig vermitteln.",
+            text: "Trainings, Schulungen und interne Akademien profitieren von einer strukturierten Dokumentation und einer langfristig nutzbaren Wissensbasis.",
+            points: [
+                "Lerninhalte sichern",
+                "Ergebnisse teilen",
+                "Wissensspeicher aufbauen",
+                "Einarbeitung beschleunigen"
+            ]
+        },
 
-                unternehmen: {
-                    title: "Forschung & Hochschulen",
-                    subtitle: "Forschung transparent dokumentieren.",
-                    text: "Interviews, Workshops und Forschungsprojekte werden nachvollziehbar dokumentiert und stehen langfristig für Auswertungen und weitere Projekte zur Verfügung.",
-                    points: [
-                        "Qualitative Daten erfassen",
-                        "Ergebnisse strukturieren",
-                        "Transparente Dokumentation ermöglichen",
-                        "Wissen wiederverwenden"
-                    ]
-                }
-            };
+        unternehmen: {
+            title: "Forschung & Hochschulen",
+            subtitle: "Forschung transparent dokumentieren.",
+            text: "Interviews, Workshops und Forschungsprojekte werden nachvollziehbar dokumentiert und stehen langfristig für Auswertungen und weitere Projekte zur Verfügung.",
+            points: [
+                "Qualitative Daten erfassen",
+                "Ergebnisse strukturieren",
+                "Transparente Dokumentation ermöglichen",
+                "Wissen wiederverwenden"
+            ]
+        }
+    };
 
-            const selected = content[type];
+    const selected = content[type];
 
-            document.getElementById("usecase-text").innerHTML = `
+    document.getElementById("usecase-text").innerHTML = `
         <h3>${selected.title}</h3>
         <p class="usecase-subtitle">${selected.subtitle}</p>
         <p>${selected.text}</p>
 
         <ul>
             ${selected.points
-                    .map(point => `<li>${point}</li>`)
-                    .join("")}
+                .map(point => `<li>${point}</li>`)
+                .join("")}
         </ul>
     `;
-        }
-    </script>
+}
+</script>
 
-    <section class="pricing" id="preise">
-        <div class="pricing-header" uk-scrollspy="cls:uk-animation-fade">
-            <span class="section-tag">PAKETE & PREISE</span>
+<section class="pricing" id="preise">
+    <div class="pricing-header" uk-scrollspy="cls:uk-animation-fade">
+        <span class="section-tag">PAKETE & PREISE</span>
 
-            <h2>Einfach. Transparent. Fair.</h2>
+        <h2>Einfach. Transparent. Fair.</h2>
+
+        <p>
+           Vom ersten Kennenlernen bis zur unternehmensweiten Lösung – wählen Sie das Paket, das zu Ihrer Organisation passt. 
+        </p>
+    </div>
+
+    <div class="pricing-cards">
+
+        <div class="price-card" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 300;">
+            <h3>Kennenlernen</h3>
+            <p class="price-subtitle" onclick="openContactModal()">Kostenlos</p>
+
+            <div class="price">0 €</div>
+            <p>Für alle, die Avelue unverbindlich kennenlernen möchten. </p>
+            <ul>
+                <li> Individuelle Produktvorstellung </li>
+                <li> Persönlicher Beratungstermin </li>
+                <li> Live-Demo der Plattform </li>
+                <li>Einblick in typische Einsatzszenarien </li>
+                <li> Fragen & individuelle Anforderungen besprechen </li>
+            </ul>
+
+            <a class="price-btn secondary" onclick="openContactModal()">Beratungstermin vereinbaren </a>
+        </div>
+
+        <div class="price-card highlight" uk-scrollspy="cls: uk-animation-slide-top; delay: 300;">
+            <div class="badge">Beliebt</div>
+
+            <h3>Professional</h3>
+            <p class="price-subtitle">Für Unternehmen und Teams </p>
+
+            <div class="price">10.000 € <span>/ Jahr</span></div>
+
+            <ul>
+                <li>Voller Zugriff auf die Avelue Plattform </li>
+                <li>KI-gestützte Dokumentation </li>
+                <li>Wissensspeicher </li>
+                <li>Rollen & Berechtigungen </li>
+                <li>DSGVO-konforme Cloud </li>
+                <li> Regelmäßige Updates </li>
+            </ul>
+
+            <a class="price-btn" onclick="openContactModal()">Jetzt anfragen</a>
+        </div>
+
+        <div class="price-card" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 300;">
+            <h3>Enterprise</h3>
+            <p class="price-subtitle">Für Workshop-Agenturen, interne Akademien und große Organisationen </p>
+
+            <div class="price">Individuelles Angebot</div>
+
+            <ul>
+                <li>Individuelle Systemanpassungen </li>
+                <li>API & Integrationen</li>
+                <li> On-Premise oder Private Cloud </li>
+                <li> Mehrmandantenfähigkeit </li>
+                <li>  Persönliche Betreuung  </li>
+                <li> Individuelle Schulungen & Onboarding  </li>
+                <li> Enterprise-Support  </li>
+            </ul>
+
+            <a class="price-btn secondary" onclick="openContactModal()">Individuelles Angebot anfragen </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="vision-network" id="vision">
+
+    <div class="vision-network-container">
+
+        <!-- Linke Textseite -->
+
+        <div class="vision-network-copy">
+
+            <span class="vision-network-eyebrow">
+                UNSERE VISION
+            </span>
+
+            <h2>
+                Die Zukunft <br>
+                der Zusammenarbeit ist <br>
+                intelligent, transparent und nachhaltig
+                
+            </h2>
 
             <p>
-                Vom ersten Kennenlernen bis zur unternehmensweiten Lösung – wählen Sie das Paket, das zu Ihrer
-                Organisation passt.
+                Mit Avelue schaffen wir eine Zukunft, in der Erkenntnisse nicht mehr in Notizen verschwinden, sondern Menschen, Teams und Organisationen dauerhaft unterstützen. So wird aus jeder Zusammenarbeit eine wertvolle Grundlage für bessere Entscheidungen von morgen. 
+
+                Unsere Vision ist eine Welt, in der jede Zusammenarbeit ihr volles Potenzial entfalten kann – weil Wissen erhalten bleibt, Entscheidungen nachvollziehbar werden und Menschen sich auf das konzentrieren können, was wirklich zählt: den gemeinsamen Austausch. 
+
+                Bereit, Zusammenarbeit neu zu denken? 
+
+                Erleben Sie, wie Avelue Wissen sichtbar macht, Zusammenarbeit intelligent begleitet und langfristigen Mehrwert schafft. 
             </p>
-        </div>
 
-        <div class="pricing-cards">
-
-            <div class="price-card" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 300;">
-                <h3>Kennenlernen</h3>
-                <p class="price-subtitle" onclick="openContactModal()">Kostenlos</p>
-
-                <div class="price">0 €</div>
-                <p>Für alle, die Avelue unverbindlich kennenlernen möchten. </p>
-                <ul>
-                    <li> Individuelle Produktvorstellung </li>
-                    <li> Persönlicher Beratungstermin </li>
-                    <li> Live-Demo der Plattform </li>
-                    <li>Einblick in typische Einsatzszenarien </li>
-                    <li> Fragen & individuelle Anforderungen besprechen </li>
-                </ul>
-
-                <a class="price-btn secondary" onclick="openContactModal()">Beratungstermin vereinbaren </a>
-            </div>
-
-            <div class="price-card highlight" uk-scrollspy="cls: uk-animation-slide-top; delay: 300;">
-                <div class="badge">Beliebt</div>
-
-                <h3>Professional</h3>
-                <p class="price-subtitle">Für Unternehmen und Teams </p>
-
-                <div class="price">10.000 € <span>/ Jahr</span></div>
-
-                <ul>
-                    <li>Voller Zugriff auf die Avelue Plattform </li>
-                    <li>KI-gestützte Dokumentation </li>
-                    <li>Wissensspeicher </li>
-                    <li>Rollen & Berechtigungen </li>
-                    <li>DSGVO-konforme Cloud </li>
-                    <li> Regelmäßige Updates </li>
-                </ul>
-
-                <a class="price-btn" onclick="openContactModal()">Jetzt anfragen</a>
-            </div>
-
-            <div class="price-card" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 300;">
-                <h3>Enterprise</h3>
-                <p class="price-subtitle">Für Workshop-Agenturen, interne Akademien und große Organisationen </p>
-
-                <div class="price">Individuelles Angebot</div>
-
-                <ul>
-                    <li>Individuelle Systemanpassungen </li>
-                    <li>API & Integrationen</li>
-                    <li> On-Premise oder Private Cloud </li>
-                    <li> Mehrmandantenfähigkeit </li>
-                    <li> Persönliche Betreuung </li>
-                    <li> Individuelle Schulungen & Onboarding </li>
-                    <li> Enterprise-Support </li>
-                </ul>
-
-                <a class="price-btn secondary" onclick="openContactModal()">Individuelles Angebot anfragen </a>
-            </div>
+            <a class="vision-network-button" onclick="openInfoModal()">
+                Beratungstermin vereinbaren
+            </a>
 
         </div>
-    </section>
-
-    <section class="vision-network" id="vision">
-
-        <div class="vision-network-container">
-
-            <!-- Linke Textseite -->
-
-            <div class="vision-network-copy">
-
-                <span class="vision-network-eyebrow">
-                    UNSERE VISION
-                </span>
-
-                <h2>
-                    Die Zukunft <br>
-                    der Zusammenarbeit ist <br>
-                    intelligent, transparent und nachhaltig
-
-                </h2>
-
-                <p>
-                    Mit Avelue schaffen wir eine Zukunft, in der Erkenntnisse nicht mehr in Notizen verschwinden,
-                    sondern Menschen, Teams und Organisationen dauerhaft unterstützen. So wird aus jeder Zusammenarbeit
-                    eine wertvolle Grundlage für bessere Entscheidungen von morgen.
-
-                    Unsere Vision ist eine Welt, in der jede Zusammenarbeit ihr volles Potenzial entfalten kann – weil
-                    Wissen erhalten bleibt, Entscheidungen nachvollziehbar werden und Menschen sich auf das
-                    konzentrieren können, was wirklich zählt: den gemeinsamen Austausch.
-
-                    Bereit, Zusammenarbeit neu zu denken?
-
-                    Erleben Sie, wie Avelue Wissen sichtbar macht, Zusammenarbeit intelligent begleitet und
-                    langfristigen Mehrwert schafft.
-                </p>
-
-                <a class="vision-network-button" onclick="openInfoModal()">
-                    Beratungstermin vereinbaren
-                </a>
-
-            </div>
 
 
-            <!-- Rechte Visualisierung -->
+        <!-- Rechte Visualisierung -->
 
-            <div class="vision-network-visual">
+        <div class="vision-network-visual">
 
-                <!-- Verbindungskreise -->
+            <!-- Verbindungskreise -->
 
-                <div class="vision-orbit vision-orbit-large"></div>
-                <div class="vision-orbit vision-orbit-small"></div>
+            <div class="vision-orbit vision-orbit-large"></div>
+            <div class="vision-orbit vision-orbit-small"></div>
 
 
-                <!-- Mittelpunkt -->
+            <!-- Mittelpunkt -->
 
-                <div class="vision-center">
+            <div class="vision-center">
 
-                    <div class="vision-center-logo">
-                        <span class="vision-logo-shape vision-logo-blue"></span>
-                        <span class="vision-logo-shape vision-logo-orange"></span>
-                    </div>
-
-                    <img src="Bilder/roboter.png" alt="Temi-Roboter als sichtbare KI-Assistenz von Avelue">
-
+                <div class="vision-center-logo">
+                    <span class="vision-logo-shape vision-logo-blue"></span>
+                    <span class="vision-logo-shape vision-logo-orange"></span>
                 </div>
 
-
-                <!-- Gespräche -->
-
-                <article class="vision-node vision-node-talk">
-
-                    <div class="vision-node-icon">
-                        <img src="./bilder/icons/bubble.png" alt="Icon für Sprechblasen">
-                    </div>
-
-                    <div>
-                        <h3>Gespräche</h3>
-
-                        <p>
-                            Workshops, Meetings und Interviews werden erfasst.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <!-- Whiteboards -->
-
-                <article class="vision-node vision-node-whiteboard">
-
-                    <div class="vision-node-icon">
-                        <img src="./bilder/icons/whiteboard.png" alt="Icon für Whiteboards">
-                    </div>
-
-                    <div>
-                        <h3>Whiteboards</h3>
-
-                        <p>
-                            Ideen, Skizzen und Brainstormings bleiben erhalten.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <!-- Entscheidungen -->
-
-                <article class="vision-node vision-node-decisions">
-
-                    <div class="vision-node-icon">
-                        <img src="./bilder/icons/fragezeichen.png" alt="Icon für Entscheidungen">
-                    </div>
-
-                    <div>
-                        <h3>Entscheidungen</h3>
-
-                        <p>
-                            Wichtige Entscheidungen werden nachvollziehbar.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <!-- Aufgaben -->
-
-                <article class="vision-node vision-node-tasks">
-
-                    <div class="vision-node-icon">
-                        <img src="./bilder/icons/liste.png" alt="Icon für Aufgaben & To-dos">
-                    </div>
-
-                    <div>
-                        <h3>Aufgaben & To-dos</h3>
-
-                        <p>
-                            Nächste Schritte werden erkannt und zugeordnet.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <!-- Wissensbasis -->
-
-                <article class="vision-node vision-node-memory">
-
-                    <div class="vision-node-icon">
-                        <img src="./bilder/icons/wissen.png" alt="Icon für Wissensbasis">
-                    </div>
-
-                    <div>
-                        <h3>Wissensbasis</h3>
-
-                        <p>
-                            Alles wird strukturiert, durchsuchbar und sicher.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <!-- Teams -->
-
-                <article class="vision-node vision-node-teams">
-
-                    <div class="vision-node-icon">
-                        <img src="./bilder/icons/team.png" alt="Icon für ein Team">
-                    </div>
-
-                    <div>
-                        <h3>Teams profitieren</h3>
-
-                        <p>
-                            Wissen bleibt für alle verfügbar und nutzbar.
-                        </p>
-                    </div>
-
-                </article>
+                <img
+                    src="Bilder/roboter.png"
+                    alt="Temi-Roboter als sichtbare KI-Assistenz von Avelue"
+                >
 
             </div>
 
 
+            <!-- Gespräche -->
+
+            <article class="vision-node vision-node-talk">
+
+                <div class="vision-node-icon">
+                    <img src="./bilder/icons/bubble.png" alt="Icon für Sprechblasen">
+                </div>
+
+                <div>
+                    <h3>Gespräche</h3>
+
+                    <p>
+                        Workshops, Meetings und Interviews werden erfasst.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Whiteboards -->
+
+            <article class="vision-node vision-node-whiteboard">
+
+                <div class="vision-node-icon">
+                    <img src="./bilder/icons/whiteboard.png" alt="Icon für Whiteboards">
+                </div>
+
+                <div>
+                    <h3>Whiteboards</h3>
+
+                    <p>
+                        Ideen, Skizzen und Brainstormings bleiben erhalten.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Entscheidungen -->
+
+            <article class="vision-node vision-node-decisions">
+
+                <div class="vision-node-icon">
+                    <img src="./bilder/icons/fragezeichen.png" alt="Icon für Entscheidungen">
+                </div>
+
+                <div>
+                    <h3>Entscheidungen</h3>
+
+                    <p>
+                        Wichtige Entscheidungen werden nachvollziehbar.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Aufgaben -->
+
+            <article class="vision-node vision-node-tasks">
+
+                <div class="vision-node-icon">
+                    <img src="./bilder/icons/liste.png" alt="Icon für Aufgaben & To-dos">
+                </div>
+
+                <div>
+                    <h3>Aufgaben & To-dos</h3>
+
+                    <p>
+                        Nächste Schritte werden erkannt und zugeordnet.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Wissensbasis -->
+
+            <article class="vision-node vision-node-memory">
+
+                <div class="vision-node-icon">
+                    <img src="./bilder/icons/wissen.png" alt="Icon für Wissensbasis">
+                </div>
+
+                <div>
+                    <h3>Wissensbasis</h3>
+
+                    <p>
+                        Alles wird strukturiert, durchsuchbar und sicher.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Teams -->
+
+            <article class="vision-node vision-node-teams">
+
+                <div class="vision-node-icon">
+                    <img src="./bilder/icons/team.png" alt="Icon für ein Team">
+                </div>
+
+                <div>
+                    <h3>Teams profitieren</h3>
+
+                    <p>
+                        Wissen bleibt für alle verfügbar und nutzbar.
+                    </p>
+                </div>
+
+            </article>
+
         </div>
 
-    </section>
 
-    <section class="faq">
-        <div class="faq-left" uk-scrollspy="cls:uk-animation-fade; delay: 500">
-            <span class="section-tag">FAQ</span>
+    </div>
 
-            <h2>
-                Häufige Fragen.<br>
-                Einfach beantwortet.
-            </h2>
+</section>
 
-            <p>
-                Hier finden Sie Antworten auf die wichtigsten Fragen zu Avelue.
-            </p>
-        </div>
+<section class="faq">
+    <div class="faq-left" uk-scrollspy="cls:uk-animation-fade; delay: 500">
+        <span class="section-tag">FAQ</span>
 
-        <div class="faq-right">
-            <details>
-                <summary>Ist Avelue DSGVO-konform?</summary>
-                <p>Ja, Avelue wird mit Fokus auf Datenschutz und sichere Verarbeitung entwickelt.</p>
-            </details>
+        <h2>
+            Häufige Fragen.<br>
+            Einfach beantwortet.
+        </h2>
 
-            <details>
-                <summary>Wie funktioniert die KI-Analyse?</summary>
-                <p>Avelue erkennt Themen, Entscheidungen und Zusammenhänge aus Workshop-Inhalten.</p>
-            </details>
+        <p>
+            Hier finden Sie Antworten auf die wichtigsten Fragen zu Avelue.
+        </p>
+    </div>
 
-            <details>
-                <summary>Welche Daten werden gespeichert?</summary>
-                <p>Gespeichert werden nur relevante Workshop-Inhalte und Ergebnisse.</p>
-            </details>
+    <div class="faq-right">
+        <details>
+            <summary>Ist Avelue DSGVO-konform?</summary>
+            <p>Ja, Avelue wird mit Fokus auf Datenschutz und sichere Verarbeitung entwickelt.</p>
+        </details>
 
-            <details>
-                <summary>Kann ich Ergebnisse exportieren?</summary>
-                <p>Ja, Ergebnisse können als strukturierte Dokumentation exportiert werden.</p>
-            </details>
-        </div>
-    </section>
+        <details>
+            <summary>Wie funktioniert die KI-Analyse?</summary>
+            <p>Avelue erkennt Themen, Entscheidungen und Zusammenhänge aus Workshop-Inhalten.</p>
+        </details>
 
-    <section class="cta" id="abschluss">
+        <details>
+            <summary>Welche Daten werden gespeichert?</summary>
+            <p>Gespeichert werden nur relevante Workshop-Inhalte und Ergebnisse.</p>
+        </details>
 
-        <div class="cta-text">
+        <details>
+            <summary>Kann ich Ergebnisse exportieren?</summary>
+            <p>Ja, Ergebnisse können als strukturierte Dokumentation exportiert werden.</p>
+        </details>
+    </div>
+</section>
 
-            <h2>
-                Bereit für intelligentere Workshops?
-            </h2>
+<section class="cta" id="abschluss">
 
-            <p>
-                Erleben Sie, wie Avelue Ihre Workshops automatisch erkennt,
-                strukturiert und sichtbar macht.
-            </p>
+    <div class="cta-text">
 
-            <div class="cta-buttons">
-                <button class="cta-btn primary" onclick="openContactModal()">
-                    <a>
-                        Kontakt aufnehmen
-                    </a>
-                </button>
-                <button class="cta-btn secondary" onclick="openContactModal()">
-                    <a>
-                        Kostenlos testen
-                    </a>
-                </button>
+        <h2>
+            Bereit für intelligentere Workshops?
+        </h2>
 
-            </div>
+        <p>
+            Erleben Sie, wie Avelue Ihre Workshops automatisch erkennt,
+            strukturiert und sichtbar macht.
+        </p>
 
-        </div>
-
-
-        <div class="cta-visual">
-
-            <div class="robot-track" aria-hidden="true"></div>
-
-            <img src="Bilder/roboter.png" alt="Temi-Roboter als intelligente Assistenz für Avelue" class="cta-robot">
+        <div class="cta-buttons">
+            <button class="cta-btn primary" onclick="openContactModal()">
+                <a>
+                    Kontakt aufnehmen
+                </a>
+            </button>
+            <button class="cta-btn secondary" onclick="openContactModal()">
+                <a>
+                    Kostenlos testen
+                </a>
+            </button>
 
         </div>
 
-    </section>
-    <!-- =========================================
+    </div>
+
+
+    <div class="cta-visual">
+
+        <div class="robot-track" aria-hidden="true"></div>
+
+        <img
+            src="Bilder/roboter.png"
+            alt="Temi-Roboter als intelligente Assistenz für Avelue"
+            class="cta-robot"
+        >
+
+    </div>
+
+</section>
+<!-- =========================================
      PROJEKTSTUDIUM
 ========================================= -->
 
-    <section class="project-study" id="projektstudium">
+<section class="project-study" id="projektstudium">
 
-        <div class="project-header">
-            <span class="section-tag">DAS TEAM HINTER AVELUE </span>
+    <div class="project-header">
+        <span class="section-tag">DAS TEAM HINTER AVELUE </span>
 
-            <h2>
-                Gemeinsam entwickeln wir <br> die Zukunft intelligenter Zusammenarbeit.
-            </h2>
+        <h2>
+            Gemeinsam entwickeln wir   <br> die Zukunft intelligenter Zusammenarbeit. 
+        </h2>
 
-            <p>
-                Hinter Avelue steht ein interdisziplinäres Team aus Design, Technologie, Strategie und Kommunikation.
-                Gemeinsam entwickeln wir intelligente Lösungen, die Zusammenarbeit einfacher, transparenter und
-                nachhaltiger machen.
-            </p>
-        </div>
+        <p>
+            Hinter Avelue steht ein interdisziplinäres Team aus Design, Technologie, Strategie und Kommunikation. Gemeinsam entwickeln wir intelligente Lösungen, die Zusammenarbeit einfacher, transparenter und nachhaltiger machen.
+        </p>
+    </div>
 
-        <div class="project-content">
+    <div class="project-content">
 
-            <div class="team-grid">
+       <div class="team-grid">
 
-                <div class="team-member">
-                    <img src="Bilder/AmaBild.jpeg" alt="Nana Amma Dewaa">
-                    <h4>Nana Amma Dewaa</h4>
-                    <span class="role">Product & Robotics Lead </span>
-                    <span class="description">Entwickelt das Produktkonzept und verantwortet die Integration der
-                        robotischen Assistenz in das Gesamtsystem. </span>
-                </div>
-                <div class="team-member">
-                    <img src="Bilder/Danuella Bild.jpeg" alt="Danuella Njohndon">
-                    <h4>Danuella Njohndon</h4>
-                    <span class="role">Business Strategy Lead</span>
-                    <span class="description">Verantwortlich für Markt- und Zielgruppenanalyse sowie die Entwicklung
-                        effizienter Workshopprozesse. Analysiert Anforderungen, identifiziert Nutzerbedürfnisse und
-                        schafft die strategische Grundlage für eine passgenaue Produktentwicklung. </span>
-                </div>
+    <div class="team-member">
+        <img src="Bilder/AmaBild.jpeg" alt="Nana Amma Dewaa">
+        <h4>Nana Amma Dewaa</h4>
+        <span class="role">Product & Robotics Lead  </span>
+        <span  class="description">Entwickelt das Produktkonzept und verantwortet die Integration der robotischen Assistenz in das Gesamtsystem. </span>
+    </div>
+ <div class="team-member">
+        <img src="Bilder/Danuella Bild.jpeg" alt="Danuella Njohndon">
+        <h4>Danuella Njohndon</h4>
+        <span class="role">Business Strategy Lead</span>
+        <span class="description">Verantwortlich für Markt- und Zielgruppenanalyse sowie die Entwicklung effizienter Workshopprozesse. Analysiert Anforderungen, identifiziert Nutzerbedürfnisse und schafft die strategische Grundlage für eine passgenaue Produktentwicklung. </span>
+    </div>
 
-                <div class="team-member">
-                    <img class="leonie-img" src="Bilder/LeonieBild.jpeg" alt="Leonie Schmidt">
-                    <h4>Leonie Schmidt</h4>
-                    <span class="role">Frontend & Web Development Lead</span>
-                    <span class="description">Entwickelt die technische Struktur der Landingpage, setzt interaktive
-                        Komponenten um und sorgt für eine moderne, performante User Experience. </span>
-                </div>
+    <div class="team-member">
+        <img class="leonie-img" src="Bilder/LeonieBild.jpeg" alt="Leonie Schmidt">
+        <h4>Leonie Schmidt</h4>
+        <span class="role">Frontend & Web Development Lead</span>
+        <span  class="description">Entwickelt die technische Struktur der Landingpage, setzt interaktive Komponenten um und sorgt für eine moderne, performante User Experience. </span>
+    </div>
 
-                <div class="team-member">
-                    <img src="Bilder/MelinaBild.jpeg" alt="Melina Nakas">
-                    <h4>Melina Nakas</h4>
-                    <span class="role">Digital Experience & Development Lead </span>
-                    <span class="description">Verantwortlich für die technische Umsetzung der Landingpage,
-                        Frontend-Entwicklung und digitale Produktpräsentation. Übersetzt Konzepte in funktionierende
-                        Nutzererlebnisse. </span>
-                </div>
+    <div class="team-member">
+        <img src="Bilder/MelinaBild.jpeg" alt="Melina Nakas">
+        <h4>Melina Nakas</h4>
+        <span class="role">Digital Experience & Development Lead </span>
+        <span  class="description">Verantwortlich für die technische Umsetzung der Landingpage, Frontend-Entwicklung und digitale Produktpräsentation. Übersetzt Konzepte in funktionierende Nutzererlebnisse. </span>
+    </div>
 
-                <div class="team-member">
-                    <img src="Bilder/NoahBild.jpeg" alt="Noah Chaloupka">
-                    <h4>Noah Chaloupka</h4>
-                    <span class="role">Market Intelligence Lead </span>
-                    <span class="description">Analysiert den Markt, bewertet Wettbewerber und identifiziert Potenziale
-                        für die strategische Positionierung von Avelue. </span>
-                </div>
+    <div class="team-member">
+        <img src="Bilder/NoahBild.jpeg" alt="Noah Chaloupka">
+        <h4>Noah Chaloupka</h4>
+        <span class="role">Market Intelligence Lead </span>
+        <span  class="description">Analysiert den Markt, bewertet Wettbewerber und identifiziert Potenziale für die strategische Positionierung von Avelue. </span>
+    </div>
 
-                <div class="team-member">
-                    <img src="Bilder/SudeBild.jpeg" alt="Sude Ümütlü">
-                    <h4>Sude Ümütlü</h4>
-                    <span class="role">Product Experience Lead </span>
-                    <span class="description">Konzipiert Funktionen und Nutzererlebnisse und entwickelt die Interaktion
-                        zwischen Software und robotischer Assistenz weiter.</span>
-                </div>
+    <div class="team-member">
+        <img src="Bilder/SudeBild.jpeg" alt="Sude Ümütlü">
+        <h4>Sude Ümütlü</h4>
+        <span class="role">Product Experience Lead </span>
+        <span  class="description">Konzipiert Funktionen und Nutzererlebnisse und entwickelt die Interaktion zwischen Software und robotischer Assistenz weiter.</span>
+    </div>
 
-                <div class="team-member">
-                    <img src="Bilder/SuryBild.jpeg" alt="Surya Fiedler">
-                    <h4>Surya Fiedler</h4>
-                    <span class="role">Brand & Content Experience Lead </span>
-                    <span class="description">Verantwortlich für Markenstrategie, digitale Inszenierung und Copywriting.
-                        Koordiniert die Projektorganisation sowie die Kommunikation mit Stakeholdern und entwickelt eine
-                        konsistente Marken- und Nutzererfahrung über alle Touchpoints hinweg. </span>
-                </div>
+    <div class="team-member">
+        <img src="Bilder/SuryBild.jpeg" alt="Surya Fiedler">
+        <h4>Surya Fiedler</h4>
+        <span class="role">Brand & Content Experience Lead </span>
+        <span  class="description">Verantwortlich für Markenstrategie, digitale Inszenierung und Copywriting. Koordiniert die Projektorganisation sowie die Kommunikation mit Stakeholdern und entwickelt eine konsistente Marken- und Nutzererfahrung über alle Touchpoints hinweg. </span>
+    </div>
 
-                <div class="team-member">
-                    <img src="Bilder/YasminBild.jpeg" alt="Yasmin Stroh">
-                    <h4>Yasmin Stroh </h4>
-                    <span class="role">Strategy & Communication Lead</span>
-                    <span class="description">Mit der Maus darüber fahrenVerantwortlich für Zielgruppenstrategie,
-                        Markenkommunikation und Storytelling. Verbindet Marktverständnis mit einer klaren Positionierung
-                        und einer überzeugenden Produktkommunikation. </span>
-                </div>
-            </div>
+    <div class="team-member">
+        <img src="Bilder/YasminBild.jpeg" alt="Yasmin Stroh">
+        <h4>Yasmin Stroh </h4>
+        <span class="role">Strategy & Communication Lead</span>
+        <span  class="description">Mit der Maus darüber fahrenVerantwortlich für Zielgruppenstrategie, Markenkommunikation und Storytelling. Verbindet Marktverständnis mit einer klaren Positionierung und einer überzeugenden Produktkommunikation. </span>
+    </div>
+</div>
 
-        </div>
+    </div>
 
-    </section>
+</section>
 
 
 
-    <!-- =========================================
+<!-- =========================================
      PRÄSENTATION
 ========================================= -->
-    <section class="presentation-section">
+<section class="presentation-section">
 
-        <div class="presentation-header">
-            <span class="section-tag">PRÄSENTATION</span>
+    <div class="presentation-header">
+        <span class="section-tag">PRÄSENTATION</span>
 
-            <h2>Unser Projekt als Präsentation.</h2>
+        <h2>Unser Projekt als Präsentation.</h2>
 
-            <p>
-                Hier können Sie unsere Canva-Präsentation direkt ansehen
-                und durch die Folien klicken.
-            </p>
-        </div>
+        <p>
+            Hier können Sie unsere Canva-Präsentation direkt ansehen
+            und durch die Folien klicken.
+        </p>
+    </div>
 
-        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
  border-radius: 8px; will-change: transform;">
-            <iframe loading="lazy"
-                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-                src="https://www.canva.com/design/DAHObTNzvY4/6Ka5cAXDMWRlWCJEnnll8Q/view?embed"
-                allowfullscreen="allowfullscreen" allow="fullscreen">
-            </iframe>
-        </div>
-        <a class="vision-network-button"
-            href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHObTNzvY4&#x2F;6Ka5cAXDMWRlWCJEnnll8Q&#x2F;view?utm_content=DAHObTNzvY4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
-            target="_blank" rel="noopener">Unsere Präsentation</a>
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAHObTNzvY4/6Ka5cAXDMWRlWCJEnnll8Q/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a class="vision-network-button" href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHObTNzvY4&#x2F;6Ka5cAXDMWRlWCJEnnll8Q&#x2F;view?utm_content=DAHObTNzvY4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Unsere Präsentation</a>
 
-    </section>
+</section>
 
-    <script>
-        const ctaSection = document.querySelector(".cta");
-        const ctaRobot = document.querySelector(".cta-robot");
+<script>
+    const ctaSection = document.querySelector(".cta");
+    const ctaRobot = document.querySelector(".cta-robot");
 
-        if (ctaSection && ctaRobot) {
+    if (ctaSection && ctaRobot) {
 
-            const robotObserver = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
+        const robotObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
 
-                        if (entry.isIntersecting) {
-                            ctaSection.classList.add("robot-active");
-                        } else {
-                            ctaSection.classList.remove("robot-active");
+                    if (entry.isIntersecting) {
+                        ctaSection.classList.add("robot-active");
+                    } else {
+                        ctaSection.classList.remove("robot-active");
 
-                            /*
-                             * Animation sauber zurücksetzen,
-                             * damit sie beim erneuten Scrollen
-                             * wieder abgespielt wird.
-                             */
-                            ctaRobot.style.animation = "none";
+                        /*
+                         * Animation sauber zurücksetzen,
+                         * damit sie beim erneuten Scrollen
+                         * wieder abgespielt wird.
+                         */
+                        ctaRobot.style.animation = "none";
 
-                            requestAnimationFrame(() => {
-                                ctaRobot.style.animation = "";
-                            });
-                        }
+                        requestAnimationFrame(() => {
+                            ctaRobot.style.animation = "";
+                        });
+                    }
 
-                    });
-                },
-                {
-                    threshold: 0.55
-                }
-            );
+                });
+            },
+            {
+                threshold: 0.55
+            }
+        );
 
-            robotObserver.observe(ctaSection);
-        }
-    </script>
+        robotObserver.observe(ctaSection);
+    }
+</script>
 
-    <!-- Kontaktformular Modal -->
-    <div class="contact-modal-overlay" id="contactModal" aria-hidden="true">
-        <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
-            <button class="contact-modal-close" onclick="closeContactModal()" aria-label="Schließen">&times;</button>
+<!-- Kontaktformular Modal -->
+<div class="contact-modal-overlay" id="contactModal" aria-hidden="true">
+  <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <button class="contact-modal-close" onclick="closeContactModal()" aria-label="Schließen">&times;</button>
 
-            <h2 id="contactModalTitle">Kontakt aufnehmen</h2>
-            <p class="contact-modal-sub">Wir melden uns schnellstmöglich bei Ihnen zurück.</p>
+    <h2 id="contactModalTitle">Kontakt aufnehmen</h2>
+    <p class="contact-modal-sub">Wir melden uns schnellstmöglich bei Ihnen zurück.</p>
 
-            <form id="contactForm" class="contact-form" novalidate>
-                <div class="form-group">
-                    <label for="cf-name">Name <span class="req">*</span></label>
-                    <input type="text" id="cf-name" name="name" required>
-                    <small class="form-error" data-for="cf-name">Bitte geben Sie Ihren Namen an.</small>
-                </div>
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="form-group">
+        <label for="cf-name">Name <span class="req">*</span></label>
+        <input type="text" id="cf-name" name="name" required>
+        <small class="form-error" data-for="cf-name">Bitte geben Sie Ihren Namen an.</small>
+      </div>
 
-                <div class="form-group">
-                    <label for="cf-email">E-Mail <span class="req">*</span></label>
-                    <input type="email" id="cf-email" name="email" required>
-                    <small class="form-error" data-for="cf-email">Bitte geben Sie eine gültige E-Mail-Adresse
-                        an.</small>
-                </div>
+      <div class="form-group">
+        <label for="cf-email">E-Mail <span class="req">*</span></label>
+        <input type="email" id="cf-email" name="email" required>
+        <small class="form-error" data-for="cf-email">Bitte geben Sie eine gültige E-Mail-Adresse an.</small>
+      </div>
 
-                <div class="form-group">
-                    <label for="cf-company">Unternehmen</label>
-                    <input type="text" id="cf-company" name="company">
-                </div>
+      <div class="form-group">
+        <label for="cf-company">Unternehmen</label>
+        <input type="text" id="cf-company" name="company">
+      </div>
 
-                <div class="form-group">
-                    <label for="cf-message">Ihr Anliegen <span class="req">*</span></label>
-                    <textarea id="cf-message" name="message" rows="5" required></textarea>
-                    <small class="form-error" data-for="cf-message">Bitte beschreiben Sie kurz Ihr Anliegen.</small>
-                </div>
+      <div class="form-group">
+        <label for="cf-message">Ihr Anliegen <span class="req">*</span></label>
+        <textarea id="cf-message" name="message" rows="5" required></textarea>
+        <small class="form-error" data-for="cf-message">Bitte beschreiben Sie kurz Ihr Anliegen.</small>
+      </div>
 
-                <div class="form-check">
-                    <label>
-                        <input type="checkbox" id="cf-agb" name="agb" required>
-                        Ich habe die AGB und Datenschutzbedingungen gelesen. <span class="req">*</span>
-                    </label>
-                    <small class="form-error" data-for="cf-agb">Bitte bestätigen Sie die AGB und
-                        Datenschutzbedingungen.</small>
-                </div>
+      <div class="form-check">
+        <label>
+          <input type="checkbox" id="cf-agb" name="agb" required>
+          Ich habe die AGB und Datenschutzbedingungen gelesen. <span class="req">*</span>
+        </label>
+        <small class="form-error" data-for="cf-agb">Bitte bestätigen Sie die AGB und Datenschutzbedingungen.</small>
+      </div>
 
-                <div class="form-check">
-                    <label>
-                        <input type="checkbox" id="cf-news" name="newsletter">
-                        Ich möchte Newsletter und Infos per Mail erhalten.
-                    </label>
-                </div>
+      <div class="form-check">
+        <label>
+          <input type="checkbox" id="cf-news" name="newsletter">
+          Ich möchte Newsletter und Infos per Mail erhalten.
+        </label>
+      </div>
 
-                <button type="submit" class="contact-submit">Absenden</button>
-            </form>
+      <button type="submit" class="contact-submit">Absenden</button>
+    </form>
 
-            <!-- Erfolgs-Toast -->
-            <div class="contact-success" id="contactSuccess">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Ihre Anfrage wurde verschickt. Vielen Dank!</span>
-            </div>
-        </div>
+    <!-- Erfolgs-Toast -->
+    <div class="contact-success" id="contactSuccess">
+      <i class="fa-solid fa-circle-check"></i>
+      <span>Ihre Anfrage wurde verschickt. Vielen Dank!</span>
+    </div>
+  </div>
+</div>
+
+<!-- Info / "In Bearbeitung" Modal -->
+<div class="contact-modal-overlay" id="infoModal" aria-hidden="true">
+  <div class="contact-modal info-modal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
+    <button class="contact-modal-close" onclick="closeInfoModal()" aria-label="Schließen">&times;</button>
+
+    <div class="info-modal-icon">
+      <i class="fa-solid fa-helmet-safety"></i>
     </div>
 
-    <!-- Info / "In Bearbeitung" Modal -->
-    <div class="contact-modal-overlay" id="infoModal" aria-hidden="true">
-        <div class="contact-modal info-modal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
-            <button class="contact-modal-close" onclick="closeInfoModal()" aria-label="Schließen">&times;</button>
+    <h2 id="infoModalTitle">Hier entsteht gerade etwas Neues</h2>
+    <p class="contact-modal-sub">
+      Diese Unterseite befindet sich noch im Aufbau. Avelue ist aktuell ein Prototyp –
+      wir arbeiten mit Hochdruck daran, die weiterführenden Inhalte zu „Mehr erfahren" 
+      in den kommenden Wochen bereitzustellen.
+    </p>
+    <p class="contact-modal-sub">
+      Sie haben schon jetzt Fragen oder möchten mehr über Avelue erfahren? 
+      Nehmen Sie gerne direkt Kontakt mit uns auf – wir freuen uns auf den Austausch.
+    </p>
 
-            <div class="info-modal-icon">
-                <i class="fa-solid fa-helmet-safety"></i>
-            </div>
+    <button type="button" class="contact-submit info-modal-cta" onclick="switchToContactModal()">
+      Kontakt aufnehmen
+    </button>
+  </div>
+</div>
 
-            <h2 id="infoModalTitle">Hier entsteht gerade etwas Neues</h2>
-            <p class="contact-modal-sub">
-                Diese Unterseite befindet sich noch im Aufbau. Avelue ist aktuell ein Prototyp –
-                wir arbeiten mit Hochdruck daran, die weiterführenden Inhalte zu „Mehr erfahren"
-                in den kommenden Wochen bereitzustellen.
-            </p>
-            <p class="contact-modal-sub">
-                Sie haben schon jetzt Fragen oder möchten mehr über Avelue erfahren?
-                Nehmen Sie gerne direkt Kontakt mit uns auf – wir freuen uns auf den Austausch.
-            </p>
 
-            <button type="button" class="contact-submit info-modal-cta" onclick="switchToContactModal()">
-                Kontakt aufnehmen
-            </button>
-        </div>
+<script>
+  const modal = () => document.getElementById('contactModal');
+
+  function openContactModal() {
+    modal().classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeContactModal() {
+    modal().classList.remove('is-open');
+    document.body.style.overflow = '';
+    // Reset nach Animation
+    setTimeout(() => {
+      const f = document.getElementById('contactForm');
+      f.reset();
+      document.querySelectorAll('.contact-form .form-error.show').forEach(e => e.classList.remove('show'));
+      document.querySelectorAll('.contact-form .invalid').forEach(e => e.classList.remove('invalid'));
+      document.getElementById('contactSuccess').classList.remove('show');
+      document.getElementById('contactForm').style.display = '';
+    }, 350);
+  }
+
+  // Schließen bei Klick auf Overlay
+  document.addEventListener('click', (e) => {
+    if (e.target.id === 'contactModal') closeContactModal();
+  });
+  // Schließen mit ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal().classList.contains('is-open')) closeContactModal();
+  });
+
+  // Validierung + Submit
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const fields = [
+      { id: 'cf-name',    test: v => v.trim().length > 1 },
+      { id: 'cf-email',   test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+      { id: 'cf-message', test: v => v.trim().length > 3 },
+    ];
+    let ok = true;
+    fields.forEach(f => {
+      const el = document.getElementById(f.id);
+      const err = document.querySelector(`.form-error[data-for="${f.id}"]`);
+      if (!f.test(el.value)) { ok = false; el.classList.add('invalid'); err.classList.add('show'); }
+      else { el.classList.remove('invalid'); err.classList.remove('show'); }
+    });
+    const agb = document.getElementById('cf-agb');
+    const agbErr = document.querySelector('.form-error[data-for="cf-agb"]');
+    if (!agb.checked) { ok = false; agbErr.classList.add('show'); }
+    else { agbErr.classList.remove('show'); }
+
+    if (!ok) return;
+
+    // Erfolg anzeigen
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('contactSuccess').classList.add('show');
+    setTimeout(closeContactModal, 1800);
+  });
+
+  // Fehler live entfernen bei Eingabe
+  document.querySelectorAll('#contactForm input, #contactForm textarea').forEach(el => {
+    el.addEventListener('input', () => {
+      el.classList.remove('invalid');
+      const err = document.querySelector(`.form-error[data-for="${el.id}"]`);
+      if (err) err.classList.remove('show');
+    });
+  });
+
+  // ==== Info-Modal ("Mehr erfahren") ====
+  const infoModal = () => document.getElementById('infoModal');
+
+  function openInfoModal() {
+    infoModal().classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeInfoModal() {
+    infoModal().classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  function switchToContactModal() {
+    closeInfoModal();
+    // Warten, bis die Schließ-Animation durch ist, dann Kontaktformular öffnen
+    setTimeout(openContactModal, 380);
+  }
+
+  // Overlay-Klick schließt Info-Modal
+  document.addEventListener('click', (e) => {
+    if (e.target.id === 'infoModal') closeInfoModal();
+  });
+  // ESC schließt Info-Modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && infoModal().classList.contains('is-open')) closeInfoModal();
+  });
+
+
+
+
+let lightboxImages = [];
+let lightboxIndex = 0;
+
+function openLightbox(images){
+    // images = Array von Bild-URLs, ODER ein einzelner String
+    lightboxImages = Array.isArray(images) ? images : [images];
+    lightboxIndex = 0;
+    updateLightbox();
+    const overlay = document.getElementById('lightboxOverlay');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+    const overlay = document.getElementById('lightboxOverlay');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+function closeLightboxOnBg(e){
+    if(e.target.id === 'lightboxOverlay') closeLightbox();
+}
+function lightboxPrev(){
+    lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
+    updateLightbox();
+}
+function lightboxNext(){
+    lightboxIndex = (lightboxIndex + 1) % lightboxImages.length;
+    updateLightbox();
+}
+function updateLightbox(){
+    document.getElementById('lightboxImage').src = lightboxImages[lightboxIndex];
+    document.getElementById('lightboxCounter').textContent =
+        lightboxImages.length > 1 ? `${lightboxIndex + 1} / ${lightboxImages.length}` : '';
+    const showArrows = lightboxImages.length > 1;
+    document.querySelector('.lightbox-prev').style.display = showArrows ? 'flex' : 'none';
+    document.querySelector('.lightbox-next').style.display = showArrows ? 'flex' : 'none';
+}
+// ESC-Taste + Pfeiltasten
+document.addEventListener('keydown', (e) => {
+    if(!document.getElementById('lightboxOverlay').classList.contains('active')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') lightboxPrev();
+    if(e.key === 'ArrowRight') lightboxNext();
+});
+</script>
+
+</script>
+
+<!-- ===== Wiederverwendbare Lightbox ===== -->
+<div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightboxOnBg(event)">
+    <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Schließen">✕</button>
+        <button class="lightbox-arrow lightbox-prev" onclick="lightboxPrev()" aria-label="Zurück">‹</button>
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        <button class="lightbox-arrow lightbox-next" onclick="lightboxNext()" aria-label="Weiter">›</button>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
     </div>
-
-
-    <script>
-        const modal = () => document.getElementById('contactModal');
-
-        function openContactModal() {
-            modal().classList.add('is-open');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeContactModal() {
-            modal().classList.remove('is-open');
-            document.body.style.overflow = '';
-            // Reset nach Animation
-            setTimeout(() => {
-                const f = document.getElementById('contactForm');
-                f.reset();
-                document.querySelectorAll('.contact-form .form-error.show').forEach(e => e.classList.remove('show'));
-                document.querySelectorAll('.contact-form .invalid').forEach(e => e.classList.remove('invalid'));
-                document.getElementById('contactSuccess').classList.remove('show');
-                document.getElementById('contactForm').style.display = '';
-            }, 350);
-        }
-
-        // Schließen bei Klick auf Overlay
-        document.addEventListener('click', (e) => {
-            if (e.target.id === 'contactModal') closeContactModal();
-        });
-        // Schließen mit ESC
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal().classList.contains('is-open')) closeContactModal();
-        });
-
-        // Validierung + Submit
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const fields = [
-                { id: 'cf-name', test: v => v.trim().length > 1 },
-                { id: 'cf-email', test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
-                { id: 'cf-message', test: v => v.trim().length > 3 },
-            ];
-            let ok = true;
-            fields.forEach(f => {
-                const el = document.getElementById(f.id);
-                const err = document.querySelector(`.form-error[data-for="${f.id}"]`);
-                if (!f.test(el.value)) { ok = false; el.classList.add('invalid'); err.classList.add('show'); }
-                else { el.classList.remove('invalid'); err.classList.remove('show'); }
-            });
-            const agb = document.getElementById('cf-agb');
-            const agbErr = document.querySelector('.form-error[data-for="cf-agb"]');
-            if (!agb.checked) { ok = false; agbErr.classList.add('show'); }
-            else { agbErr.classList.remove('show'); }
-
-            if (!ok) return;
-
-            // Erfolg anzeigen
-            document.getElementById('contactForm').style.display = 'none';
-            document.getElementById('contactSuccess').classList.add('show');
-            setTimeout(closeContactModal, 1800);
-        });
-
-        // Fehler live entfernen bei Eingabe
-        document.querySelectorAll('#contactForm input, #contactForm textarea').forEach(el => {
-            el.addEventListener('input', () => {
-                el.classList.remove('invalid');
-                const err = document.querySelector(`.form-error[data-for="${el.id}"]`);
-                if (err) err.classList.remove('show');
-            });
-        });
-
-        // ==== Info-Modal ("Mehr erfahren") ====
-        const infoModal = () => document.getElementById('infoModal');
-
-        function openInfoModal() {
-            infoModal().classList.add('is-open');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeInfoModal() {
-            infoModal().classList.remove('is-open');
-            document.body.style.overflow = '';
-        }
-        function switchToContactModal() {
-            closeInfoModal();
-            // Warten, bis die Schließ-Animation durch ist, dann Kontaktformular öffnen
-            setTimeout(openContactModal, 380);
-        }
-
-        // Overlay-Klick schließt Info-Modal
-        document.addEventListener('click', (e) => {
-            if (e.target.id === 'infoModal') closeInfoModal();
-        });
-        // ESC schließt Info-Modal
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && infoModal().classList.contains('is-open')) closeInfoModal();
-        });
-
-
-
-
-        let lightboxImages = [];
-        let lightboxIndex = 0;
-
-        function openLightbox(images) {
-            // images = Array von Bild-URLs, ODER ein einzelner String
-            lightboxImages = Array.isArray(images) ? images : [images];
-            lightboxIndex = 0;
-            updateLightbox();
-            const overlay = document.getElementById('lightboxOverlay');
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox() {
-            const overlay = document.getElementById('lightboxOverlay');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        function closeLightboxOnBg(e) {
-            if (e.target.id === 'lightboxOverlay') closeLightbox();
-        }
-        function lightboxPrev() {
-            lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
-            updateLightbox();
-        }
-        function lightboxNext() {
-            lightboxIndex = (lightboxIndex + 1) % lightboxImages.length;
-            updateLightbox();
-        }
-        function updateLightbox() {
-            document.getElementById('lightboxImage').src = lightboxImages[lightboxIndex];
-            document.getElementById('lightboxCounter').textContent =
-                lightboxImages.length > 1 ? `${lightboxIndex + 1} / ${lightboxImages.length}` : '';
-            const showArrows = lightboxImages.length > 1;
-            document.querySelector('.lightbox-prev').style.display = showArrows ? 'flex' : 'none';
-            document.querySelector('.lightbox-next').style.display = showArrows ? 'flex' : 'none';
-        }
-        // ESC-Taste + Pfeiltasten
-        document.addEventListener('keydown', (e) => {
-            if (!document.getElementById('lightboxOverlay').classList.contains('active')) return;
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowLeft') lightboxPrev();
-            if (e.key === 'ArrowRight') lightboxNext();
-        });
-    </script>
-
-    </script>
-
-
-    <!-- ===== Wiederverwendbare Lightbox ===== -->
-    <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightboxOnBg(event)">
-        <div class="lightbox-content">
-            <button class="lightbox-close" onclick="closeLightbox()" aria-label="Schließen">✕</button>
-            <button class="lightbox-arrow lightbox-prev" onclick="lightboxPrev()" aria-label="Zurück">‹</button>
-            <img class="lightbox-image" id="lightboxImage" src="" alt="">
-            <button class="lightbox-arrow lightbox-next" onclick="lightboxNext()" aria-label="Weiter">›</button>
-            <div class="lightbox-counter" id="lightboxCounter"></div>
-        </div>
-    </div>
+</div>
 
 
 </body>
 
 <footer>
-
+    
 
     <div class="footer-top">
 
         <div class="footer-brand">
             <a href="#top">
                 <div class="logo">
+                    
+                        <img src="bilder/logo.png" alt="Avelue Logo">
 
-                    <img src="bilder/logo.png" alt="Avelue Logo">
-
-                    <h2 class="footer-logo-link" style="color: #fff;">Avelue</h2>
-
+                        <h2 class="footer-logo-link" style="color: #fff;">Avelue</h2>
+                    
                 </div>
             </a>
             <p>
@@ -2942,18 +2392,20 @@
 
         <div class="footer-contact">
 
-            <h3>Kontakt</h3>
+    <h3>Kontakt</h3>
 
-            <p>info@avelue.de</p>
+    <p>info@avelue.de</p>
 
-            <a href="https://www.instagram.com/avelue.ai?igsh=OW4xeGg0OTlycTg0" target="_blank" class="social-link">
-                <i class="fa-brands fa-instagram"></i>
-                Instagram
-            </a>
+    <a href="https://www.instagram.com/avelue.ai?igsh=OW4xeGg0OTlycTg0"
+       target="_blank"
+       class="social-link">
+        <i class="fa-brands fa-instagram"></i>
+        Instagram
+    </a>
 
-        </div>
+</div>
 
-
+        
 
     </div>
 
@@ -2967,5 +2419,4 @@
     </div>
 
 </footer>
-
 </html>
