@@ -314,7 +314,7 @@ button>a:hover {
     color: var(--brand-navy);
 
     font-size: clamp(3.2rem, 5vw, 5.7rem);
-    font-weight: 800;
+    font-weight: 700;
     line-height: 0.98;
     letter-spacing: -0.05em;
 }
