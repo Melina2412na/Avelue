@@ -466,6 +466,180 @@
         </div>
 
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const brandSection = document.querySelector(".brand-story");
+
+            if (!brandSection) {
+                return;
+            }
+
+            const tabs = brandSection.querySelectorAll(".brand-story-tab");
+
+            const meaningPanel = document.getElementById("brandPanelMeaning");
+            const valuesPanel = document.getElementById("brandPanelValues");
+
+            const kicker = document.getElementById("brandStoryKicker");
+            const title = document.getElementById("brandStoryTitle");
+            const lead = document.getElementById("brandStoryLead");
+            const description = document.getElementById("brandStoryDescription");
+
+
+            const content = {
+
+                meaning: {
+                    kicker: "INSPIRED BY VALUE",
+                    title: 'Warum <span>Avelue?</span>',
+                    lead: "Ein Name. Viele Bedeutungen. Ein Versprechen.",
+                    description:
+                        "Avelue ist inspiriert von dem, was wirklich zählt: Value. " +
+                        "Der Name vereint zentrale Funktionen unserer Lösung und steht " +
+                        "für den Mehrwert, der aus Zusammenarbeit entsteht."
+                },
+
+                values: {
+                    kicker: "UNSERE MARKE",
+                    title: 'Wofür steht <span>Avelue?</span>',
+                    lead:
+                        "Klare Werte für eine neue Qualität der Zusammenarbeit.",
+                    description:
+                        "Unsere Marke basiert auf Werten, die den Kern unserer Lösung " +
+                        "und unseren Anspruch widerspiegeln. Sie leiten unser Handeln " +
+                        "in der Technologie, in der Kommunikation und im " +
+                        "verantwortungsvollen Umgang mit Menschen und Wissen."
+                }
+
+            };
+
+
+            function switchBrandView(view) {
+
+                const showValues = view === "values";
+
+                brandSection.classList.toggle(
+                    "is-values",
+                    showValues
+                );
+
+
+                tabs.forEach(function (tab) {
+
+                    const isActive =
+                        tab.dataset.brandView === view;
+
+                    tab.classList.toggle(
+                        "active",
+                        isActive
+                    );
+
+                    tab.setAttribute(
+                        "aria-selected",
+                        String(isActive)
+                    );
+
+                });
+
+
+                const activePanel =
+                    showValues
+                        ? valuesPanel
+                        : meaningPanel;
+
+                const inactivePanel =
+                    showValues
+                        ? meaningPanel
+                        : valuesPanel;
+
+
+                inactivePanel.classList.remove("active");
+
+                window.setTimeout(function () {
+
+                    inactivePanel.hidden = true;
+
+                    activePanel.hidden = false;
+
+                    window.requestAnimationFrame(function () {
+
+                        activePanel.classList.add("active");
+
+                    });
+
+                }, 180);
+
+
+                kicker.textContent =
+                    content[view].kicker;
+
+                title.innerHTML =
+                    content[view].title;
+
+                lead.textContent =
+                    content[view].lead;
+
+                description.textContent =
+                    content[view].description;
+
+            }
+
+
+            tabs.forEach(function (tab) {
+
+                tab.addEventListener(
+                    "click",
+                    function () {
+
+                        switchBrandView(
+                            tab.dataset.brandView
+                        );
+
+                    }
+                );
+
+            });
+
+
+            tabs.forEach(function (tab, index) {
+
+                tab.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key !== "ArrowRight" &&
+                            event.key !== "ArrowLeft"
+                        ) {
+                            return;
+                        }
+
+                        event.preventDefault();
+
+                        let nextIndex;
+
+                        if (event.key === "ArrowRight") {
+
+                            nextIndex =
+                                (index + 1) % tabs.length;
+
+                        } else {
+
+                            nextIndex =
+                                (index - 1 + tabs.length) %
+                                tabs.length;
+
+                        }
+
+                        tabs[nextIndex].focus();
+                        tabs[nextIndex].click();
+
+                    }
+                );
+
+            });
+
+        });
+    </script>
 
     <section class="problem">
 
