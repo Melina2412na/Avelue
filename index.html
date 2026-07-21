@@ -1988,6 +1988,7 @@
                     </ul>
                 </div>
 
+
                 <div class="usecase-visual">
 
                     <img id="usecase-image" src="Bilder/WorkshopBild.png"
@@ -1997,107 +1998,138 @@
             </div>
         </div>
         </div>
+
+      
     </section>
     <script>
-        function showUsecase(type, event) {
-            const buttons = document.querySelectorAll(".usecase-btn");
+function showUsecase(type, event) {
+    document.querySelectorAll(".usecase-btn").forEach(button => {
+        button.classList.remove("active");
+    });
 
-            buttons.forEach(button => {
-                button.classList.remove("active");
-            });
+    event.currentTarget.classList.add("active");
 
-            event.currentTarget.classList.add("active");
+    const content = {
+        workshops: {
+            title: "Workshops",
+            subtitle: "Workshops effizient begleiten.",
+            text: "Avelue dokumentiert Diskussionen in Echtzeit, erkennt Themen und Entscheidungen und erstellt strukturierte Ergebnisse – automatisch und nachvollziehbar.",
+            image: "Bilder/WorkshopBild.png",
+            alt: "Workshop mit Temi und mehreren Teilnehmenden",
+            points: [
+                "Gespräche intelligent erfassen",
+                "Themen & Entscheidungen erkennen",
+                "Aufgaben automatisch ableiten",
+                "Ergebnisse flexibel exportieren"
+            ]
+        },
 
-            const content = {
-                workshops: {
-                    title: "Workshops",
-                    subtitle: "Workshops effizient begleiten.",
-                    text: "Avelue dokumentiert Diskussionen in Echtzeit, erkennt Themen und Entscheidungen und erstellt strukturierte Ergebnisse – automatisch und nachvollziehbar.",
-                    points: [
-                        "Gespräche intelligent erfassen",
-                        "Themen & Entscheidungen erkennen",
-                        "Aufgaben automatisch ableiten",
-                        "Ergebnisse flexibel exportieren"
-                    ]
-                },
+        design: {
+            title: "Meetings",
+            subtitle: "Aus Meetings werden klare Entscheidungen.",
+            text: "Alle relevanten Informationen werden automatisch dokumentiert und zentral bereitgestellt.",
+            image: "Bilder/Meeting.jpeg",
+            alt: "Meeting mit mehreren Teilnehmenden",
+            points: [
+                "Entscheidungen dokumentieren",
+                "Aufgaben zuweisen",
+                "Gemeinsamen Wissensstand schaffen",
+                "Nachbereitung reduzieren"
+            ]
+        },
 
-                design: {
-                    title: "Meetings",
-                    subtitle: "Aus Meetings werden klare Entscheidungen.",
-                    text: "Alle relevanten Informationen werden automatisch dokumentiert und zentral bereitgestellt. So bleiben Beschlüsse, Verantwortlichkeiten und nächste Schritte jederzeit nachvollziehbar.",
-                    points: [
-                        "Entscheidungen dokumentieren",
-                        "Aufgaben zuweisen",
-                        "Gemeinsamen Wissensstand schaffen",
-                        "Nachbereitung reduzieren"
-                    ]
-                },
+        projekt: {
+            title: "Design Thinking",
+            subtitle: "Ideen strukturiert weiterentwickeln.",
+            text: "Von der ersten Idee bis zum fertigen Konzept erkennt Avelue Zusammenhänge und dokumentiert Kreativprozesse.",
+            image: "Bilder/Design.jpeg",
+            alt: "Design-Thinking-Workshop",
+            points: [
+                "Whiteboards erfassen",
+                "Ideen clustern",
+                "Erkenntnisse verknüpfen",
+                "Wissensbasis aufbauen"
+            ]
+        },
 
-                projekt: {
-                    title: "Design Thinking",
-                    subtitle: "Ideen strukturiert weiterentwickeln.",
-                    text: "Von der ersten Idee bis zum fertigen Konzept erkennt Avelue Zusammenhänge, dokumentiert Kreativprozesse und macht Ergebnisse langfristig nutzbar.",
-                    points: [
-                        "Whiteboards erfassen",
-                        "Ideen clustern",
-                        "Erkenntnisse verknüpfen",
-                        "Wissensbasis aufbauen"
-                    ]
-                },
+        forschung: {
+            title: "Strategie & Innovation",
+            subtitle: "Komplexität verständlich machen.",
+            text: "Strategische Diskussionen und Innovationsprozesse werden automatisch strukturiert.",
+            image:"Bilder/StrategieInnovation.jpeg",
+            alt: "Strategie- und Innovationsworkshop",
+            points: [
+                "Prioritäten erkennen",
+                "Roadmaps dokumentieren",
+                "Maßnahmen ableiten",
+                "Entscheidungen nachvollziehen"
+            ]
+        },
 
-                forschung: {
-                    title: "Strategie & Innovation",
-                    subtitle: "Komplexität verständlich machen.",
-                    text: "Strategische Diskussionen, Roadmaps und Innovationsprozesse werden automatisch strukturiert und nachvollziehbar dokumentiert.",
-                    points: [
-                        "Prioritäten erkennen",
-                        "Roadmaps dokumentieren",
-                        "Maßnahmen ableiten",
-                        "Entscheidungen nachvollziehen"
-                    ]
-                },
+        hochschule: {
+            title: "Trainings & Akademien",
+            subtitle: "Wissen nachhaltig vermitteln.",
+            text: "Trainings und Schulungen profitieren von einer strukturierten Dokumentation.",
+            image: "Bilder/TrainingAkademie.jpeg",
+            alt: "Training mit mehreren Teilnehmenden",
+            points: [
+                "Lerninhalte sichern",
+                "Ergebnisse teilen",
+                "Wissensspeicher aufbauen",
+                "Einarbeitung beschleunigen"
+            ]
+        },
 
-                hochschule: {
-                    title: "Trainings & Akademien",
-                    subtitle: "Wissen nachhaltig vermitteln.",
-                    text: "Trainings, Schulungen und interne Akademien profitieren von einer strukturierten Dokumentation und einer langfristig nutzbaren Wissensbasis.",
-                    points: [
-                        "Lerninhalte sichern",
-                        "Ergebnisse teilen",
-                        "Wissensspeicher aufbauen",
-                        "Einarbeitung beschleunigen"
-                    ]
-                },
+        unternehmen: {
+            title: "Forschung & Hochschulen",
+            subtitle: "Forschung transparent dokumentieren.",
+            text: "Interviews, Workshops und Forschungsprojekte werden nachvollziehbar dokumentiert.",
+            image: "Bilder/ForschungHochschule.jpeg",
+            alt: "Forschung an einer Hochschule",
+            points: [
+                "Qualitative Daten erfassen",
+                "Ergebnisse strukturieren",
+                "Transparente Dokumentation ermöglichen",
+                "Wissen wiederverwenden"
+            ]
+        }
+    };
 
-                unternehmen: {
-                    title: "Forschung & Hochschulen",
-                    subtitle: "Forschung transparent dokumentieren.",
-                    text: "Interviews, Workshops und Forschungsprojekte werden nachvollziehbar dokumentiert und stehen langfristig für Auswertungen und weitere Projekte zur Verfügung.",
-                    points: [
-                        "Qualitative Daten erfassen",
-                        "Ergebnisse strukturieren",
-                        "Transparente Dokumentation ermöglichen",
-                        "Wissen wiederverwenden"
-                    ]
-                }
-            };
+    const selected = content[type];
+    const textContainer = document.getElementById("usecase-text");
+    const imageElement = document.getElementById("usecase-image");
 
-            const selected = content[type];
+    if (!selected) {
+        console.error("Kein Inhalt für diesen Typ gefunden:", type);
+        return;
+    }
 
-            document.getElementById("usecase-text").innerHTML = `
+    if (!textContainer) {
+        console.error("Element #usecase-text wurde nicht gefunden.");
+        return;
+    }
+
+    if (!imageElement) {
+        console.error("Element #usecase-image wurde nicht gefunden.");
+        return;
+    }
+
+    textContainer.innerHTML = `
         <h3>${selected.title}</h3>
         <p class="usecase-subtitle">${selected.subtitle}</p>
         <p>${selected.text}</p>
 
         <ul>
-            ${selected.points
-                    .map(point => `<li>${point}</li>`)
-                    .join("")}
+            ${selected.points.map(point => `<li>${point}</li>`).join("")}
         </ul>
     `;
-        }
-    </script>
 
+    imageElement.src = selected.image;
+    imageElement.alt = selected.alt;
+
+    console.log("Neues Bild:", selected.image);
+}
+</script>
     <section class="pricing" id="preise">
         <div class="pricing-header" uk-scrollspy="cls:uk-animation-fade">
             <span class="section-tag">PAKETE & PREISE</span>
