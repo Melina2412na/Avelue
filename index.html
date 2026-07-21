@@ -1474,12 +1474,12 @@ Anonymisierte Verarbeitung, rollenbasierte Freigaben und Human-in-the-Loop schaf
 
     <div class="usecases-content">
         <div class="usecase-tabs">
-            <button class="usecase-btn active" onclick="showUsecase('workshops')">Workshops</button>
-            <button class="usecase-btn" onclick="showUsecase('design')">Meetings</button>
-            <button class="usecase-btn" onclick="showUsecase('projekt')">Design Thinking</button>
-            <button class="usecase-btn" onclick="showUsecase('forschung')">Strategie & Innovation</button>
-            <button class="usecase-btn" onclick="showUsecase('hochschule')">Trainings & Akademien </button>
-            <button class="usecase-btn" onclick="showUsecase('unternehmen')">Forschung & Hochschulen </button>
+           <button class="usecase-btn active" onclick="showUsecase('workshops', event)">Workshops</button>
+<button class="usecase-btn" onclick="showUsecase('design', event)">Meetings</button>
+<button class="usecase-btn" onclick="showUsecase('projekt', event)">Design Thinking</button>
+<button class="usecase-btn" onclick="showUsecase('forschung', event)">Strategie & Innovation</button>
+<button class="usecase-btn" onclick="showUsecase('hochschule', event)">Trainings & Akademien</button>
+<button class="usecase-btn" onclick="showUsecase('unternehmen', event)">Forschung & Hochschulen</button>
         </div>
 
         <div class="usecase-box">
@@ -1509,73 +1509,86 @@ Anonymisierte Verarbeitung, rollenbasierte Freigaben und Human-in-the-Loop schaf
         </div>
     </div>
 </section>
-
 <script>
-function showUsecase(type) {
+function showUsecase(type, event) {
     const buttons = document.querySelectorAll(".usecase-btn");
-    buttons.forEach(btn => btn.classList.remove("active"));
 
-    event.target.classList.add("active");
+    buttons.forEach(button => {
+        button.classList.remove("active");
+    });
+
+    event.currentTarget.classList.add("active");
 
     const content = {
         workshops: {
             title: "Workshops",
-            text: "Avelue dokumentiert Diskussionen in Echtzeit, erkennt Themen und Entscheidungen und erstellt strukturierte Ergebnisse – automatisch und nachvollziehbar. ",
+            subtitle: "Workshops effizient begleiten.",
+            text: "Avelue dokumentiert Diskussionen in Echtzeit, erkennt Themen und Entscheidungen und erstellt strukturierte Ergebnisse – automatisch und nachvollziehbar.",
             points: [
-                " Gespräche intelligent erfassen",
-                " Themen & Entscheidungen erkennen ",
-                " Aufgaben automatisch ableiten",
-                " Ergebnisse flexibel exportieren "
+                "Gespräche intelligent erfassen",
+                "Themen und Entscheidungen erkennen",
+                "Aufgaben automatisch ableiten",
+                "Ergebnisse flexibel exportieren"
             ]
         },
+
         design: {
             title: "Meetings",
-            text: "Aus Meetings werden Entscheidungen. Alle relevanten Informationen werden automatisch dokumentiert und zentral bereitgestellt. So bleiben Beschlüsse, Verantwortlichkeiten und nächste Schritte jederzeit nachvollziehbar.",
+            subtitle: "Aus Meetings werden klare Entscheidungen.",
+            text: "Alle relevanten Informationen werden automatisch dokumentiert und zentral bereitgestellt. So bleiben Beschlüsse, Verantwortlichkeiten und nächste Schritte jederzeit nachvollziehbar.",
             points: [
-                " Entscheidungen dokumentieren ",
-                "Aufgaben zuweisen ",
-                "Gemeinsamer Wissensstand ",
-                "Weniger Nachbereitung "
+                "Entscheidungen dokumentieren",
+                "Aufgaben zuweisen",
+                "Gemeinsamen Wissensstand schaffen",
+                "Nachbereitung reduzieren"
             ]
         },
+
         projekt: {
-            title: "Design Thinking ",
-            text: "Ideen strukturiert weiterentwickeln. Von der ersten Idee bis zum fertigen Konzept erkennt Avelue Zusammenhänge, dokumentiert Kreativprozesse und macht Ergebnisse langfristig nutzbar. ",
+            title: "Design Thinking",
+            subtitle: "Ideen strukturiert weiterentwickeln.",
+            text: "Von der ersten Idee bis zum fertigen Konzept erkennt Avelue Zusammenhänge, dokumentiert Kreativprozesse und macht Ergebnisse langfristig nutzbar.",
             points: [
-                "Whiteboards erfassen ",
-                "Ideen clustern ",
-                "Erkenntnisse verknüpfen ",
-                "Wissensbasis aufbauen "
+                "Whiteboards erfassen",
+                "Ideen clustern",
+                "Erkenntnisse verknüpfen",
+                "Wissensbasis aufbauen"
             ]
         },
+
         forschung: {
             title: "Strategie & Innovation",
-            text: "Komplexität verständlich machen. Strategische Diskussionen, Roadmaps und Innovationsprozesse werden automatisch strukturiert und nachvollziehbar dokumentiert.",
+            subtitle: "Komplexität verständlich machen.",
+            text: "Strategische Diskussionen, Roadmaps und Innovationsprozesse werden automatisch strukturiert und nachvollziehbar dokumentiert.",
             points: [
                 "Prioritäten erkennen",
                 "Roadmaps dokumentieren",
-                "Maßnahmen ableiten ",
-                "Entscheidungen nachvollziehen "
+                "Maßnahmen ableiten",
+                "Entscheidungen nachvollziehen"
             ]
         },
+
         hochschule: {
             title: "Trainings & Akademien",
-            text: "Wissen nachhaltig vermitteln. Trainings, Schulungen und interne Akademien profitieren von einer strukturierten Dokumentation und einer langfristig nutzbaren Wissensbasis.",
+            subtitle: "Wissen nachhaltig vermitteln.",
+            text: "Trainings, Schulungen und interne Akademien profitieren von einer strukturierten Dokumentation und einer langfristig nutzbaren Wissensbasis.",
             points: [
-                " Lerninhalte sichern ",
-                " Ergebnisse teilen ",
-                " Wissensspeicher aufbauen ",
-                "Schnellere Einarbeitung "
+                "Lerninhalte sichern",
+                "Ergebnisse teilen",
+                "Wissensspeicher aufbauen",
+                "Einarbeitung beschleunigen"
             ]
         },
+
         unternehmen: {
-            title: "Forschung & Hochschulen ",
-            text: "Forschung transparent dokumentieren. Interviews, Workshops und Forschungsprojekte werden nachvollziehbar dokumentiert und stehen langfristig für Auswertungen und weitere Projekte zur Verfügung. ",
+            title: "Forschung & Hochschulen",
+            subtitle: "Forschung transparent dokumentieren.",
+            text: "Interviews, Workshops und Forschungsprojekte werden nachvollziehbar dokumentiert und stehen langfristig für Auswertungen und weitere Projekte zur Verfügung.",
             points: [
-                "Qualitative Daten erfassen ",
-                "Ergebnisse strukturieren ",
-                "Transparente Dokumentation ",
-                " Wiederverwendbares Wissen "
+                "Qualitative Daten erfassen",
+                "Ergebnisse strukturieren",
+                "Transparente Dokumentation ermöglichen",
+                "Wissen wiederverwenden"
             ]
         }
     };
@@ -1584,14 +1597,16 @@ function showUsecase(type) {
 
     document.getElementById("usecase-text").innerHTML = `
         <h3>${selected.title}</h3>
+        <p class="usecase-subtitle">${selected.subtitle}</p>
         <p>${selected.text}</p>
+
         <ul>
-            ${selected.points.map(point => `<li>${point}</li>`).join("")}
+            ${selected.points
+                .map(point => `<li>${point}</li>`)
+                .join("")}
         </ul>
     `;
 }
-
-
 </script>
 
 <section class="pricing" id="preise">
