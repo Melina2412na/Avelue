@@ -2784,11 +2784,436 @@ Alle von der KI erzeugten Inhalte können vor der endgültigen Freigabe überpr�
                         Kontakt aufnehmen
                     </a>
                 </button>
-                <button class="cta-btn secondary" onclick="openContactModal()">
-                    <a>
-                        Kostenlos testen
+               <button type="button" class="cta-btn secondary" onclick="openBookingModal()">
+    Beratungstermin vereinbaren
+</button>
+
+<!-- =========================================
+     BERATUNGSTERMIN MODAL
+========================================= -->
+
+<div class="booking-overlay" id="bookingModal" aria-hidden="true">
+
+    <div
+        class="booking-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="bookingModalTitle"
+    >
+
+        <button
+            type="button"
+            class="booking-close"
+            onclick="closeBookingModal()"
+            aria-label="Terminfenster schließen"
+        >
+            &times;
+        </button>
+
+
+        <!-- Linke Seite -->
+
+        <div class="booking-info">
+
+            <span class="booking-eyebrow">
+                BERATUNGSTERMIN BUCHEN
+            </span>
+
+            <h2 id="bookingModalTitle">
+                Beratungstermin<br>
+                vereinbaren
+            </h2>
+
+            <p class="booking-intro">
+                Wählen Sie einen passenden Termin für eine persönliche
+                Beratung mit unserem Team.
+            </p>
+
+
+            <div class="booking-benefits">
+
+                <div class="booking-benefit">
+
+                    <div class="booking-benefit-icon">
+                        <i class="fa-regular fa-calendar"></i>
+                    </div>
+
+                    <div>
+                        <strong>Dauer: ca. 30 Minuten</strong>
+                        <span>Online-Meeting via Microsoft Teams</span>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-benefit">
+
+                    <div class="booking-benefit-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+
+                    <div>
+                        <strong>Persönliche Beratung</strong>
+                        <span>Wir nehmen uns Zeit für Ihre Fragen.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-benefit">
+
+                    <div class="booking-benefit-icon">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>Unverbindlich und kostenlos</strong>
+                        <span>Kennenlernen ohne Verpflichtungen.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="booking-contact">
+
+                <p>
+                    Haben Sie Fragen?
+                    <br>
+                    Schreiben Sie uns an
+                    <a href="mailto:info@avelue.de">
+                        info@avelue.de
                     </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Rechte Seite -->
+
+        <div class="booking-calendar-area">
+
+            <div id="bookingStepCalendar">
+
+                <h3>Wählen Sie ein Datum</h3>
+
+
+                <div class="calendar-header">
+
+                    <button
+                        type="button"
+                        class="calendar-arrow"
+                        id="bookingPreviousMonth"
+                        aria-label="Vorheriger Monat"
+                    >
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <strong id="bookingMonthTitle"></strong>
+
+                    <button
+                        type="button"
+                        class="calendar-arrow"
+                        id="bookingNextMonth"
+                        aria-label="Nächster Monat"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="calendar-weekdays">
+
+                    <span>Mo</span>
+                    <span>Di</span>
+                    <span>Mi</span>
+                    <span>Do</span>
+                    <span>Fr</span>
+                    <span>Sa</span>
+                    <span>So</span>
+
+                </div>
+
+
+                <div
+                    class="calendar-days"
+                    id="bookingCalendarDays"
+                ></div>
+
+
+                <div
+                    class="booking-times-wrapper"
+                    id="bookingTimesWrapper"
+                >
+
+                    <div class="booking-divider"></div>
+
+                    <h4 id="bookingSelectedDateText">
+                        Bitte wählen Sie einen Freitag.
+                    </h4>
+
+
+                    <div
+                        class="booking-times"
+                        id="bookingTimes"
+                    >
+
+                        <button type="button" class="booking-time" data-time="09:00">
+                            09:00
+                        </button>
+
+                        <button type="button" class="booking-time" data-time="10:00">
+                            10:00
+                        </button>
+
+                        <button type="button" class="booking-time" data-time="11:00">
+                            11:00
+                        </button>
+
+                        <button type="button" class="booking-time" data-time="13:00">
+                            13:00
+                        </button>
+
+                        <button type="button" class="booking-time" data-time="14:00">
+                            14:00
+                        </button>
+
+                        <button type="button" class="booking-time" data-time="15:00">
+                            15:00
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="booking-primary-button"
+                        id="bookingContinueButton"
+                        disabled
+                    >
+                        Weiter
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Formular -->
+
+            <div
+                class="booking-form-step"
+                id="bookingStepForm"
+                hidden
+            >
+
+                <button
+                    type="button"
+                    class="booking-back"
+                    id="bookingBackButton"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Termin ändern
                 </button>
+
+                <h3>Ihre Kontaktdaten</h3>
+
+                <div class="booking-selection-summary">
+
+                    <i class="fa-regular fa-calendar-check"></i>
+
+                    <div>
+                        <strong id="bookingSummaryDate"></strong>
+                        <span id="bookingSummaryTime"></span>
+                    </div>
+
+                </div>
+
+
+                <form id="bookingForm" novalidate>
+
+                    <div class="booking-form-row">
+
+                        <div class="booking-form-group">
+
+                            <label for="bookingName">
+                                Name
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bookingName"
+                                name="name"
+                                autocomplete="name"
+                                required
+                            >
+
+                            <small class="booking-error">
+                                Bitte geben Sie Ihren Namen ein.
+                            </small>
+
+                        </div>
+
+
+                        <div class="booking-form-group">
+
+                            <label for="bookingCompany">
+                                Unternehmen
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bookingCompany"
+                                name="company"
+                                autocomplete="organization"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="booking-form-row">
+
+                        <div class="booking-form-group">
+
+                            <label for="bookingEmail">
+                                E-Mail
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="bookingEmail"
+                                name="email"
+                                autocomplete="email"
+                                required
+                            >
+
+                            <small class="booking-error">
+                                Bitte geben Sie eine gültige E-Mail-Adresse ein.
+                            </small>
+
+                        </div>
+
+
+                        <div class="booking-form-group">
+
+                            <label for="bookingPhone">
+                                Telefon
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="bookingPhone"
+                                name="phone"
+                                autocomplete="tel"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="booking-form-group">
+
+                        <label for="bookingMessage">
+                            Worum geht es in Ihrem Termin?
+                        </label>
+
+                        <textarea
+                            id="bookingMessage"
+                            name="message"
+                            rows="4"
+                            placeholder="Beschreiben Sie kurz Ihr Anliegen."
+                        ></textarea>
+
+                    </div>
+
+
+                    <label class="booking-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="bookingPrivacy"
+                            required
+                        >
+
+                        <span>
+                            Ich habe die Datenschutzbestimmungen gelesen
+                            und stimme der Verarbeitung meiner Daten zu.
+                            <strong>*</strong>
+                        </span>
+
+                    </label>
+
+                    <small
+                        class="booking-error booking-privacy-error"
+                        id="bookingPrivacyError"
+                    >
+                        Bitte bestätigen Sie die Datenschutzbestimmungen.
+                    </small>
+
+
+                    <button
+                        type="submit"
+                        class="booking-primary-button"
+                    >
+                        Termin verbindlich anfragen
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Erfolgsmeldung -->
+
+            <div
+                class="booking-success"
+                id="bookingSuccess"
+                hidden
+            >
+
+                <div class="booking-success-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <h3>Vielen Dank!</h3>
+
+                <p>
+                    Ihre Terminanfrage wurde erfolgreich aufgenommen.
+                    Wir senden Ihnen die Bestätigung und den Zugangslink
+                    anschließend per E-Mail.
+                </p>
+
+                <div class="booking-success-date">
+
+                    <strong id="bookingSuccessDate"></strong>
+                    <span id="bookingSuccessTime"></span>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="booking-primary-button"
+                    onclick="closeBookingModal()"
+                >
+                    Fenster schließen
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
             </div>
 
@@ -3294,6 +3719,611 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Beim Laden zunächst nur Produkt anzeigen
     showFaqCategory("produkt");
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const bookingModal = document.getElementById("bookingModal");
+    const calendarDays = document.getElementById("bookingCalendarDays");
+    const monthTitle = document.getElementById("bookingMonthTitle");
+
+    const previousMonthButton = document.getElementById("bookingPreviousMonth");
+    const nextMonthButton = document.getElementById("bookingNextMonth");
+
+    const selectedDateText = document.getElementById("bookingSelectedDateText");
+    const continueButton = document.getElementById("bookingContinueButton");
+
+    const calendarStep = document.getElementById("bookingStepCalendar");
+    const formStep = document.getElementById("bookingStepForm");
+    const successStep = document.getElementById("bookingSuccess");
+
+    const backButton = document.getElementById("bookingBackButton");
+    const bookingForm = document.getElementById("bookingForm");
+
+    const summaryDate = document.getElementById("bookingSummaryDate");
+    const summaryTime = document.getElementById("bookingSummaryTime");
+
+    const successDate = document.getElementById("bookingSuccessDate");
+    const successTime = document.getElementById("bookingSuccessTime");
+
+    const timeButtons = document.querySelectorAll(".booking-time");
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    let displayedDate = new Date(
+        today.getFullYear(),
+        today.getMonth(),
+        1
+    );
+
+    let selectedDate = null;
+    let selectedTime = null;
+
+
+    const monthNames = [
+        "Januar",
+        "Februar",
+        "März",
+        "April",
+        "Mai",
+        "Juni",
+        "Juli",
+        "August",
+        "September",
+        "Oktober",
+        "November",
+        "Dezember"
+    ];
+
+
+    function formatDate(date) {
+
+        return new Intl.DateTimeFormat("de-DE", {
+            weekday: "long",
+            day: "2-digit",
+            month: "long",
+            year: "numeric"
+        }).format(date);
+
+    }
+
+
+    function isSameDay(dateOne, dateTwo) {
+
+        return (
+            dateOne &&
+            dateTwo &&
+            dateOne.getFullYear() === dateTwo.getFullYear() &&
+            dateOne.getMonth() === dateTwo.getMonth() &&
+            dateOne.getDate() === dateTwo.getDate()
+        );
+
+    }
+
+
+    function isFriday(date) {
+
+        return date.getDay() === 5;
+
+    }
+
+
+    function resetTimeSelection() {
+
+        selectedTime = null;
+
+        timeButtons.forEach(function (button) {
+            button.classList.remove("selected");
+        });
+
+        updateContinueButton();
+
+    }
+
+
+    function updateContinueButton() {
+
+        continueButton.disabled = !selectedDate || !selectedTime;
+
+    }
+
+
+    function renderCalendar() {
+
+        calendarDays.innerHTML = "";
+
+        const year = displayedDate.getFullYear();
+        const month = displayedDate.getMonth();
+
+        monthTitle.textContent =
+            monthNames[month] + " " + year;
+
+
+        const firstDayOfMonth = new Date(year, month, 1);
+        const lastDayOfMonth = new Date(year, month + 1, 0);
+
+        /*
+         * JavaScript:
+         * Sonntag = 0
+         * Montag = 1
+         *
+         * Für unseren Kalender soll Montag die erste Spalte sein.
+         */
+
+        const startPosition =
+            (firstDayOfMonth.getDay() + 6) % 7;
+
+
+        for (let empty = 0; empty < startPosition; empty++) {
+
+            const emptyElement = document.createElement("span");
+
+            emptyElement.className =
+                "calendar-day empty";
+
+            calendarDays.appendChild(emptyElement);
+
+        }
+
+
+        for (
+            let day = 1;
+            day <= lastDayOfMonth.getDate();
+            day++
+        ) {
+
+            const currentDate =
+                new Date(year, month, day);
+
+            currentDate.setHours(0, 0, 0, 0);
+
+
+            const dayButton =
+                document.createElement("button");
+
+            dayButton.type = "button";
+            dayButton.className = "calendar-day";
+            dayButton.textContent = day;
+
+            dayButton.setAttribute(
+                "aria-label",
+                formatDate(currentDate)
+            );
+
+
+            const dateIsPast =
+                currentDate < today;
+
+            const dateIsFriday =
+                isFriday(currentDate);
+
+
+            if (isSameDay(currentDate, today)) {
+                dayButton.classList.add("today");
+            }
+
+
+            if (dateIsPast) {
+
+                dayButton.classList.add("past");
+                dayButton.disabled = true;
+
+            } else if (dateIsFriday) {
+
+                dayButton.classList.add("available");
+
+                dayButton.addEventListener(
+                    "click",
+                    function () {
+
+                        selectedDate =
+                            new Date(currentDate);
+
+                        resetTimeSelection();
+                        renderCalendar();
+
+                        selectedDateText.textContent =
+                            formatDate(selectedDate);
+
+                    }
+                );
+
+            } else {
+
+                dayButton.disabled = true;
+
+            }
+
+
+            if (isSameDay(currentDate, selectedDate)) {
+
+                dayButton.classList.add("selected");
+
+            }
+
+
+            calendarDays.appendChild(dayButton);
+
+        }
+
+
+        const currentMonthStart =
+            new Date(today.getFullYear(), today.getMonth(), 1);
+
+        previousMonthButton.disabled =
+            displayedDate <= currentMonthStart;
+
+    }
+
+
+    timeButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            if (!selectedDate) {
+                return;
+            }
+
+            timeButtons.forEach(function (otherButton) {
+                otherButton.classList.remove("selected");
+            });
+
+            button.classList.add("selected");
+
+            selectedTime =
+                button.dataset.time;
+
+            updateContinueButton();
+
+        });
+
+    });
+
+
+    previousMonthButton.addEventListener(
+        "click",
+        function () {
+
+            const previousMonth =
+                new Date(
+                    displayedDate.getFullYear(),
+                    displayedDate.getMonth() - 1,
+                    1
+                );
+
+            const currentMonthStart =
+                new Date(
+                    today.getFullYear(),
+                    today.getMonth(),
+                    1
+                );
+
+            if (previousMonth < currentMonthStart) {
+                return;
+            }
+
+            displayedDate = previousMonth;
+
+            renderCalendar();
+
+        }
+    );
+
+
+    nextMonthButton.addEventListener(
+        "click",
+        function () {
+
+            displayedDate =
+                new Date(
+                    displayedDate.getFullYear(),
+                    displayedDate.getMonth() + 1,
+                    1
+                );
+
+            renderCalendar();
+
+        }
+    );
+
+
+    continueButton.addEventListener(
+        "click",
+        function () {
+
+            if (!selectedDate || !selectedTime) {
+                return;
+            }
+
+            summaryDate.textContent =
+                formatDate(selectedDate);
+
+            summaryTime.textContent =
+                selectedTime + " Uhr · ca. 30 Minuten";
+
+            calendarStep.hidden = true;
+            formStep.hidden = false;
+
+        }
+    );
+
+
+    backButton.addEventListener(
+        "click",
+        function () {
+
+            formStep.hidden = true;
+            calendarStep.hidden = false;
+
+        }
+    );
+
+
+    bookingForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            const nameInput =
+                document.getElementById("bookingName");
+
+            const emailInput =
+                document.getElementById("bookingEmail");
+
+            const privacyInput =
+                document.getElementById("bookingPrivacy");
+
+            const privacyError =
+                document.getElementById("bookingPrivacyError");
+
+
+            let formIsValid = true;
+
+
+            if (nameInput.value.trim().length < 2) {
+
+                showBookingError(nameInput);
+                formIsValid = false;
+
+            } else {
+
+                hideBookingError(nameInput);
+
+            }
+
+
+            const emailIsValid =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+                    emailInput.value.trim()
+                );
+
+
+            if (!emailIsValid) {
+
+                showBookingError(emailInput);
+                formIsValid = false;
+
+            } else {
+
+                hideBookingError(emailInput);
+
+            }
+
+
+            if (!privacyInput.checked) {
+
+                privacyError.classList.add("show");
+                formIsValid = false;
+
+            } else {
+
+                privacyError.classList.remove("show");
+
+            }
+
+
+            if (!formIsValid) {
+                return;
+            }
+
+
+            /*
+             * Hier würde später die Verbindung zu einem
+             * Backend, E-Mail-Dienst oder Buchungssystem erfolgen.
+             */
+
+            console.log({
+                date: formatDate(selectedDate),
+                time: selectedTime,
+                name: nameInput.value,
+                company:
+                    document.getElementById("bookingCompany").value,
+                email: emailInput.value,
+                phone:
+                    document.getElementById("bookingPhone").value,
+                message:
+                    document.getElementById("bookingMessage").value
+            });
+
+
+            successDate.textContent =
+                formatDate(selectedDate);
+
+            successTime.textContent =
+                selectedTime + " Uhr · ca. 30 Minuten";
+
+
+            formStep.hidden = true;
+            successStep.hidden = false;
+
+        }
+    );
+
+
+    function showBookingError(input) {
+
+        input.classList.add("invalid");
+
+        const errorElement =
+            input.parentElement.querySelector(
+                ".booking-error"
+            );
+
+        if (errorElement) {
+            errorElement.classList.add("show");
+        }
+
+    }
+
+
+    function hideBookingError(input) {
+
+        input.classList.remove("invalid");
+
+        const errorElement =
+            input.parentElement.querySelector(
+                ".booking-error"
+            );
+
+        if (errorElement) {
+            errorElement.classList.remove("show");
+        }
+
+    }
+
+
+    document
+        .querySelectorAll(
+            "#bookingForm input, #bookingForm textarea"
+        )
+        .forEach(function (input) {
+
+            input.addEventListener(
+                "input",
+                function () {
+
+                    hideBookingError(input);
+
+                }
+            );
+
+        });
+
+
+    document
+        .getElementById("bookingPrivacy")
+        .addEventListener(
+            "change",
+            function () {
+
+                document
+                    .getElementById("bookingPrivacyError")
+                    .classList.remove("show");
+
+            }
+        );
+
+
+    bookingModal.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === bookingModal) {
+                closeBookingModal();
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                bookingModal.classList.contains("is-open")
+            ) {
+                closeBookingModal();
+            }
+
+        }
+    );
+
+
+    renderCalendar();
+
+
+    window.openBookingModal = function () {
+
+        bookingModal.classList.add("is-open");
+
+        bookingModal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.style.overflow = "hidden";
+
+    };
+
+
+    window.closeBookingModal = function () {
+
+        bookingModal.classList.remove("is-open");
+
+        bookingModal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.style.overflow = "";
+
+
+        setTimeout(function () {
+
+            calendarStep.hidden = false;
+            formStep.hidden = true;
+            successStep.hidden = true;
+
+            bookingForm.reset();
+
+            document
+                .querySelectorAll(".booking-error.show")
+                .forEach(function (error) {
+                    error.classList.remove("show");
+                });
+
+            document
+                .querySelectorAll(".booking-form-group .invalid")
+                .forEach(function (input) {
+                    input.classList.remove("invalid");
+                });
+
+            selectedDate = null;
+            selectedTime = null;
+
+            displayedDate =
+                new Date(
+                    today.getFullYear(),
+                    today.getMonth(),
+                    1
+                );
+
+            selectedDateText.textContent =
+                "Bitte wählen Sie einen Freitag.";
+
+            resetTimeSelection();
+            renderCalendar();
+
+        }, 350);
+
+    };
+
 });
 </script>
 
