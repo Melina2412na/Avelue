@@ -2394,42 +2394,376 @@ function showUsecase(type, event) {
 
     </section>
 
-    <section class="faq">
-        <div class="faq-left" uk-scrollspy="cls:uk-animation-fade; delay: 500">
-            <span class="section-tag">FAQ</span>
+    <section class="faq" id="faq">
 
-            <h2>
-                Häufige Fragen.<br>
-                Einfach beantwortet.
-            </h2>
+    <div class="faq-left" uk-scrollspy="cls:uk-animation-fade; delay: 500">
+        <span class="section-tag">FAQ</span>
 
-            <p>
-                Hier finden Sie Antworten auf die wichtigsten Fragen zu Avelue.
-            </p>
+        <h2>
+            Häufige Fragen.<br>
+            Einfach beantwortet.
+        </h2>
+
+        <p>
+            Hier finden Sie Antworten auf die wichtigsten Fragen zu Avelue.
+        </p>
+    </div>
+
+
+    <div class="faq-right">
+
+        <div class="faq-filter">
+            <button
+                type="button"
+                class="faq-chip active"
+                data-filter="produkt">
+                Produkt & Funktionen
+            </button>
+
+            <button
+                type="button"
+                class="faq-chip"
+                data-filter="robotik">
+                Robotik
+            </button>
+
+            <button
+                type="button"
+                class="faq-chip"
+                data-filter="datenschutz">
+                Datenschutz
+            </button>
+             <button
+                type="button"
+                class="faq-chip"
+                data-filter="Einführung & Nutzung">
+                Einführung & Nutzung
+            
+            </button>
+             <button
+                type="button"
+                class="faq-chip"
+                data-filter="Preise & Demo">
+                Preise & Demo
+            
+            </button>
         </div>
 
-        <div class="faq-right">
-            <details>
-                <summary>Ist Avelue DSGVO-konform?</summary>
-                <p>Ja, Avelue wird mit Fokus auf Datenschutz und sichere Verarbeitung entwickelt.</p>
+
+        <div class="faq-list">
+
+            <!-- Produkt -->
+
+            <details class="faq-item" data-category="produkt">
+                <summary>Was ist Avelue?</summary>
+                <p>
+                   Avelue ist ein KI-gestütztes System zur intelligenten Begleitung von Zusammenarbeit. Gespräche, Whiteboards, Moderationsmaterialien und Dokumente werden automatisch erfasst, miteinander verknüpft und strukturiert aufbereitet. Daraus entstehen nachvollziehbare Ergebnisse, konkrete Aufgaben und eine langfristig nutzbare Wissensbasis. 
+
+ <br>So reduziert Avelue den manuellen Dokumentationsaufwand und unterstützt Teams dabei, Entscheidungen transparent festzuhalten und Wissen nachhaltig zu sichern. 
+                </p>
             </details>
 
-            <details>
-                <summary>Wie funktioniert die KI-Analyse?</summary>
-                <p>Avelue erkennt Themen, Entscheidungen und Zusammenhänge aus Workshop-Inhalten.</p>
+            <details class="faq-item" data-category="produkt">
+                <summary>Für welche Formate eignet sich Avelue?</summary>
+                <p>
+                    Avelue kann überall dort eingesetzt werden, wo Menschen gemeinsam Ideen entwickeln, Entscheidungen treffen oder Wissen austauschen. 
+                    Dazu gehören unter anderem:  </p>
+                 <ul>
+                    <li>Workshops </li>
+                    <li>Meetings </li>
+                    <li>Strategie- und Innovationsprozesse</li>
+                    <li>Design-Thinking-Formate</li>
+                    <li>Schulungen und interne Akademien </li>
+                    <li>Projekt- und Teamarbeit </li>
+                    <li>Retrospektiven  </li>
+                    <li>Beratungs- und Moderationsformate</li>
+                </ul>
+                <p>
+                Dank der flexiblen Architektur lässt sich Avelue an unterschiedliche Arbeitsweisen und Organisationsformen anpassen. 
+
+ 
+                </p>
             </details>
 
-            <details>
-                <summary>Welche Daten werden gespeichert?</summary>
-                <p>Gespeichert werden nur relevante Workshop-Inhalte und Ergebnisse.</p>
+            <details class="faq-item" data-category="produkt">
+                <summary>Welche Inhalte werden automatisch erfasst?</summary>
+                <p>
+                    Je nach Einsatzszenario kann Avelue verschiedene Informationsquellen intelligent zusammenführen. 
+                    Dazu gehören beispielsweise:
+                </p>
+                <ul>
+                    <li>Gespräche und Diskussionen </li>
+                    <li>Whiteboards und Metaplanwände </li>
+                    <li>Präsentationen und Dokumente  </li>
+                    <li>Entscheidungen und Beschlüsse</li>
+                    <li>Aufgaben und Verantwortlichkeiten </li>
+                    <li>Themenschwerpunkte und Zusammenhänge</li>
+                </ul>
+                 <p>Alle Informationen werden strukturiert aufbereitet und können 
+                    anschließend überprüft, ergänzt und freigegeben werden. </p>
             </details>
 
-            <details>
-                <summary>Kann ich Ergebnisse exportieren?</summary>
-                <p>Ja, Ergebnisse können als strukturierte Dokumentation exportiert werden.</p>
+             <details class="faq-item" data-category="produkt">
+                <summary>Ersetzt Avelue Moderator:innen oder Projektleitungen? </summary>
+                <p>
+                  Nein. <br>
+                  Avelue versteht sich nicht als Ersatz für Menschen, sondern als intelligente
+                   Unterstützung. Während Moderationsteams sich auf den Austausch, die Teilnehmenden und den 
+                   Prozess konzentrieren können, übernimmt Avelue die strukturierte Dokumentation und Nachbereitung. 
+                     <br>
+                  Dadurch bleibt mehr Zeit für die eigentliche Zusammenarbeit – ohne 
+                  dass wichtige Informationen verloren gehen.
+                </p>
+            
             </details>
+
+
+            <!-- Robotik -->
+
+            <details class="faq-item" data-category="robotik">
+                <summary>Warum kommt ein Roboter zum Einsatz?</summary>
+                <p>
+                    Der Roboter macht die Technologie im Raum sichtbar und schafft Vertrauen in den Umgang mit KI.<br> 
+
+Er unterstützt dabei, Informationen direkt dort zu erfassen, 
+wo Zusammenarbeit stattfindet, scannt beispielsweise Whiteboards oder Moderationsmaterialien und informiert Teilnehmende jederzeit transparent über den aktuellen Systemstatus. <br>
+
+Dadurch wird KI nicht als unsichtbare Hintergrundtechnologie wahrgenommen, sondern als nachvollziehbare und verständliche Unterstützung. 
+                </p>
+            </details>
+
+            <details class="faq-item" data-category="robotik">
+                <summary>Kann Avelue auch ohne Roboter genutzt werden?</summary>
+                <p>
+                   Ja. <br> 
+
+Avelue kann auch ohne robotische Assistenz eingesetzt werden. In diesem Fall erfolgt die Erfassung von Gesprächen über externe Aufnahme- und Transkriptionshardware. Visuelle Inhalte wie Whiteboards oder Moderationsmaterialien müssen anschließend manuell erfasst und in das System eingebracht werden. 
+
+<br> Die robotische Assistenz erweitert Avelue um eine automatisierte und nahtlos integrierte Erfassung direkt im Raum. Sie dokumentiert visuelle Inhalte selbstständig, macht den aktuellen Systemstatus für alle Teilnehmenden transparent und reduziert den manuellen Aufwand während und nach der Zusammenarbeit erheblich. 
+
+<br> Daher empfehlen wir, Avelue in Kombination mit der robotischen Assistenz einzusetzen. Erst durch das Zusammenspiel aus intelligenter Software und autonomer Erfassung entsteht ein durchgängiger Prozess, der die typischen Herausforderungen der manuellen Dokumentation – wie Medienbrüche, zusätzlichen Arbeitsaufwand oder unvollständige Ergebnisse – weitgehend vermeidet. 
+                </p>
+            </details>
+
+            <details class="faq-item" data-category="robotik">
+                <summary>Welche KI-Funktionen bietet Avelue?</summary>
+                <p>
+                    Avelue nutzt moderne KI, um Informationen automatisch zu analysieren und sinnvoll aufzubereiten. 
+
+Dazu gehören unter anderem: </p>
+  <ul>
+                    <li>Live-Transkription von Gesprächen 
+</li>
+                    <li>automatische Zusammenfassungen  </li>
+                    <li>Erkennung von Themen und Clustern   </li>
+                    <li>Extraktion von Entscheidungen</li>
+                    <li>Priorisierung von Aufgaben  </li>
+                    <li>intelligente Wissensverknüpfung </li>
+                     <li>durchsuchbare Wissensbasis  </li>
+                      <li>KI-gestützte Suche und Chatfunktionen  </li>
+                </ul>
+
+ <p>
+Alle Ergebnisse können vor ihrer Freigabe überprüft und angepasst werden. 
+                </p>
+            </details>
+
+
+            <!-- Datenschutz -->
+
+            <details class="faq-item" data-category="datenschutz">
+                <summary>Wie geht Avelue mit personenbezogenen Daten um? </summary>
+                <p>
+                    Datenschutz ist ein zentraler Bestandteil des Systems und wurde bereits bei der Entwicklung berücksichtigt. 
+
+<br> Avelue verarbeitet ausschließlich die Informationen, die für den jeweiligen Anwendungsfall erforderlich sind. Rollen- und Rechtekonzepte sorgen dafür, dass nur berechtigte Personen Zugriff auf Inhalte erhalten. Zusätzlich können innerhalb der gesetzlichen Vorgaben passende Lösch- und Aufbewahrungsfristen für unterschiedliche Datenarten definiert werden. 
+
+ 
+                </p>
+            </details>
+
+            <details class="faq-item" data-category="datenschutz">
+                <summary>Werden Audioaufnahmen dauerhaft gespeichert?</summary>
+                <p>
+                    Nein. <br>
+
+Gespräche werden ausschließlich für die Live-Transkription und Analyse verarbeitet. Eine dauerhafte Speicherung der Audioaufnahmen ist nicht vorgesehen. 
+
+<br>So bleiben die Vorteile der KI erhalten, ohne unnötig sensible Daten langfristig aufzubewahren.
+                </p>
+            </details>
+
+            <details class="faq-item" data-category="datenschutz">
+                <summary>Ist Avelue DSGVO-konform? </summary>
+                <p>
+                    Avelue wurde nach den Prinzipien von Privacy by Design und Privacy by Default entwickelt. 
+
+<br>Transparente Datenverarbeitung, rollenbasierte Zugriffsrechte, Löschkonzepte sowie die Möglichkeit einer datenschutzkonformen Bereitstellung innerhalb Europas schaffen die Grundlage für einen DSGVO-konformen Einsatz. 
+
+<br>Die konkrete Umsetzung richtet sich dabei stets nach den individuellen Anforderungen der jeweiligen Organisation.
+                </p>
+            </details>
+
+             <details class="faq-item" data-category="datenschutz">
+                <summary>Wer entscheidet über die Ergebnisse der KI?  </summary>
+                <p>
+                    Immer der Mensch. <br>
+
+Alle von der KI erzeugten Inhalte können vor der endgültigen Freigabe überprüft, angepasst oder ergänzt werden. 
+
+<br>Dieses Human-in-the-Loop-Prinzip stellt sicher, dass Entscheidungen nachvollziehbar bleiben und die Verantwortung jederzeit bei den Anwenderinnen und Anwendern liegt.
+                </p>
+            </details>
+
+             <details class="faq-item" data-category="datenschutz">
+                <summary>Wo werden die Daten gespeichert?  </summary>
+                <p>Je nach Kundenanforderung können Daten in sicheren europäischen oder deutschen Rechenzentren verarbeitet und gespeichert werden. 
+
+<br>So lassen sich unternehmensinterne Datenschutz- und Compliance-Anforderungen flexibel berücksichtigen. 
+                </p>     
+            </details>
+
+            <!-- Einführung & Nutzung -->
+
+<details class="faq-item" data-category="Einführung & Nutzung">
+    <summary>Wie schnell kann Avelue eingeführt werden?</summary>
+    <p>
+        Avelue ist so konzipiert, dass Organisationen ohne aufwendige Einführungsprojekte starten können.
+        <br><br>
+        Je nach Einsatzbereich begleiten wir die Einrichtung, passen das System an individuelle Anforderungen an und unterstützen bei der Integration in bestehende Arbeitsabläufe.
+    </p>
+</details>
+
+<details class="faq-item" data-category="Einführung & Nutzung">
+    <summary>Kann Avelue in bestehende Systeme integriert werden?</summary>
+    <p>
+        Ja.
+        <br><br>
+        Ergebnisse und Dokumentationen lassen sich beispielsweise in Word, PowerPoint oder andere Wissensmanagement- und Kollaborationstools exportieren.
+        <br><br>
+        Darüber hinaus sind individuelle Schnittstellen und Integrationen möglich, um Avelue nahtlos in bestehende IT-Landschaften einzubinden.
+    </p>
+</details>
+
+<details class="faq-item" data-category="Einführung & Nutzung">
+    <summary>Für welche Organisationen eignet sich Avelue?</summary>
+
+    <p>
+        Avelue richtet sich an alle Organisationen, die regelmäßig kollaborative Formate durchführen und dabei Wissen langfristig sichern möchten.
+        <br><br>
+        Dazu zählen unter anderem:
+    </p>
+
+    <ul>
+        <li>Unternehmen</li>
+        <li>Interne Akademien</li>
+        <li>Workshop- und Innovationsagenturen</li>
+        <li>Beratungsunternehmen</li>
+        <li>Bildungseinrichtungen</li>
+        <li>Öffentliche Organisationen</li>
+    </ul>
+
+    <p>
+        Überall dort, wo Zusammenarbeit entsteht, hilft Avelue dabei, Ergebnisse nachhaltig verfügbar zu machen.
+    </p>
+</details>
+
+<details class="faq-item" data-category="Einführung & Nutzung">
+    <summary>Kann Avelue an individuelle Anforderungen angepasst werden?</summary>
+    <p>
+        Ja.
+        <br><br>
+        Je nach Organisation können Funktionen, Rollen- und Rechtekonzepte, Datenschutzvorgaben sowie Integrationen individuell konfiguriert werden.
+        <br><br>
+        So lässt sich Avelue flexibel an unterschiedliche Prozesse, Teams und Einsatzbereiche anpassen und wächst gemeinsam mit den Anforderungen der Organisation.
+    </p>
+</details>
+
+<!-- Preise & Demo -->
+
+<details class="faq-item" data-category="Preise & Demo">
+    <summary>Kann ich Avelue vorab testen?</summary>
+    <p>
+        Ja.
+        <br><br>
+        Wir bieten Interessierten die Möglichkeit, Avelue unverbindlich kennenzulernen. In einer persönlichen Live-Demo zeigen wir den gesamten Ablauf – von der Erfassung einer Zusammenarbeit bis hin zur intelligenten Aufbereitung der Ergebnisse.
+        <br><br>
+        So erhalten Sie einen realistischen Eindruck davon, wie Avelue in Ihrem Arbeitsalltag unterstützen kann.
+    </p>
+</details>
+
+<details class="faq-item" data-category="Preise & Demo">
+    <summary>Gibt es eine kostenlose Testversion?</summary>
+    <p>
+        Ja.
+        <br><br>
+        Für ausgewählte Anwendungsfälle bieten wir eine Testphase an, damit Sie Avelue unter realen Bedingungen kennenlernen können.
+        <br><br>
+        Gemeinsam definieren wir den passenden Umfang und begleiten Sie bei den ersten Schritten, sodass Sie den Mehrwert für Ihre Organisation direkt erleben können.
+    </p>
+</details>
+
+<details class="faq-item" data-category="Preise & Demo">
+    <summary>Wie setzen sich die Preise zusammen?</summary>
+
+    <p>
+        Unsere Preisgestaltung richtet sich nach Ihrem individuellen Einsatzszenario.
+        <br><br>
+        Dabei spielen beispielsweise folgende Faktoren eine Rolle:
+    </p>
+
+    <ul>
+        <li>Anzahl der Nutzerinnen und Nutzer</li>
+        <li>Gewünschte Funktionsmodule</li>
+        <li>Integrationen in bestehende Systeme</li>
+        <li>Benötigte Support- und Serviceleistungen</li>
+    </ul>
+
+    <p>
+        So erhalten Sie eine Lösung, die optimal zu Ihren Anforderungen passt.
+    </p>
+</details>
+
+<details class="faq-item" data-category="Preise & Demo">
+    <summary>Gibt es eine Enterprise-Lösung?</summary>
+    <p>
+        Ja.
+        <br><br>
+        Für größere Unternehmen, interne Akademien oder Workshop- und Beratungsagenturen bieten wir individuelle Enterprise-Lösungen an.
+        <br><br>
+        Diese können beispielsweise zusätzliche Integrationen, erweiterte Rollen- und Rechtekonzepte, individuelle Datenschutzanforderungen oder spezielle Supportleistungen umfassen.
+    </p>
+</details>
+
+<details class="faq-item" data-category="Preise & Demo">
+    <summary>Wie läuft eine Demo ab?</summary>
+    <p>
+        In einem persönlichen Termin lernen Sie Avelue anhand eines praxisnahen Beispiels kennen.
+        <br><br>
+        Wir zeigen Ihnen Schritt für Schritt, wie Informationen erfasst, durch KI analysiert und in strukturierte Ergebnisse überführt werden.
+        <br><br>
+        Anschließend besprechen wir gemeinsam Ihre Anforderungen und zeigen auf, wie Avelue optimal in Ihre bestehenden Prozesse integriert werden kann.
+    </p>
+</details>
+
+<details class="faq-item" data-category="Preise & Demo">
+    <summary>Benötige ich spezielle Hardware?</summary>
+    <p>
+        Für den Einsatz von Avelue wird Hardware zur Erfassung von Gesprächen und visuellen Inhalten benötigt.
+        <br><br>
+        In der empfohlenen Konfiguration übernimmt diese Aufgabe die robotische Assistenz. Sie vereint Kamera-, Audio- und Interaktionsfunktionen in einem System und erfasst Informationen direkt dort, wo Zusammenarbeit stattfindet.
+        <br><br>
+        Alternativ kann Avelue auch mit externer Aufnahme- und Transkriptionshardware genutzt werden. In diesem Fall müssen visuelle Inhalte wie Whiteboards oder Moderationsmaterialien manuell erfasst und in das System übertragen werden.
+        <br><br>
+        Die robotische Assistenz ist keine technische Voraussetzung, aber der empfohlene Standard für den Einsatz von Avelue. Sie ermöglicht eine automatisierte Erfassung direkt im Raum und schafft den größtmöglichen Mehrwert durch einen nahtlosen Dokumentationsprozess.
+    </p>
+</details>
+
         </div>
-    </section>
+
+    </div>
+
+</section>
 
     <section class="cta" id="abschluss">
 
@@ -2926,7 +3260,42 @@ function showUsecase(type, event) {
         });
     }
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const faqButtons = document.querySelectorAll(".faq-chip");
+    const faqItems = document.querySelectorAll(".faq-item");
 
+    function showFaqCategory(category) {
+        faqItems.forEach(function (item) {
+            const itemCategory = item.getAttribute("data-category");
+
+            if (itemCategory === category) {
+                item.classList.remove("faq-hidden");
+            } else {
+                item.classList.add("faq-hidden");
+                item.removeAttribute("open");
+            }
+        });
+    }
+
+    faqButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const selectedCategory = button.getAttribute("data-filter");
+
+            faqButtons.forEach(function (otherButton) {
+                otherButton.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            showFaqCategory(selectedCategory);
+        });
+    });
+
+    // Beim Laden zunächst nur Produkt anzeigen
+    showFaqCategory("produkt");
+});
+</script>
 
 </body>
 
